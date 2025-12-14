@@ -19,6 +19,6 @@ var searchData=
   ['localtoworld_16',['LocalToWorld',['../de/d22/class_spine_1_1_bone.html#a42e6bcd5d837faec67110fe71087be3a',1,'Spine::Bone']]],
   ['localtoworldrotation_17',['LocalToWorldRotation',['../de/d22/class_spine_1_1_bone.html#aaba512ff57ace74ea287eaf67ffe683c',1,'Spine::Bone']]],
   ['logcollector_18',['LogCollector',['../d3/d17/class_log_collector.html',1,'']]],
-  ['loop_19',['Loop',['../db/d03/md__doxygen_documentation_2_manual_2_d_d.html#autotoc_md43',1,'3.7. Core Loop'],['../da/d60/class_spine_1_1_track_entry.html#a70e1121898ba103bb8d1a4dea9ee54c0',1,'Spine.TrackEntry.Loop']]],
+  ['loop_19',['Loop',['../d1/dca/md__f_1_2_g_i_t_2dwarf__clash__docs_2_doxygen_documentation_2_manual_2_d_d.html#autotoc_md43',1,'3.7. Core Loop'],['../da/d60/class_spine_1_1_track_entry.html#a70e1121898ba103bb8d1a4dea9ee54c0',1,'Spine.TrackEntry.Loop']]],
   ['loop_20',['loop',['../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ad13ed8bd0d072b4af5e21326d237964c',1,'Spine::Unity::SkeletonAnimation']]]
 ];

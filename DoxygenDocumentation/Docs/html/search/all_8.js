@@ -12,7 +12,7 @@ var searchData=
   ['bankrefreshwindow_9',['BankRefreshWindow',['../d6/d1b/class_f_m_o_d_unity_1_1_bank_refresh_window.html',1,'FMODUnity']]],
   ['baseclassa_10',['BaseClassA',['../df/d42/class_febucci_1_1_hierarchy_data_1_1_examples_1_1_base_class_a.html',1,'Febucci::HierarchyData::Examples']]],
   ['baseclassb_11',['BaseClassB',['../dd/d15/class_febucci_1_1_hierarchy_data_1_1_examples_1_1_base_class_b.html',1,'Febucci::HierarchyData::Examples']]],
-  ['battle_20—_20дизайн‑документ_12',['# Dwarf Clash: Mass Battle — Дизайн‑документ',['../db/d03/md__doxygen_documentation_2_manual_2_d_d.html',1,'']]],
+  ['battle_20—_20дизайн‑документ_12',['# Dwarf Clash: Mass Battle — Дизайн‑документ',['../d1/dca/md__f_1_2_g_i_t_2dwarf__clash__docs_2_doxygen_documentation_2_manual_2_d_d.html',1,'']]],
   ['battlefieldmanager_13',['BattlefieldManager',['../db/d81/class_battlefield_manager.html',1,'']]],
   ['battlepasspage_14',['BattlePassPage',['../d6/ded/class_be_name_space_1_1_battle_pass_page.html',1,'BeNameSpace']]],
   ['battlepassquesttreeasset_15',['BattlePassQuestTreeAsset',['../d9/dcf/class_battle_pass_quest_tree_asset.html',1,'']]],
