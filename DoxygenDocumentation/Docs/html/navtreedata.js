@@ -73,13 +73,49 @@ var NAVTREE =
         [ "4.1. Музыкальные референсы", "db/d03/md__doxygen_documentation_2_manual_2_d_d.html#autotoc_md46", null ]
       ] ]
     ] ],
-    [ "Список задач", "dd/da0/todo.html", null ]
+    [ "Список задач", "dd/da0/todo.html", null ],
+    [ "Пространства имен", "namespaces.html", [
+      [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
+      [ "Члены пространств имен", "namespacemembers.html", [
+        [ "Указатель", "namespacemembers.html", null ],
+        [ "Перечисления", "namespacemembers_enum.html", null ]
+      ] ]
+    ] ],
+    [ "Классы", "annotated.html", [
+      [ "Классы", "annotated.html", "annotated_dup" ],
+      [ "Алфавитный указатель классов", "classes.html", null ],
+      [ "Иерархия классов", "hierarchy.html", "hierarchy" ],
+      [ "Члены классов", "functions.html", [
+        [ "Указатель", "functions.html", "functions_dup" ],
+        [ "Функции", "functions_func.html", "functions_func" ],
+        [ "Переменные", "functions_vars.html", null ],
+        [ "Перечисления", "functions_enum.html", null ],
+        [ "Свойства", "functions_prop.html", "functions_prop" ],
+        [ "События", "functions_evnt.html", null ]
+      ] ]
+    ] ],
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"db/d03/md__doxygen_documentation_2_manual_2_d_d.html"
+"annotated.html",
+"d1/d04/class_spine_1_1_unity_1_1_skeleton_utility_bone.html",
+"d3/d0f/class_spine_1_1_unity_1_1_skeleton_renderer.html#a084063433d714d91812aea1062fd0195",
+"d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html",
+"d5/da9/interface_f_m_o_d_1_1_i_channel_control.html",
+"d6/dc8/class_spine_1_1_r_g_b_a_timeline.html#aa2f11ab49d1551f3bcc0c8a8307ef2b9",
+"d8/d38/class_spine_1_1_unity_1_1_spine_atlas_asset.html",
+"d9/dae/class_spine_1_1_skeleton.html#a37c49ddd794a12ea5cda13ef8dc5ff46",
+"da/db0/struct_f_m_o_d_1_1_studio_1_1_t_i_m_e_l_i_n_e___n_e_s_t_e_d___b_e_a_t___p_r_o_p_e_r_t_i_e_s.html",
+"db/d5c/class_spine_1_1_transform_constraint.html#af400a8380c85c02327da621326a4582e",
+"dc/d27/class_toolbox_1_1_component_ext.html#a1b75cbc553797beb15018a520e51e5aa",
+"de/d22/class_spine_1_1_bone.html#a1c2696d7e1094ed06f4d0fe6ec5abc5b",
+"df/d13/class_spine_1_1_transform_constraint_timeline.html#a0792ddce4470112e1b5c88353e800c22",
+"dir_ef6bdb7f787ddba5c6cd32539d8e5772.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
