@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/Bone.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d9/dc9/_bone_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Bone.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/de6/namespace_spine.html">Spine</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">using </span>Physics = <a class="code hl_class" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a>.<a class="code hl_enumeration" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Physics</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html">   43</a></span>    <span class="keyword">public</span> <span class="keyword">class </span>Bone : <a class="code hl_interface" href="../../da/d98/interface_spine_1_1_i_updatable.html">IUpdatable</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">static</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> yDown;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">internal</span> <a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a> data;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">internal</span> Skeleton skeleton;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">internal</span> Bone parent;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">internal</span> ExposedList&lt;Bone&gt; children = <span class="keyword">new</span> ExposedList&lt;Bone&gt;();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> x, y, rotation, scaleX, scaleY, shearX, shearY;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> ax, ay, arotation, ascaleX, ascaleY, ashearX, ashearY;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> a, b, worldX;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> c, d, worldY;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">internal</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a> inherit;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">internal</span> <span class="keywordtype">bool</span> sorted, active;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a> <a class="code hl_namespace" href="../../de/d75/namespace_data.html">Data</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> data; } }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">public</span> Skeleton Skeleton { <span class="keyword">get</span> { <span class="keywordflow">return</span> skeleton; } }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">public</span> Bone Parent { <span class="keyword">get</span> { <span class="keywordflow">return</span> parent; } }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">public</span> ExposedList&lt;Bone&gt; Children { <span class="keyword">get</span> { <span class="keywordflow">return</span> children; } }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ae61f8ff89dc9a52134aa745c8b717aaa">   63</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ae61f8ff89dc9a52134aa745c8b717aaa">Active</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> active; } }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a449250768b89e6b5cda2a158207b219e">   65</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a449250768b89e6b5cda2a158207b219e">X</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> x; } <span class="keyword">set</span> { x = value; } }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a4a7a8d0b99b6f3d2e042189bc1620b2a">   67</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a4a7a8d0b99b6f3d2e042189bc1620b2a">Y</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> y; } <span class="keyword">set</span> { y = value; } }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ae3e3b5774fb19a846db3b39c565d6313">   69</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ae3e3b5774fb19a846db3b39c565d6313">Rotation</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> rotation; } <span class="keyword">set</span> { rotation = value; } }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a41c41f1378421d1cf2ad21fd29c15a7e">   72</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a41c41f1378421d1cf2ad21fd29c15a7e">ScaleX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleX; } <span class="keyword">set</span> { scaleX = value; } }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a4b0e658f9b264ccd6fe056dddc490a2c">   75</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a4b0e658f9b264ccd6fe056dddc490a2c">ScaleY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleY; } <span class="keyword">set</span> { scaleY = value; } }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a7a0ccfe4f730da0491be616bb49b0401">   78</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a7a0ccfe4f730da0491be616bb49b0401">ShearX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> shearX; } <span class="keyword">set</span> { shearX = value; } }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a9496340b8f39d2f3b70de79457363f7f">   81</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a9496340b8f39d2f3b70de79457363f7f">ShearY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> shearY; } <span class="keyword">set</span> { shearY = value; } }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">   84</a></span>        <span class="keyword">public</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> inherit; } <span class="keyword">set</span> { inherit = value; } }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a6a3cc7c4448f3859b6bfc6f0157c3a6f">   87</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a6a3cc7c4448f3859b6bfc6f0157c3a6f">AppliedRotation</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> arotation; } <span class="keyword">set</span> { arotation = value; } }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ab3811661c5330a129f8ce8c74292266b">   90</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ab3811661c5330a129f8ce8c74292266b">AX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ax; } <span class="keyword">set</span> { ax = value; } }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a1c2696d7e1094ed06f4d0fe6ec5abc5b">   93</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a1c2696d7e1094ed06f4d0fe6ec5abc5b">AY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ay; } <span class="keyword">set</span> { ay = value; } }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a0f21d0b0d5f45d8ff19f098d456970e9">   96</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a0f21d0b0d5f45d8ff19f098d456970e9">AScaleX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ascaleX; } <span class="keyword">set</span> { ascaleX = value; } }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a835fb922b0bcaf127ecc44e6cf247c98">   99</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a835fb922b0bcaf127ecc44e6cf247c98">AScaleY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ascaleY; } <span class="keyword">set</span> { ascaleY = value; } }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a967c874d90fdd83604c2c7d7bc798283">  102</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a967c874d90fdd83604c2c7d7bc798283">AShearX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ashearX; } <span class="keyword">set</span> { ashearX = value; } }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a2b851cfd7e6b8ee35434f90844a4e1a4">  105</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a2b851cfd7e6b8ee35434f90844a4e1a4">AShearY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ashearY; } <span class="keyword">set</span> { ashearY = value; } }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a934009fcbf471670ddb717896d9c339e">  108</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a934009fcbf471670ddb717896d9c339e">A</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> a; } <span class="keyword">set</span> { a = value; } }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ad99c616c62995e4b0c207b1f6608a52c">  110</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ad99c616c62995e4b0c207b1f6608a52c">B</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> b; } <span class="keyword">set</span> { b = value; } }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a0f8f536da6e17eeda7cdc25051f29a5c">  112</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a0f8f536da6e17eeda7cdc25051f29a5c">C</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> c; } <span class="keyword">set</span> { c = value; } }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a6b370338082cd2e642c06de548847021">  114</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a6b370338082cd2e642c06de548847021">D</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> d; } <span class="keyword">set</span> { d = value; } }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ac8f234829fb48b94eb694537100b3570">  117</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ac8f234829fb48b94eb694537100b3570">WorldX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> worldX; } <span class="keyword">set</span> { worldX = value; } }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#af22e54e68b742c6378c87fa2f5ad7d6c">  119</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#af22e54e68b742c6378c87fa2f5ad7d6c">WorldY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> worldY; } <span class="keyword">set</span> { worldY = value; } }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a6f9dcc12c596710439b0545275401ccf">  121</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a6f9dcc12c596710439b0545275401ccf">WorldRotationX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(c, a); } }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a33a7ce850ec092ca76ebb8292796f483">  123</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a33a7ce850ec092ca76ebb8292796f483">WorldRotationY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(d, b); } }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a2d81978145b54c3531ef3ceeb70904d5">  126</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a2d81978145b54c3531ef3ceeb70904d5">WorldScaleX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)Math.Sqrt(a * a + c * c); } }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ad86cf0fe043b18cd39791f38f411fb2a">  128</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#ad86cf0fe043b18cd39791f38f411fb2a">WorldScaleY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)Math.Sqrt(b * b + d * d); } }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> (<a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a> data, <a class="code hl_class" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> skeleton, <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> parent) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;data&quot;</span>, <span class="stringliteral">&quot;data cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">if</span> (skeleton == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;skeleton&quot;</span>, <span class="stringliteral">&quot;skeleton cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            this.data = data;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            this.skeleton = skeleton;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            this.parent = parent;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">SetToSetupPose</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a6520a5f5576ed3f567cbd68a4fb15749">  141</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a> (Bone bone, Skeleton skeleton, Bone parent) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">if</span> (bone == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;bone&quot;</span>, <span class="stringliteral">&quot;bone cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span> (skeleton == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;skeleton&quot;</span>, <span class="stringliteral">&quot;skeleton cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            this.skeleton = skeleton;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            this.parent = parent;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            data = bone.data;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            x = bone.x;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            y = bone.y;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            rotation = bone.rotation;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            scaleX = bone.scaleX;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            scaleY = bone.scaleY;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            shearX = bone.shearX;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            shearY = bone.shearY;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            inherit = bone.inherit;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a50fb82f9790751ea0a1e118c793de5ee">  158</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a50fb82f9790751ea0a1e118c793de5ee">Update</a> (Physics physics) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a7cb46c9bf47dc1c82334464ddad0f4f3">UpdateWorldTransform</a>(ax, ay, arotation, ascaleX, ascaleY, ashearX, ashearY);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a7cb46c9bf47dc1c82334464ddad0f4f3">  163</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a7cb46c9bf47dc1c82334464ddad0f4f3">UpdateWorldTransform</a> () {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a7cb46c9bf47dc1c82334464ddad0f4f3">UpdateWorldTransform</a>(x, y, rotation, scaleX, scaleY, shearX, shearY);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#aec562a1c4a29fd87849e77161dbd2f58">  172</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#aec562a1c4a29fd87849e77161dbd2f58">UpdateWorldTransform</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> scaleX, <span class="keywordtype">float</span> scaleY, <span class="keywordtype">float</span> shearX, <span class="keywordtype">float</span> shearY) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            ax = x;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            ay = y;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            arotation = rotation;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            ascaleX = scaleX;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            ascaleY = scaleY;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            ashearX = shearX;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            ashearY = shearY;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            Bone parent = this.parent;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) { <span class="comment">// Root bone.</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                Skeleton skeleton = this.skeleton;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="keywordtype">float</span> sx = skeleton.scaleX, sy = skeleton.ScaleY;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                <span class="keywordtype">float</span> rx = (rotation + shearX) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordtype">float</span> ry = (rotation + 90 + shearY) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                a = (float)Math.Cos(rx) * scaleX * sx;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                b = (float)Math.Cos(ry) * scaleY * sx;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                c = (float)Math.Sin(rx) * scaleX * sy;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                d = (float)Math.Sin(ry) * scaleY * sy;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                worldX = x * sx + skeleton.x;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                worldY = y * sy + skeleton.y;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordtype">float</span> pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            worldX = pa * x + pb * y + parent.worldX;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            worldY = pc * x + pd * y + parent.worldY;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">switch</span> (inherit) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.Normal: {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                <span class="keywordtype">float</span> rx = (rotation + shearX) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordtype">float</span> ry = (rotation + 90 + shearY) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordtype">float</span> la = (float)Math.Cos(rx) * scaleX;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="keywordtype">float</span> lb = (float)Math.Cos(ry) * scaleY;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <span class="keywordtype">float</span> lc = (float)Math.Sin(rx) * scaleX;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="keywordtype">float</span> ld = (float)Math.Sin(ry) * scaleY;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                a = pa * la + pb * lc;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                b = pa * lb + pb * ld;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                c = pc * la + pd * lc;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                d = pc * lb + pd * ld;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.OnlyTranslation: {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                <span class="keywordtype">float</span> rx = (rotation + shearX) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <span class="keywordtype">float</span> ry = (rotation + 90 + shearY) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                a = (float)Math.Cos(rx) * scaleX;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                b = (float)Math.Cos(ry) * scaleY;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                c = (float)Math.Sin(rx) * scaleX;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                d = (float)Math.Sin(ry) * scaleY;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoRotationOrReflection: {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordtype">float</span> sx = 1 / skeleton.scaleX, sy = 1 / skeleton.ScaleY;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                pa *= sx;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                pc *= sy;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keywordtype">float</span> s = pa * pa + pc * pc, prx;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                <span class="keywordflow">if</span> (s &gt; 0.0001f) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                    s = Math.Abs(pa * pd * sy - pb * sx * pc) / s;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    pb = pc * s;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    pd = pa * s;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                    prx = <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(pc, pa);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    pa = 0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                    pc = 0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    prx = 90 - <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(pd, pb);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                <span class="keywordtype">float</span> rx = (rotation + shearX - prx) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordtype">float</span> ry = (rotation + shearY - prx + 90) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordtype">float</span> la = (float)Math.Cos(rx) * scaleX;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="keywordtype">float</span> lb = (float)Math.Cos(ry) * scaleY;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                <span class="keywordtype">float</span> lc = (float)Math.Sin(rx) * scaleX;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                <span class="keywordtype">float</span> ld = (float)Math.Sin(ry) * scaleY;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                a = pa * la - pb * lc;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                b = pa * lb - pb * ld;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                c = pc * la + pd * lc;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                d = pc * lb + pd * ld;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScale:</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScaleOrReflection: {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                rotation *= <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                <span class="keywordtype">float</span> cos = (float)Math.Cos(rotation), sin = (float)Math.Sin(rotation);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                <span class="keywordtype">float</span> za = (pa * cos + pb * sin) / skeleton.scaleX;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                <span class="keywordtype">float</span> zc = (pc * cos + pd * sin) / skeleton.ScaleY;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                <span class="keywordtype">float</span> s = (float)Math.Sqrt(za * za + zc * zc);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                <span class="keywordflow">if</span> (s &gt; 0.00001f) s = 1 / s;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                za *= s;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                zc *= s;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                s = (float)Math.Sqrt(za * za + zc * zc);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                <span class="keywordflow">if</span> (inherit == <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScale &amp;&amp; (pa * pd - pb * pc &lt; 0) != (skeleton.scaleX &lt; 0 != skeleton.ScaleY &lt; 0)) s = -s;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                rotation = MathUtils.PI / 2 + <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.<a class="code hl_function" href="../../d0/d97/class_spine_1_1_math_utils.html#a3e98f9d30d651fcde8320c2bdaa41f74">Atan2</a>(zc, za);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="keywordtype">float</span> zb = (float)Math.Cos(rotation) * s;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <span class="keywordtype">float</span> zd = (float)Math.Sin(rotation) * s;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                shearX *= <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                shearY = (90 + shearY) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                <span class="keywordtype">float</span> la = (float)Math.Cos(shearX) * scaleX;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="keywordtype">float</span> lb = (float)Math.Cos(shearY) * scaleY;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                <span class="keywordtype">float</span> lc = (float)Math.Sin(shearX) * scaleX;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordtype">float</span> ld = (float)Math.Sin(shearY) * scaleY;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                a = za * la + zb * lc;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                b = za * lb + zb * ld;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                c = zc * la + zd * lc;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                d = zc * lb + zd * ld;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            a *= skeleton.scaleX;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            b *= skeleton.scaleX;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            c *= skeleton.ScaleY;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            d *= skeleton.ScaleY;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
+</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span></div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">  285</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">SetToSetupPose</a> () {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a> data = this.data;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            x = data.x;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            y = data.y;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            rotation = data.rotation;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            scaleX = data.scaleX;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            scaleY = data.ScaleY;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            shearX = data.shearX;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            shearY = data.shearY;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            inherit = data.inherit;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        }</div>
+</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span></div>
+<div class="foldopen" id="foldopen00307" data-start="{" data-end="}">
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#aa1ac7180d78c77b4ff5f0823bfc0b8ac">  307</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#aa1ac7180d78c77b4ff5f0823bfc0b8ac">UpdateAppliedTransform</a> () {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            Bone parent = this.parent;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                ax = worldX - skeleton.x;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                ay = worldY - skeleton.y;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                <span class="keywordtype">float</span> a = this.a, b = this.b, c = this.c, d = this.d;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                arotation = <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(c, a);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                ascaleX = (float)Math.Sqrt(a * a + c * c);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                ascaleY = (float)Math.Sqrt(b * b + d * d);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                ashearX = 0;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                ashearY = <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(a * b + c * d, a * d - b * c);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordtype">float</span> pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordtype">float</span> pid = 1 / (pa * pd - pb * pc);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            <span class="keywordtype">float</span> ia = pd * pid, ib = pb * pid, ic = pc * pid, <span class="keywordtype">id</span> = pa * pid;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="keywordtype">float</span> dx = worldX - parent.worldX, dy = worldY - parent.worldY;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            ax = (dx * ia - dy * ib);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            ay = (dy * <span class="keywordtype">id</span> - dx * ic);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordtype">float</span> ra, rb, rc, rd;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">if</span> (inherit == <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.OnlyTranslation) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                ra = a;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                rb = b;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                rc = c;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                rd = d;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keywordflow">switch</span> (inherit) {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoRotationOrReflection: {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    <span class="keywordtype">float</span> s = Math.Abs(pa * pd - pb * pc) / (pa * pa + pc * pc);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                    <span class="keywordtype">float</span> skeletonScaleY = skeleton.ScaleY;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    pb = -pc * skeleton.scaleX * s / skeletonScaleY;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    pd = pa * skeletonScaleY * s / skeleton.scaleX;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    pid = 1 / (pa * pd - pb * pc);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    ia = pd * pid;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                    ib = pb * pid;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScale:</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                <span class="keywordflow">case</span> <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScaleOrReflection: {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                    <span class="keywordtype">float</span> r = rotation * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad, cos = (float)Math.Cos(r), sin = (float)Math.Sin(r);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                    pa = (pa * cos + pb * sin) / skeleton.scaleX;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                    pc = (pc * cos + pd * sin) / skeleton.ScaleY;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                    <span class="keywordtype">float</span> s = (float)Math.Sqrt(pa * pa + pc * pc);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                    <span class="keywordflow">if</span> (s &gt; 0.00001f) s = 1 / s;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                    pa *= s;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                    pc *= s;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                    s = (float)Math.Sqrt(pa * pa + pc * pc);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    <span class="keywordflow">if</span> (inherit == <a class="code hl_property" href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Inherit</a>.NoScale &amp;&amp; pid &lt; 0 != (skeleton.scaleX &lt; 0 != skeleton.ScaleY &lt; 0)) s = -s;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                    r = MathUtils.PI / 2 + <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.<a class="code hl_function" href="../../d0/d97/class_spine_1_1_math_utils.html#a3e98f9d30d651fcde8320c2bdaa41f74">Atan2</a>(pc, pa);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                    pb = (float)Math.Cos(r) * s;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                    pd = (float)Math.Sin(r) * s;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                    pid = 1 / (pa * pd - pb * pc);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                    ia = pd * pid;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                    ib = pb * pid;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                    ic = pc * pid;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                    <span class="keywordtype">id</span> = pa * pid;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                ra = ia * a - ib * c;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                rb = ia * b - ib * d;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                rc = <span class="keywordtype">id</span> * c - ic * a;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                rd = <span class="keywordtype">id</span> * d - ic * b;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            }</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            ashearX = 0;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            ascaleX = (float)Math.Sqrt(ra * ra + rc * rc);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">if</span> (ascaleX &gt; 0.0001f) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                <span class="keywordtype">float</span> det = ra * rd - rb * rc;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                ascaleY = det / ascaleX;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                ashearY = -<a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(ra * rb + rc * rd, det);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                arotation = <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(rc, ra);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                ascaleX = 0;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                ascaleY = (float)Math.Sqrt(rb * rb + rd * rd);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                ashearY = 0;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                arotation = 90 - <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(rd, rb);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>            }</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        }</div>
+</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span></div>
+<div class="foldopen" id="foldopen00390" data-start="{" data-end="}">
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a85285deba5f815ed0c4afaf5fa265ccd">  390</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a85285deba5f815ed0c4afaf5fa265ccd">WorldToLocal</a> (<span class="keywordtype">float</span> worldX, <span class="keywordtype">float</span> worldY, out <span class="keywordtype">float</span> localX, out <span class="keywordtype">float</span> localY) {</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>            <span class="keywordtype">float</span> a = this.a, b = this.b, c = this.c, d = this.d;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            <span class="keywordtype">float</span> det = a * d - b * c;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            <span class="keywordtype">float</span> x = worldX - this.worldX, y = worldY - this.worldY;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            localX = (x * d - y * b) / det;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            localY = (y * a - x * c) / det;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        }</div>
+</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span></div>
+<div class="foldopen" id="foldopen00399" data-start="{" data-end="}">
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a42e6bcd5d837faec67110fe71087be3a">  399</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a42e6bcd5d837faec67110fe71087be3a">LocalToWorld</a> (<span class="keywordtype">float</span> localX, <span class="keywordtype">float</span> localY, out <span class="keywordtype">float</span> worldX, out <span class="keywordtype">float</span> worldY) {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            worldX = localX * a + localY * b + this.worldX;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            worldY = localX * c + localY * d + this.worldY;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        }</div>
+</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span></div>
+<div class="foldopen" id="foldopen00405" data-start="{" data-end="}">
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#ab0aa8a98bdd0871ab801adb375724bf7">  405</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#ab0aa8a98bdd0871ab801adb375724bf7">WorldToParent</a> (<span class="keywordtype">float</span> worldX, <span class="keywordtype">float</span> worldY, out <span class="keywordtype">float</span> parentX, out <span class="keywordtype">float</span> parentY) {</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                parentX = worldX;</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                parentY = worldY;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                parent.WorldToLocal(worldX, worldY, out parentX, out parentY);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>            }</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        }</div>
+</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span></div>
+<div class="foldopen" id="foldopen00415" data-start="{" data-end="}">
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a1d93a8c2d1dfc270dafd7d0032859616">  415</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a1d93a8c2d1dfc270dafd7d0032859616">ParentToWorld</a> (<span class="keywordtype">float</span> parentX, <span class="keywordtype">float</span> parentY, out <span class="keywordtype">float</span> worldX, out <span class="keywordtype">float</span> worldY) {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                worldX = parentX;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                worldY = parentY;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                parent.LocalToWorld(parentX, parentY, out worldX, out worldY);</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            }</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        }</div>
+</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span></div>
+<div class="foldopen" id="foldopen00425" data-start="{" data-end="}">
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#a900f988a99dde5481b6f3cfe3da7eebd">  425</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a900f988a99dde5481b6f3cfe3da7eebd">WorldToLocalRotation</a> (<span class="keywordtype">float</span> worldRotation) {</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>            worldRotation *= <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            <span class="keywordtype">float</span> sin = (float)Math.Sin(worldRotation), cos = (float)Math.Cos(worldRotation);</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(a * sin - c * cos, d * cos - b * sin) + rotation - shearX;</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        }</div>
+</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span></div>
+<div class="foldopen" id="foldopen00432" data-start="{" data-end="}">
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#aaba512ff57ace74ea287eaf67ffe683c">  432</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#aaba512ff57ace74ea287eaf67ffe683c">LocalToWorldRotation</a> (<span class="keywordtype">float</span> localRotation) {</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            localRotation = (localRotation - rotation - shearX) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>            <span class="keywordtype">float</span> sin = (float)Math.Sin(localRotation), cos = (float)Math.Cos(localRotation);</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.Atan2Deg(cos * c + sin * d, cos * a + sin * b);</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        }</div>
+</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span></div>
+<div class="foldopen" id="foldopen00444" data-start="{" data-end="}">
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno"><a class="line" href="../../de/d22/class_spine_1_1_bone.html#aa8c440acc7431298b9ccafe6d54f10e5">  444</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#aa8c440acc7431298b9ccafe6d54f10e5">RotateWorld</a> (<span class="keywordtype">float</span> degrees) {</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>            degrees *= <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>            <span class="keywordtype">float</span> sin = (float)Math.Sin(degrees), cos = (float)Math.Cos(degrees);</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>            <span class="keywordtype">float</span> ra = a, rb = b;</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>            a = cos * ra - sin * c;</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>            b = cos * rb - sin * d;</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>            c = sin * ra + cos * c;</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>            d = sin * rb + cos * d;</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        }</div>
+</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span> </div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>        <span class="keyword">override</span> <span class="keyword">public</span> <span class="keywordtype">string</span> ToString () {</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>            <span class="keywordflow">return</span> data.name;</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        }</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>    }</div>
+</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html">Spine.BoneData</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/d91/_bone_data_8cs_source.html#l00033">BoneData.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html">Spine.Bone</a></div><div class="ttdoc">Stores a bone&#39;s current pose.</div><div class="ttdef"><b>Определения</b> <a href="#l00043">Bone.cs:43</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a0f21d0b0d5f45d8ff19f098d456970e9"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a0f21d0b0d5f45d8ff19f098d456970e9">Spine.Bone.AScaleX</a></div><div class="ttdeci">float AScaleX</div><div class="ttdoc">The applied local scaleX.</div><div class="ttdef"><b>Определения</b> <a href="#l00096">Bone.cs:96</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a0f8f536da6e17eeda7cdc25051f29a5c"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a0f8f536da6e17eeda7cdc25051f29a5c">Spine.Bone.C</a></div><div class="ttdeci">float C</div><div class="ttdoc">Part of the world transform matrix for the X axis. If changed, UpdateAppliedTransform() should be cal...</div><div class="ttdef"><b>Определения</b> <a href="#l00112">Bone.cs:112</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a1c2696d7e1094ed06f4d0fe6ec5abc5b"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a1c2696d7e1094ed06f4d0fe6ec5abc5b">Spine.Bone.AY</a></div><div class="ttdeci">float AY</div><div class="ttdoc">The applied local y translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00093">Bone.cs:93</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a1d93a8c2d1dfc270dafd7d0032859616"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a1d93a8c2d1dfc270dafd7d0032859616">Spine.Bone.ParentToWorld</a></div><div class="ttdeci">void ParentToWorld(float parentX, float parentY, out float worldX, out float worldY)</div><div class="ttdoc">Transforms a point from the parent bone&#39;s coordinates to world coordinates.</div><div class="ttdef"><b>Определения</b> <a href="#l00415">Bone.cs:415</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a2b851cfd7e6b8ee35434f90844a4e1a4"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a2b851cfd7e6b8ee35434f90844a4e1a4">Spine.Bone.AShearY</a></div><div class="ttdeci">float AShearY</div><div class="ttdoc">The applied local shearY.</div><div class="ttdef"><b>Определения</b> <a href="#l00105">Bone.cs:105</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a2d81978145b54c3531ef3ceeb70904d5"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a2d81978145b54c3531ef3ceeb70904d5">Spine.Bone.WorldScaleX</a></div><div class="ttdeci">float WorldScaleX</div><div class="ttdoc">Returns the magnitide (always positive) of the world scale X.</div><div class="ttdef"><b>Определения</b> <a href="#l00126">Bone.cs:126</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a33a7ce850ec092ca76ebb8292796f483"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a33a7ce850ec092ca76ebb8292796f483">Spine.Bone.WorldRotationY</a></div><div class="ttdeci">float WorldRotationY</div><div class="ttdoc">The world rotation for the Y axis, calculated using b and d.</div><div class="ttdef"><b>Определения</b> <a href="#l00123">Bone.cs:123</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a41c41f1378421d1cf2ad21fd29c15a7e"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a41c41f1378421d1cf2ad21fd29c15a7e">Spine.Bone.ScaleX</a></div><div class="ttdeci">float ScaleX</div><div class="ttdoc">The local scaleX.</div><div class="ttdef"><b>Определения</b> <a href="#l00072">Bone.cs:72</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a42e6bcd5d837faec67110fe71087be3a"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a42e6bcd5d837faec67110fe71087be3a">Spine.Bone.LocalToWorld</a></div><div class="ttdeci">void LocalToWorld(float localX, float localY, out float worldX, out float worldY)</div><div class="ttdoc">Transforms a point from the bone&#39;s local coordinates to world coordinates.</div><div class="ttdef"><b>Определения</b> <a href="#l00399">Bone.cs:399</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a449250768b89e6b5cda2a158207b219e"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a449250768b89e6b5cda2a158207b219e">Spine.Bone.X</a></div><div class="ttdeci">float X</div><div class="ttdoc">The local X translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00065">Bone.cs:65</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a4a7a8d0b99b6f3d2e042189bc1620b2a"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a4a7a8d0b99b6f3d2e042189bc1620b2a">Spine.Bone.Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">The local Y translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00067">Bone.cs:67</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a4b0e658f9b264ccd6fe056dddc490a2c"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a4b0e658f9b264ccd6fe056dddc490a2c">Spine.Bone.ScaleY</a></div><div class="ttdeci">float ScaleY</div><div class="ttdoc">The local scaleY.</div><div class="ttdef"><b>Определения</b> <a href="#l00075">Bone.cs:75</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a50fb82f9790751ea0a1e118c793de5ee"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a50fb82f9790751ea0a1e118c793de5ee">Spine.Bone.Update</a></div><div class="ttdeci">void Update(Physics physics)</div><div class="ttdoc">Computes the world transform using the parent bone and this bone&#39;s local applied transform.</div><div class="ttdef"><b>Определения</b> <a href="#l00158">Bone.cs:158</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a6520a5f5576ed3f567cbd68a4fb15749"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a6520a5f5576ed3f567cbd68a4fb15749">Spine.Bone.Bone</a></div><div class="ttdeci">Bone(Bone bone, Skeleton skeleton, Bone parent)</div><div class="ttdoc">Copy constructor. Does not copy the Children bones.</div><div class="ttdef"><b>Определения</b> <a href="#l00141">Bone.cs:141</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a6a3cc7c4448f3859b6bfc6f0157c3a6f"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a6a3cc7c4448f3859b6bfc6f0157c3a6f">Spine.Bone.AppliedRotation</a></div><div class="ttdeci">float AppliedRotation</div><div class="ttdoc">The rotation, as calculated by any constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00087">Bone.cs:87</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a6b370338082cd2e642c06de548847021"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a6b370338082cd2e642c06de548847021">Spine.Bone.D</a></div><div class="ttdeci">float D</div><div class="ttdoc">Part of the world transform matrix for the Y axis. If changed, UpdateAppliedTransform() should be cal...</div><div class="ttdef"><b>Определения</b> <a href="#l00114">Bone.cs:114</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a6f9dcc12c596710439b0545275401ccf"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a6f9dcc12c596710439b0545275401ccf">Spine.Bone.WorldRotationX</a></div><div class="ttdeci">float WorldRotationX</div><div class="ttdoc">The world rotation for the X axis, calculated using a and c.</div><div class="ttdef"><b>Определения</b> <a href="#l00121">Bone.cs:121</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a714357ad49be82fa9247e231ce917aaa"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">Spine.Bone.SetToSetupPose</a></div><div class="ttdeci">void SetToSetupPose()</div><div class="ttdoc">Sets this bone&#39;s local transform to the setup pose.</div><div class="ttdef"><b>Определения</b> <a href="#l00285">Bone.cs:285</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a7a0ccfe4f730da0491be616bb49b0401"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a7a0ccfe4f730da0491be616bb49b0401">Spine.Bone.ShearX</a></div><div class="ttdeci">float ShearX</div><div class="ttdoc">The local shearX.</div><div class="ttdef"><b>Определения</b> <a href="#l00078">Bone.cs:78</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a7cb46c9bf47dc1c82334464ddad0f4f3"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a7cb46c9bf47dc1c82334464ddad0f4f3">Spine.Bone.UpdateWorldTransform</a></div><div class="ttdeci">void UpdateWorldTransform()</div><div class="ttdoc">Computes the world transform using the parent bone and this bone&#39;s local transform.</div><div class="ttdef"><b>Определения</b> <a href="#l00163">Bone.cs:163</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a835fb922b0bcaf127ecc44e6cf247c98"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a835fb922b0bcaf127ecc44e6cf247c98">Spine.Bone.AScaleY</a></div><div class="ttdeci">float AScaleY</div><div class="ttdoc">The applied local scaleY.</div><div class="ttdef"><b>Определения</b> <a href="#l00099">Bone.cs:99</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a85285deba5f815ed0c4afaf5fa265ccd"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a85285deba5f815ed0c4afaf5fa265ccd">Spine.Bone.WorldToLocal</a></div><div class="ttdeci">void WorldToLocal(float worldX, float worldY, out float localX, out float localY)</div><div class="ttdoc">Transforms a point from world coordinates to the bone&#39;s local coordinates.</div><div class="ttdef"><b>Определения</b> <a href="#l00390">Bone.cs:390</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a8dbae327b49f4560162756f62220e511"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a8dbae327b49f4560162756f62220e511">Spine.Bone.Inherit</a></div><div class="ttdeci">Inherit Inherit</div><div class="ttdoc">Controls how parent world transforms affect this bone.</div><div class="ttdef"><b>Определения</b> <a href="#l00084">Bone.cs:84</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a900f988a99dde5481b6f3cfe3da7eebd"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a900f988a99dde5481b6f3cfe3da7eebd">Spine.Bone.WorldToLocalRotation</a></div><div class="ttdeci">float WorldToLocalRotation(float worldRotation)</div><div class="ttdoc">Transforms a world rotation to a local rotation.</div><div class="ttdef"><b>Определения</b> <a href="#l00425">Bone.cs:425</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a934009fcbf471670ddb717896d9c339e"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a934009fcbf471670ddb717896d9c339e">Spine.Bone.A</a></div><div class="ttdeci">float A</div><div class="ttdoc">Part of the world transform matrix for the X axis. If changed, UpdateAppliedTransform() should be cal...</div><div class="ttdef"><b>Определения</b> <a href="#l00108">Bone.cs:108</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a9496340b8f39d2f3b70de79457363f7f"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a9496340b8f39d2f3b70de79457363f7f">Spine.Bone.ShearY</a></div><div class="ttdeci">float ShearY</div><div class="ttdoc">The local shearY.</div><div class="ttdef"><b>Определения</b> <a href="#l00081">Bone.cs:81</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a967c874d90fdd83604c2c7d7bc798283"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a967c874d90fdd83604c2c7d7bc798283">Spine.Bone.AShearX</a></div><div class="ttdeci">float AShearX</div><div class="ttdoc">The applied local shearX.</div><div class="ttdef"><b>Определения</b> <a href="#l00102">Bone.cs:102</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_aa1ac7180d78c77b4ff5f0823bfc0b8ac"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#aa1ac7180d78c77b4ff5f0823bfc0b8ac">Spine.Bone.UpdateAppliedTransform</a></div><div class="ttdeci">void UpdateAppliedTransform()</div><div class="ttdoc">Computes the applied transform values from the world transform.</div><div class="ttdef"><b>Определения</b> <a href="#l00307">Bone.cs:307</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_aa8c440acc7431298b9ccafe6d54f10e5"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#aa8c440acc7431298b9ccafe6d54f10e5">Spine.Bone.RotateWorld</a></div><div class="ttdeci">void RotateWorld(float degrees)</div><div class="ttdoc">Rotates the world transform the specified amount.</div><div class="ttdef"><b>Определения</b> <a href="#l00444">Bone.cs:444</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_aaba512ff57ace74ea287eaf67ffe683c"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#aaba512ff57ace74ea287eaf67ffe683c">Spine.Bone.LocalToWorldRotation</a></div><div class="ttdeci">float LocalToWorldRotation(float localRotation)</div><div class="ttdoc">Transforms a local rotation to a world rotation.</div><div class="ttdef"><b>Определения</b> <a href="#l00432">Bone.cs:432</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ab0aa8a98bdd0871ab801adb375724bf7"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ab0aa8a98bdd0871ab801adb375724bf7">Spine.Bone.WorldToParent</a></div><div class="ttdeci">void WorldToParent(float worldX, float worldY, out float parentX, out float parentY)</div><div class="ttdoc">Transforms a point from world coordinates to the parent bone&#39;s local coordinates.</div><div class="ttdef"><b>Определения</b> <a href="#l00405">Bone.cs:405</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ab3811661c5330a129f8ce8c74292266b"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ab3811661c5330a129f8ce8c74292266b">Spine.Bone.AX</a></div><div class="ttdeci">float AX</div><div class="ttdoc">The applied local x translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00090">Bone.cs:90</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ac8f234829fb48b94eb694537100b3570"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ac8f234829fb48b94eb694537100b3570">Spine.Bone.WorldX</a></div><div class="ttdeci">float WorldX</div><div class="ttdoc">The world X position. If changed, UpdateAppliedTransform() should be called.</div><div class="ttdef"><b>Определения</b> <a href="#l00117">Bone.cs:117</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ad86cf0fe043b18cd39791f38f411fb2a"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ad86cf0fe043b18cd39791f38f411fb2a">Spine.Bone.WorldScaleY</a></div><div class="ttdeci">float WorldScaleY</div><div class="ttdoc">Returns the magnitide (always positive) of the world scale Y.</div><div class="ttdef"><b>Определения</b> <a href="#l00128">Bone.cs:128</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ad99c616c62995e4b0c207b1f6608a52c"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ad99c616c62995e4b0c207b1f6608a52c">Spine.Bone.B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Part of the world transform matrix for the Y axis. If changed, UpdateAppliedTransform() should be cal...</div><div class="ttdef"><b>Определения</b> <a href="#l00110">Bone.cs:110</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ae3e3b5774fb19a846db3b39c565d6313"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ae3e3b5774fb19a846db3b39c565d6313">Spine.Bone.Rotation</a></div><div class="ttdeci">float Rotation</div><div class="ttdoc">The local rotation.</div><div class="ttdef"><b>Определения</b> <a href="#l00069">Bone.cs:69</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_ae61f8ff89dc9a52134aa745c8b717aaa"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#ae61f8ff89dc9a52134aa745c8b717aaa">Spine.Bone.Active</a></div><div class="ttdeci">bool Active</div><div class="ttdoc">Returns false when this item won&#39;t be updated by Skeleton.UpdateWorldTransform(Skeleton....</div><div class="ttdef"><b>Определения</b> <a href="#l00063">Bone.cs:63</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_aec562a1c4a29fd87849e77161dbd2f58"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#aec562a1c4a29fd87849e77161dbd2f58">Spine.Bone.UpdateWorldTransform</a></div><div class="ttdeci">void UpdateWorldTransform(float x, float y, float rotation, float scaleX, float scaleY, float shearX, float shearY)</div><div class="ttdoc">Computes the world transform using the parent bone and the specified local transform....</div><div class="ttdef"><b>Определения</b> <a href="#l00172">Bone.cs:172</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_af22e54e68b742c6378c87fa2f5ad7d6c"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#af22e54e68b742c6378c87fa2f5ad7d6c">Spine.Bone.WorldY</a></div><div class="ttdeci">float WorldY</div><div class="ttdoc">The world Y position. If changed, UpdateAppliedTransform() should be called.</div><div class="ttdef"><b>Определения</b> <a href="#l00119">Bone.cs:119</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_math_utils_html"><div class="ttname"><a href="../../d0/d97/class_spine_1_1_math_utils.html">Spine.MathUtils</a></div><div class="ttdef"><b>Определения</b> <a href="../../d8/d1c/_math_utils_8cs_source.html#l00035">MathUtils.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_math_utils_html_a3e98f9d30d651fcde8320c2bdaa41f74"><div class="ttname"><a href="../../d0/d97/class_spine_1_1_math_utils.html#a3e98f9d30d651fcde8320c2bdaa41f74">Spine.MathUtils.Atan2</a></div><div class="ttdeci">static float Atan2(float y, float x)</div><div class="ttdoc">Returns the atan2 using Math.Atan2.</div><div class="ttdef"><b>Определения</b> <a href="../../d8/d1c/_math_utils_8cs_source.html#l00130">MathUtils.cs:130</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html">Spine.Skeleton</a></div><div class="ttdef"><b>Определения</b> <a href="../../df/d5f/_skeleton_8cs_source.html#l00033">Skeleton.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a76c2052feb3e27c26a6ec7aa3d377343"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Spine.Skeleton.Physics</a></div><div class="ttdeci">Physics</div><div class="ttdoc">Determines how physics and other non-deterministic updates are applied.</div><div class="ttdef"><b>Определения</b> <a href="../../df/d5f/_skeleton_8cs_source.html#l00768">Skeleton.cs:768</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_i_updatable_html"><div class="ttname"><a href="../../da/d98/interface_spine_1_1_i_updatable.html">Spine.IUpdatable</a></div><div class="ttdoc">The interface for items updated by Skeleton.UpdateWorldTransform(Physics).</div><div class="ttdef"><b>Определения</b> <a href="../../d7/d1b/_i_updatable_8cs_source.html#l00034">IUpdatable.cs:34</a></div></div>
+<div class="ttc" id="anamespace_data_html"><div class="ttname"><a href="../../de/d75/namespace_data.html">Data</a></div><div class="ttdef"><b>Определения</b> <a href="../../de/d3b/_template_object_8cs_source.html#l00004">TemplateObject.cs:5</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="../../de/de6/namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/de3/_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-csharp</b></li><li class="navelem"><b>Bone.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

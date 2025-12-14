@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Структура Spine.Unity.MeshGeneratorBuffers</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_spine_1_1_unity_1_1_mesh_generator_buffers.html','','struct_spine_1_1_unity_1_1_mesh_generator_buffers-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура Spine.Unity.MeshGeneratorBuffers</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:aa67aca214c17a5f383c79226e3081366" id="r_aa67aca214c17a5f383c79226e3081366"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa67aca214c17a5f383c79226e3081366">vertexCount</a></td></tr>
+<tr class="memdesc:aa67aca214c17a5f383c79226e3081366"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vertex count that will actually be used for the mesh. The Lengths of the buffer arrays may be larger than this number.  <br /></td></tr>
+<tr class="memitem:ab64c38731004ef4c60939c64c069be58" id="r_ab64c38731004ef4c60939c64c069be58"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab64c38731004ef4c60939c64c069be58">vertexBuffer</a></td></tr>
+<tr class="memdesc:ab64c38731004ef4c60939c64c069be58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex positions. To be used for UnityEngine.Mesh.vertices.  <br /></td></tr>
+<tr class="memitem:ababec87d8eeb1387db972f19239b72ad" id="r_ababec87d8eeb1387db972f19239b72ad"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ababec87d8eeb1387db972f19239b72ad">uvBuffer</a></td></tr>
+<tr class="memdesc:ababec87d8eeb1387db972f19239b72ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex texture coordinates (UVs). To be used for UnityEngine.Mesh.uv.  <br /></td></tr>
+<tr class="memitem:a69e38454bc6c2cf59589034c634832e9" id="r_a69e38454bc6c2cf59589034c634832e9"><td class="memItemLeft" align="right" valign="top">Color32[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69e38454bc6c2cf59589034c634832e9">colorBuffer</a></td></tr>
+<tr class="memdesc:a69e38454bc6c2cf59589034c634832e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex colors. To be used for UnityEngine.Mesh.colors32.  <br /></td></tr>
+<tr class="memitem:a39f49c516a5d3c5c0b75f4b7b9085b5b" id="r_a39f49c516a5d3c5c0b75f4b7b9085b5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_unity_1_1_mesh_generator.html">MeshGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39f49c516a5d3c5c0b75f4b7b9085b5b">meshGenerator</a></td></tr>
+<tr class="memdesc:a39f49c516a5d3c5c0b75f4b7b9085b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespace_spine.html">Spine</a> rendering component's <a class="el" href="class_spine_1_1_unity_1_1_mesh_generator.html" title="Holds several methods to prepare and generate a UnityEngine mesh based on a skeleton....">MeshGenerator</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a10b4898018f260106bbcd786fb3aea85" id="r_a10b4898018f260106bbcd786fb3aea85"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10b4898018f260106bbcd786fb3aea85">uv2Buffer</a><code> [get]</code></td></tr>
+<tr class="memdesc:a10b4898018f260106bbcd786fb3aea85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vertex texture coordinates (UVs), second channel. To be used for UnityEngine.Mesh.uv2. Using this accessor automatically allocates and resizes the buffer accordingly.  <br /></td></tr>
+<tr class="memitem:a054df1dd87f54c03e66d35c5db8f6306" id="r_a054df1dd87f54c03e66d35c5db8f6306"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a054df1dd87f54c03e66d35c5db8f6306">uv3Buffer</a><code> [get]</code></td></tr>
+<tr class="memdesc:a054df1dd87f54c03e66d35c5db8f6306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vertex texture coordinates (UVs), third channel. To be used for UnityEngine.Mesh.uv3. Using this accessor automatically allocates and resizes the buffer accordingly.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00075">75</a></p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a69e38454bc6c2cf59589034c634832e9" name="a69e38454bc6c2cf59589034c634832e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e38454bc6c2cf59589034c634832e9">&#9670;&#160;</a></span>colorBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color32 [] Spine.Unity.MeshGeneratorBuffers.colorBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vertex colors. To be used for UnityEngine.Mesh.colors32. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00086">86</a></p>
+
+</div>
+</div>
+<a id="a39f49c516a5d3c5c0b75f4b7b9085b5b" name="a39f49c516a5d3c5c0b75f4b7b9085b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f49c516a5d3c5c0b75f4b7b9085b5b">&#9670;&#160;</a></span>meshGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_unity_1_1_mesh_generator.html">MeshGenerator</a> Spine.Unity.MeshGeneratorBuffers.meshGenerator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="namespace_spine.html">Spine</a> rendering component's <a class="el" href="class_spine_1_1_unity_1_1_mesh_generator.html" title="Holds several methods to prepare and generate a UnityEngine mesh based on a skeleton....">MeshGenerator</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00097">97</a></p>
+
+</div>
+</div>
+<a id="ababec87d8eeb1387db972f19239b72ad" name="ababec87d8eeb1387db972f19239b72ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ababec87d8eeb1387db972f19239b72ad">&#9670;&#160;</a></span>uvBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Spine.Unity.MeshGeneratorBuffers.uvBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vertex texture coordinates (UVs). To be used for UnityEngine.Mesh.uv. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00083">83</a></p>
+
+</div>
+</div>
+<a id="ab64c38731004ef4c60939c64c069be58" name="ab64c38731004ef4c60939c64c069be58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64c38731004ef4c60939c64c069be58">&#9670;&#160;</a></span>vertexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 [] Spine.Unity.MeshGeneratorBuffers.vertexBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vertex positions. To be used for UnityEngine.Mesh.vertices. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00080">80</a></p>
+
+</div>
+</div>
+<a id="aa67aca214c17a5f383c79226e3081366" name="aa67aca214c17a5f383c79226e3081366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67aca214c17a5f383c79226e3081366">&#9670;&#160;</a></span>vertexCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Spine.Unity.MeshGeneratorBuffers.vertexCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The vertex count that will actually be used for the mesh. The Lengths of the buffer arrays may be larger than this number. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00077">77</a></p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Полный список свойств</h2>
+<a id="a10b4898018f260106bbcd786fb3aea85" name="a10b4898018f260106bbcd786fb3aea85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b4898018f260106bbcd786fb3aea85">&#9670;&#160;</a></span>uv2Buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Spine.Unity.MeshGeneratorBuffers.uv2Buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional vertex texture coordinates (UVs), second channel. To be used for UnityEngine.Mesh.uv2. Using this accessor automatically allocates and resizes the buffer accordingly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00090">90</a></p>
+
+</div>
+</div>
+<a id="a054df1dd87f54c03e66d35c5db8f6306" name="a054df1dd87f54c03e66d35c5db8f6306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054df1dd87f54c03e66d35c5db8f6306">&#9670;&#160;</a></span>uv3Buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Spine.Unity.MeshGeneratorBuffers.uv3Buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional vertex texture coordinates (UVs), third channel. To be used for UnityEngine.Mesh.uv3. Using this accessor automatically allocates and resizes the buffer accordingly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="_mesh_generator_8cs_source.html#l00094">94</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-unity/Mesh Generation/<a class="el" href="_mesh_generator_8cs_source.html">MeshGenerator.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_spine.html">Spine</a></li><li class="navelem"><a href="namespace_spine_1_1_unity.html">Unity</a></li><li class="navelem"><a href="struct_spine_1_1_unity_1_1_mesh_generator_buffers.html">MeshGeneratorBuffers</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

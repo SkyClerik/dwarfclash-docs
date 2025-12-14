@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Scripts/Extensions/Time/DateTimeWrapper.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d9/d2a/_date_time_wrapper_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DateTimeWrapper.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>[Serializable]</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> year = 2023;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> month = 1;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> day = 1;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> hour = 0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> minute = 0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> second = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">   31</a></span>    <span class="keyword">public</span> DateTime <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">get</span> =&gt; <span class="keyword">new</span> DateTime(year, month, day, hour, minute, second);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">set</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            year = value.Year;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            month = value.Month;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            day = value.Day;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            hour = value.Hour;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            minute = value.Minute;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            second = value.Second;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#af6ef4a585d244d6b300a05b70fd2fb31">   51</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> <a class="code hl_function" href="../../d5/d94/class_date_time_wrapper.html#af6ef4a585d244d6b300a05b70fd2fb31">operator +</a>(<a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> duration)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> { <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a> = date.Value + duration.Value };</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#a60a06b753084402088b5f3c7a04c2d47">   62</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> <a class="code hl_function" href="../../d5/d94/class_date_time_wrapper.html#a60a06b753084402088b5f3c7a04c2d47">operator -</a>(<a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> duration)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> { <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a> = date.Value - duration.Value };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#acebe71f60571c4717c06a9fa0968d03a">   73</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d5/d94/class_date_time_wrapper.html#a60a06b753084402088b5f3c7a04c2d47">operator -</a>(<a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date1, <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date2)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a> = date1.Value - date2.Value };</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#a5ac9b218bdebafe9f603e2915ac2f937">   84</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> <a class="code hl_function" href="../../d5/d94/class_date_time_wrapper.html#af6ef4a585d244d6b300a05b70fd2fb31">operator +</a>(<a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date, TimeSpan duration)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> { <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a> = date.Value + duration };</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../d5/d94/class_date_time_wrapper.html#a00aa6be2c9dfe0a1f61051ad258c5856">   95</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> <a class="code hl_function" href="../../d5/d94/class_date_time_wrapper.html#a60a06b753084402088b5f3c7a04c2d47">operator -</a>(<a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> date, TimeSpan duration)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a> { <a class="code hl_property" href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">Value</a> = date.Value - duration };</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>[Serializable]</div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="};">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html">  109</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> days = 0;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> hours = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> minutes = 0;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> seconds = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="};">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">  124</a></span>    <span class="keyword">public</span> TimeSpan <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">get</span> =&gt; <span class="keyword">new</span> TimeSpan(days, hours, minutes, seconds);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">set</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            days = value.Days;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            hours = value.Hours;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            minutes = value.Minutes;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            seconds = value.Seconds;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#aeb52228be95aad15b3196bce648e4c4d">  142</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#aeb52228be95aad15b3196bce648e4c4d">operator +</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value + b.Value };</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#acdf9d83df3959c6b2126eaed0585671f">  153</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#acdf9d83df3959c6b2126eaed0585671f">operator -</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value - b.Value };</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#abaec0a603dca8ae31fcd1d964145ce3a">  164</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#abaec0a603dca8ae31fcd1d964145ce3a">operator *</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <span class="keywordtype">int</span> multiplier)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value * multiplier };</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a38fd6da580a403a3730bded2be8f4ed6">  176</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a38fd6da580a403a3730bded2be8f4ed6">operator /</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <span class="keywordtype">int</span> divisor)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">if</span> (divisor == 0) <span class="keywordflow">throw</span> <span class="keyword">new</span> DivideByZeroException();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value / divisor };</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a0c5203e06d580bca88f8118e36c592d0">  188</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#aeb52228be95aad15b3196bce648e4c4d">operator +</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, TimeSpan b)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value + b };</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a67ba65608100a46434d37c3db4fec814">  199</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#acdf9d83df3959c6b2126eaed0585671f">operator -</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, TimeSpan b)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> { <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a> = a.Value - b };</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span></div>
+<div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#aac4ae960e51f4061c1a6e5ea0906fd92">  210</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#aac4ae960e51f4061c1a6e5ea0906fd92">operator &gt;</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">return</span> a.Value &gt; b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="}">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a3b84618093bbd3019fe35e585a5482d4">  221</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a3b84618093bbd3019fe35e585a5482d4">operator &lt;</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span> a.Value &lt; b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span></div>
+<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a61fd72dcf672b4dcabce6804208f1d39">  232</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a61fd72dcf672b4dcabce6804208f1d39">operator &gt;=</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">return</span> a.Value &gt;= b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="foldopen" id="foldopen00243" data-start="{" data-end="}">
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a24211129c68f6d9b252375f5822f7fb2">  243</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a24211129c68f6d9b252375f5822f7fb2">operator &lt;=</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordflow">return</span> a.Value &lt;= b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
+</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
+<div class="foldopen" id="foldopen00254" data-start="{" data-end="}">
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a3734b855d1d5877f4efdb6e99620ee28">  254</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a3734b855d1d5877f4efdb6e99620ee28">operator ==</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">return</span> a.Value == b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
+</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span></div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#ab4836b26d5c570d74ed976125996e3a7">  265</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#ab4836b26d5c570d74ed976125996e3a7">operator !=</a>(<a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> a, <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> b)</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">return</span> a.Value != b.<a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    }</div>
+</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span></div>
+<div class="foldopen" id="foldopen00275" data-start="{" data-end="}">
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#aaf12aecf8afaf81f78fac084e3836491">  275</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#aaf12aecf8afaf81f78fac084e3836491">Equals</a>(<span class="keywordtype">object</span> obj)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">if</span> (obj is <a class="code hl_class" href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a> other)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordflow">return</span> <span class="keyword">this</span> == other;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
+</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span></div>
+<div class="foldopen" id="foldopen00288" data-start="{" data-end="}">
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_time_span_wrapper.html#a117a396998f379b785b6a4e6329719b4">  288</a></span>    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d8b/class_time_span_wrapper.html#a117a396998f379b785b6a4e6329719b4">GetHashCode</a>()</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keywordflow">return</span> <a class="code hl_property" href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">Value</a>.GetHashCode();</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    }</div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
+</div>
+<div class="ttc" id="aclass_date_time_wrapper_html"><div class="ttname"><a href="../../d5/d94/class_date_time_wrapper.html">DateTimeWrapper</a></div><div class="ttdoc">Сериализуемая обертка для System.DateTime, позволяющая редактировать дату и время в инспекторе Unity.</div><div class="ttdef"><b>Определения</b> <a href="#l00012">DateTimeWrapper.cs:13</a></div></div>
+<div class="ttc" id="aclass_date_time_wrapper_html_a60a06b753084402088b5f3c7a04c2d47"><div class="ttname"><a href="../../d5/d94/class_date_time_wrapper.html#a60a06b753084402088b5f3c7a04c2d47">DateTimeWrapper.operator-</a></div><div class="ttdeci">static DateTimeWrapper operator-(DateTimeWrapper date, TimeSpanWrapper duration)</div><div class="ttdoc">Вычитает TimeSpanWrapper из DateTimeWrapper.</div><div class="ttdef"><b>Определения</b> <a href="#l00062">DateTimeWrapper.cs:62</a></div></div>
+<div class="ttc" id="aclass_date_time_wrapper_html_ab8f16fd72bb68616d5a80baa52c9f094"><div class="ttname"><a href="../../d5/d94/class_date_time_wrapper.html#ab8f16fd72bb68616d5a80baa52c9f094">DateTimeWrapper.Value</a></div><div class="ttdeci">DateTime Value</div><div class="ttdoc">Получает или устанавливает текущее значение как System.DateTime.</div><div class="ttdef"><b>Определения</b> <a href="#l00031">DateTimeWrapper.cs:32</a></div></div>
+<div class="ttc" id="aclass_date_time_wrapper_html_af6ef4a585d244d6b300a05b70fd2fb31"><div class="ttname"><a href="../../d5/d94/class_date_time_wrapper.html#af6ef4a585d244d6b300a05b70fd2fb31">DateTimeWrapper.operator+</a></div><div class="ttdeci">static DateTimeWrapper operator+(DateTimeWrapper date, TimeSpanWrapper duration)</div><div class="ttdoc">Добавляет TimeSpanWrapper к DateTimeWrapper.</div><div class="ttdef"><b>Определения</b> <a href="#l00051">DateTimeWrapper.cs:51</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html">TimeSpanWrapper</a></div><div class="ttdoc">Сериализуемая обертка для System.TimeSpan, позволяющая редактировать продолжительность времени в инсп...</div><div class="ttdef"><b>Определения</b> <a href="#l00109">DateTimeWrapper.cs:110</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a117a396998f379b785b6a4e6329719b4"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a117a396998f379b785b6a4e6329719b4">TimeSpanWrapper.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Служит хэш-функцией по умолчанию.</div><div class="ttdef"><b>Определения</b> <a href="#l00288">DateTimeWrapper.cs:288</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a24211129c68f6d9b252375f5822f7fb2"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a24211129c68f6d9b252375f5822f7fb2">TimeSpanWrapper.operator&lt;=</a></div><div class="ttdeci">static bool operator&lt;=(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на &quot;меньше или равно&quot;.</div><div class="ttdef"><b>Определения</b> <a href="#l00243">DateTimeWrapper.cs:243</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a3734b855d1d5877f4efdb6e99620ee28"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a3734b855d1d5877f4efdb6e99620ee28">TimeSpanWrapper.operator==</a></div><div class="ttdeci">static bool operator==(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на равенство.</div><div class="ttdef"><b>Определения</b> <a href="#l00254">DateTimeWrapper.cs:254</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a38fd6da580a403a3730bded2be8f4ed6"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a38fd6da580a403a3730bded2be8f4ed6">TimeSpanWrapper.operator/</a></div><div class="ttdeci">static TimeSpanWrapper operator/(TimeSpanWrapper a, int divisor)</div><div class="ttdoc">Делит TimeSpanWrapper на целочисленный делитель.</div><div class="ttdef"><b>Определения</b> <a href="#l00176">DateTimeWrapper.cs:176</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a3b84618093bbd3019fe35e585a5482d4"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a3b84618093bbd3019fe35e585a5482d4">TimeSpanWrapper.operator&lt;</a></div><div class="ttdeci">static bool operator&lt;(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на &quot;меньше&quot;.</div><div class="ttdef"><b>Определения</b> <a href="#l00221">DateTimeWrapper.cs:221</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a61fd72dcf672b4dcabce6804208f1d39"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a61fd72dcf672b4dcabce6804208f1d39">TimeSpanWrapper.operator&gt;=</a></div><div class="ttdeci">static bool operator&gt;=(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на &quot;больше или равно&quot;.</div><div class="ttdef"><b>Определения</b> <a href="#l00232">DateTimeWrapper.cs:232</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_a69811c3ca7b430d5cdb8f133caf5376b"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#a69811c3ca7b430d5cdb8f133caf5376b">TimeSpanWrapper.Value</a></div><div class="ttdeci">TimeSpan Value</div><div class="ttdoc">Получает или устанавливает текущее значение как System.TimeSpan.</div><div class="ttdef"><b>Определения</b> <a href="#l00124">DateTimeWrapper.cs:125</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_aac4ae960e51f4061c1a6e5ea0906fd92"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#aac4ae960e51f4061c1a6e5ea0906fd92">TimeSpanWrapper.operator&gt;</a></div><div class="ttdeci">static bool operator&gt;(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на &quot;больше&quot;.</div><div class="ttdef"><b>Определения</b> <a href="#l00210">DateTimeWrapper.cs:210</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_aaf12aecf8afaf81f78fac084e3836491"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#aaf12aecf8afaf81f78fac084e3836491">TimeSpanWrapper.Equals</a></div><div class="ttdeci">override bool Equals(object obj)</div><div class="ttdoc">Определяет, равен ли указанный объект текущему объекту TimeSpanWrapper.</div><div class="ttdef"><b>Определения</b> <a href="#l00275">DateTimeWrapper.cs:275</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_ab4836b26d5c570d74ed976125996e3a7"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#ab4836b26d5c570d74ed976125996e3a7">TimeSpanWrapper.operator!=</a></div><div class="ttdeci">static bool operator!=(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Сравнивает два TimeSpanWrapper на неравенство.</div><div class="ttdef"><b>Определения</b> <a href="#l00265">DateTimeWrapper.cs:265</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_abaec0a603dca8ae31fcd1d964145ce3a"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#abaec0a603dca8ae31fcd1d964145ce3a">TimeSpanWrapper.operator*</a></div><div class="ttdeci">static TimeSpanWrapper operator*(TimeSpanWrapper a, int multiplier)</div><div class="ttdoc">Умножает TimeSpanWrapper на целочисленный множитель.</div><div class="ttdef"><b>Определения</b> <a href="#l00164">DateTimeWrapper.cs:164</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_acdf9d83df3959c6b2126eaed0585671f"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#acdf9d83df3959c6b2126eaed0585671f">TimeSpanWrapper.operator-</a></div><div class="ttdeci">static TimeSpanWrapper operator-(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Вычитает один TimeSpanWrapper из другого.</div><div class="ttdef"><b>Определения</b> <a href="#l00153">DateTimeWrapper.cs:153</a></div></div>
+<div class="ttc" id="aclass_time_span_wrapper_html_aeb52228be95aad15b3196bce648e4c4d"><div class="ttname"><a href="../../d9/d8b/class_time_span_wrapper.html#aeb52228be95aad15b3196bce648e4c4d">TimeSpanWrapper.operator+</a></div><div class="ttdeci">static TimeSpanWrapper operator+(TimeSpanWrapper a, TimeSpanWrapper b)</div><div class="ttdoc">Складывает два TimeSpanWrapper.</div><div class="ttdef"><b>Определения</b> <a href="#l00142">DateTimeWrapper.cs:142</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Scripts</b></li><li class="navelem"><b>Extensions</b></li><li class="navelem"><b>Time</b></li><li class="navelem"><b>DateTimeWrapper.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Scripts/Extensions/ComponentExt.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_ext_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentExt.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_toolbox.html">Toolbox</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html">    5</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">partial class </span><a class="code hl_class" href="class_toolbox_1_1_component_ext.html">ComponentExt</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#aced485f400809a5d7822addfee784d43">   13</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> I <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#aced485f400809a5d7822addfee784d43">GetInterfaceComponent&lt;I&gt;</a>(<span class="keyword">this</span> Component comp) where I : <span class="keyword">class</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> comp.GetComponent(typeof(I)) as I;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#a655ed6ff361e302602b4eaa7ec72ecb0">   24</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> I[] <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#a655ed6ff361e302602b4eaa7ec72ecb0">GetInterfaceComponents&lt;I&gt;</a>(<span class="keyword">this</span> Component comp) where I : <span class="keyword">class</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            var components = comp.GetComponents(typeof(I));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            I[] iComponents = <span class="keyword">new</span> I[components.Length];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            components.CopyTo(iComponents, 0);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> iComponents;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#aca0830ccbf3f36be43aab26baa6dde04">   38</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#aca0830ccbf3f36be43aab26baa6dde04">GetSafeComponent&lt;T&gt;</a>(<span class="keyword">this</span> Component comp) where T : Component</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            T component = comp.GetComponent&lt;T&gt;();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (component == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                Debug.LogError(<span class="stringliteral">&quot;Component of type &quot;</span> + typeof(T) + <span class="stringliteral">&quot; not found&quot;</span>, comp);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> component;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#a376bb75916e8f9fdc214c7a6f8b426a5">   52</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#a376bb75916e8f9fdc214c7a6f8b426a5">GetComponent&lt;T&gt;</a>(<span class="keyword">this</span> GameObject inst) where T : <span class="keyword">class</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> inst.GetComponent(typeof(T)) as T;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#a02bde30664fb7d82f945291eeb8971a2">   64</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#a02bde30664fb7d82f945291eeb8971a2">TryGetComponentInChildren&lt;T&gt;</a>(<span class="keyword">this</span> Transform transform, out T component) where T : Component</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            component = transform.GetComponent&lt;T&gt;();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (component != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">foreach</span> (Transform child <span class="keywordflow">in</span> transform)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">if</span> (child.TryGetComponentInChildren&lt;T&gt;(out component))</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_toolbox_1_1_component_ext.html#a1b75cbc553797beb15018a520e51e5aa">   85</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="class_toolbox_1_1_component_ext.html#a1b75cbc553797beb15018a520e51e5aa">GetComponentIncludingDisabled&lt;T&gt;</a>(<span class="keyword">this</span> GameObject inst) where T : Component</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            T[] components = inst.GetComponents&lt;T&gt;();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">return</span> components.Length &gt; 0 ? components[0] : <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html">Toolbox.ComponentExt</a></div><div class="ttdef"><b>Определения</b> <a href="#l00005">ComponentExt.cs:6</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_a02bde30664fb7d82f945291eeb8971a2"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#a02bde30664fb7d82f945291eeb8971a2">Toolbox.ComponentExt.TryGetComponentInChildren&lt; T &gt;</a></div><div class="ttdeci">static bool TryGetComponentInChildren&lt; T &gt;(this Transform transform, out T component)</div><div class="ttdoc">Пытается рекурсивно найти компонент указанного типа в текущем Transform или его дочерних объектах.</div><div class="ttdef"><b>Определения</b> <a href="#l00064">ComponentExt.cs:64</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_a1b75cbc553797beb15018a520e51e5aa"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#a1b75cbc553797beb15018a520e51e5aa">Toolbox.ComponentExt.GetComponentIncludingDisabled&lt; T &gt;</a></div><div class="ttdeci">static T GetComponentIncludingDisabled&lt; T &gt;(this GameObject inst)</div><div class="ttdoc">Получает первый найденный компонент типа T на GameObject, даже если он отключен (disabled).</div><div class="ttdef"><b>Определения</b> <a href="#l00085">ComponentExt.cs:85</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_a376bb75916e8f9fdc214c7a6f8b426a5"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#a376bb75916e8f9fdc214c7a6f8b426a5">Toolbox.ComponentExt.GetComponent&lt; T &gt;</a></div><div class="ttdeci">static T GetComponent&lt; T &gt;(this GameObject inst)</div><div class="ttdoc">Получает компонент с игрового объекта, поддерживая поиск по типу интерфейса.</div><div class="ttdef"><b>Определения</b> <a href="#l00052">ComponentExt.cs:52</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_a655ed6ff361e302602b4eaa7ec72ecb0"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#a655ed6ff361e302602b4eaa7ec72ecb0">Toolbox.ComponentExt.GetInterfaceComponents&lt; I &gt;</a></div><div class="ttdeci">static I[] GetInterfaceComponents&lt; I &gt;(this Component comp)</div><div class="ttdoc">Получает все компоненты на GameObject, реализующие указанный интерфейс.</div><div class="ttdef"><b>Определения</b> <a href="#l00024">ComponentExt.cs:24</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_aca0830ccbf3f36be43aab26baa6dde04"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#aca0830ccbf3f36be43aab26baa6dde04">Toolbox.ComponentExt.GetSafeComponent&lt; T &gt;</a></div><div class="ttdeci">static T GetSafeComponent&lt; T &gt;(this Component comp)</div><div class="ttdoc">Безопасно получает компонент типа T. В случае отсутствия компонента, выводит ошибку в консоль,...</div><div class="ttdef"><b>Определения</b> <a href="#l00038">ComponentExt.cs:38</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_component_ext_html_aced485f400809a5d7822addfee784d43"><div class="ttname"><a href="class_toolbox_1_1_component_ext.html#aced485f400809a5d7822addfee784d43">Toolbox.ComponentExt.GetInterfaceComponent&lt; I &gt;</a></div><div class="ttdeci">static I GetInterfaceComponent&lt; I &gt;(this Component comp)</div><div class="ttdoc">Получает первый найденный на GameObject компонент, реализующий указанный интерфейс.</div><div class="ttdef"><b>Определения</b> <a href="#l00013">ComponentExt.cs:13</a></div></div>
+<div class="ttc" id="anamespace_toolbox_html"><div class="ttname"><a href="namespace_toolbox.html">Toolbox</a></div><div class="ttdef"><b>Определения</b> <a href="_color_ext_8cs_source.html#l00003">ColorExt.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Scripts</b></li><li class="navelem"><b>Extensions</b></li><li class="navelem"><b>ComponentExt.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

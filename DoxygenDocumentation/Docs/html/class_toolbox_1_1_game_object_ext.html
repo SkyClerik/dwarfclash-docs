@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Toolbox.GameObjectExt</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_toolbox_1_1_game_object_ext.html','','class_toolbox_1_1_game_object_ext-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Toolbox.GameObjectExt</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a9ad4ae69391ea28f173330089ab159ae" id="r_a9ad4ae69391ea28f173330089ab159ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad4ae69391ea28f173330089ab159ae">SetLayerRecursively</a> (this GameObject inst, int layer)</td></tr>
+<tr class="memdesc:a9ad4ae69391ea28f173330089ab159ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекурсивно устанавливает указанный слой для игрового объекта и всех его дочерних объектов.  <br /></td></tr>
+<tr class="memitem:a4305c8101d9a3629f1472fdf0ed79db2" id="r_a4305c8101d9a3629f1472fdf0ed79db2"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4305c8101d9a3629f1472fdf0ed79db2">FindTypeAboveObject&lt; T &gt;</a> (this GameObject inst)</td></tr>
+<tr class="memdesc:a4305c8101d9a3629f1472fdf0ed79db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Находит первый родительский игровой объект (включая текущий), на котором есть компонент указанного типа.  <br /></td></tr>
+<tr class="memitem:a5b5887eda16599aad4269f02eb381683" id="r_a5b5887eda16599aad4269f02eb381683"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b5887eda16599aad4269f02eb381683">FindTypeAboveObjectRecursive&lt; T &gt;</a> (this GameObject inst)</td></tr>
+<tr class="memdesc:a5b5887eda16599aad4269f02eb381683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекурсивно поднимается по иерархии от <span class="tt">inst</span>, чтобы найти <span class="tt">GameObject</span> с компонентом типа <span class="tt">T</span>.  <br /></td></tr>
+<tr class="memitem:ae30064688823399113ed4f864792fd66" id="r_ae30064688823399113ed4f864792fd66"><td class="memItemLeft" align="right" valign="top">static Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae30064688823399113ed4f864792fd66">FindChildRecursiveByName</a> (this GameObject inst, string name)</td></tr>
+<tr class="memdesc:ae30064688823399113ed4f864792fd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекурсивно находит дочерний объект с указанным именем.  <br /></td></tr>
+<tr class="memitem:a1a472ab1e770c8a5538b5677497b6ef2" id="r_a1a472ab1e770c8a5538b5677497b6ef2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a472ab1e770c8a5538b5677497b6ef2">Show</a> (this GameObject inst)</td></tr>
+<tr class="memdesc:a1a472ab1e770c8a5538b5677497b6ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показывает игровой объект, устанавливая его активным. Является null-safe.  <br /></td></tr>
+<tr class="memitem:a16b509d832d8329b832b2f43a0530982" id="r_a16b509d832d8329b832b2f43a0530982"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b509d832d8329b832b2f43a0530982">Hide</a> (this GameObject inst)</td></tr>
+<tr class="memdesc:a16b509d832d8329b832b2f43a0530982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скрывает игровой объект, устанавливая его неактивным. Является null-safe.  <br /></td></tr>
+<tr class="memitem:a4233c73daf40a1858f5eccc30eee4c9e" id="r_a4233c73daf40a1858f5eccc30eee4c9e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4233c73daf40a1858f5eccc30eee4c9e">IsReady</a> (this Object inst)</td></tr>
+<tr class="memdesc:a4233c73daf40a1858f5eccc30eee4c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, что объект не равен null.  <br /></td></tr>
+<tr class="memitem:a0e5965687da06aeadc263b1bfcfdcd4f" id="r_a0e5965687da06aeadc263b1bfcfdcd4f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e5965687da06aeadc263b1bfcfdcd4f">DestroyChildren</a> (this GameObject inst)</td></tr>
+<tr class="memdesc:a0e5965687da06aeadc263b1bfcfdcd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отвязывает и уничтожает всех непосредственных дочерних объектов у игрового объекта.  <br /></td></tr>
+<tr class="memitem:a50d7280874fe7dcaf918656394ae3a7b" id="r_a50d7280874fe7dcaf918656394ae3a7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50d7280874fe7dcaf918656394ae3a7b">ChangeLayersRecursively</a> (this GameObject inst, string name)</td></tr>
+<tr class="memdesc:a50d7280874fe7dcaf918656394ae3a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекурсивно изменяет слой всех дочерних объектов на указанный слой по имени.  <br /></td></tr>
+<tr class="memitem:ae79a22cafa7cec6776b4230df291d96e" id="r_ae79a22cafa7cec6776b4230df291d96e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae79a22cafa7cec6776b4230df291d96e">IsRenderersVisible</a> (GameObject inst)</td></tr>
+<tr class="memdesc:ae79a22cafa7cec6776b4230df291d96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, видим ли хотя бы один рендерер на игровом объекте или в его дочерних объектах.  <br /></td></tr>
+<tr class="memitem:ad1753ecbc9107f3f8e6b4032b4b0e849" id="r_ad1753ecbc9107f3f8e6b4032b4b0e849"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1753ecbc9107f3f8e6b4032b4b0e849">ShowRenderers</a> (GameObject inst)</td></tr>
+<tr class="memdesc:ad1753ecbc9107f3f8e6b4032b4b0e849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включает все рендереры на игровом объекте и во всех его дочерних объектах.  <br /></td></tr>
+<tr class="memitem:a14784e66e6c90d73391f8b1022e62478" id="r_a14784e66e6c90d73391f8b1022e62478"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14784e66e6c90d73391f8b1022e62478">HideRenderers</a> (GameObject inst)</td></tr>
+<tr class="memdesc:a14784e66e6c90d73391f8b1022e62478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отключает все рендереры на игровом объекте и во всех его дочерних объектах.  <br /></td></tr>
+<tr class="memitem:ac42b90b13110e3a7a326abcab1957902" id="r_ac42b90b13110e3a7a326abcab1957902"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac42b90b13110e3a7a326abcab1957902">DumpRootTransforms</a> ()</td></tr>
+<tr class="memdesc:ac42b90b13110e3a7a326abcab1957902"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DEBUG] Выводит в лог информацию о всех корневых объектах сцены.  <br /></td></tr>
+<tr class="memitem:a560b316d52c6bec0eb293ecbcdc9e385" id="r_a560b316d52c6bec0eb293ecbcdc9e385"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560b316d52c6bec0eb293ecbcdc9e385">DumpGoToLog</a> (GameObject go)</td></tr>
+<tr class="memdesc:a560b316d52c6bec0eb293ecbcdc9e385"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DEBUG] Выводит в лог дамп иерархии и свойств для указанного игрового объекта.  <br /></td></tr>
+<tr class="memitem:affb4ba4725521a17a1fbedadb8252af8" id="r_affb4ba4725521a17a1fbedadb8252af8"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affb4ba4725521a17a1fbedadb8252af8">DumpGo</a> (GameObject go)</td></tr>
+<tr class="memdesc:affb4ba4725521a17a1fbedadb8252af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DEBUG] Формирует строку с подробной информацией об игровом объекте и его дочерних объектах.  <br /></td></tr>
+<tr class="memitem:a4ff12b5b4c08d92be3e81b3ec0a4f757" id="r_a4ff12b5b4c08d92be3e81b3ec0a4f757"><td class="memItemLeft" align="right" valign="top">static List&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ff12b5b4c08d92be3e81b3ec0a4f757">GetDirectChildren</a> (this GameObject parent)</td></tr>
+<tr class="memdesc:a4ff12b5b4c08d92be3e81b3ec0a4f757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список непосредственных дочерних GameObject'ов у данного объекта (не рекурсивно).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00007">7</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a50d7280874fe7dcaf918656394ae3a7b" name="a50d7280874fe7dcaf918656394ae3a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d7280874fe7dcaf918656394ae3a7b">&#9670;&#160;</a></span>ChangeLayersRecursively()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.ChangeLayersRecursively </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рекурсивно изменяет слой всех дочерних объектов на указанный слой по имени. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Корневой игровой объект.</td></tr>
+    <tr><td class="paramname">name</td><td>Имя слоя для установки.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00166">166</a></p>
+
+</div>
+</div>
+<a id="a0e5965687da06aeadc263b1bfcfdcd4f" name="a0e5965687da06aeadc263b1bfcfdcd4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5965687da06aeadc263b1bfcfdcd4f">&#9670;&#160;</a></span>DestroyChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.DestroyChildren </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отвязывает и уничтожает всех непосредственных дочерних объектов у игрового объекта. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Родительский игровой объект, дочерние элементы которого нужно уничтожить.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a id="affb4ba4725521a17a1fbedadb8252af8" name="affb4ba4725521a17a1fbedadb8252af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb4ba4725521a17a1fbedadb8252af8">&#9670;&#160;</a></span>DumpGo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Toolbox.GameObjectExt.DumpGo </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>go</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[DEBUG] Формирует строку с подробной информацией об игровом объекте и его дочерних объектах. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">go</td><td>Игровой объект для анализа.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с отформатированной информацией об иерархии и свойствах.</dd></dl>
+<p>Этот метод предназначен для отладки и может быть удален в релизных сборках. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00295">295</a></p>
+
+</div>
+</div>
+<a id="a560b316d52c6bec0eb293ecbcdc9e385" name="a560b316d52c6bec0eb293ecbcdc9e385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560b316d52c6bec0eb293ecbcdc9e385">&#9670;&#160;</a></span>DumpGoToLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.DumpGoToLog </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>go</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[DEBUG] Выводит в лог дамп иерархии и свойств для указанного игрового объекта. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">go</td><td>Игровой объект для вывода в лог.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Этот метод предназначен для отладки и может быть удален в релизных сборках. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00282">282</a></p>
+
+</div>
+</div>
+<a id="ac42b90b13110e3a7a326abcab1957902" name="ac42b90b13110e3a7a326abcab1957902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42b90b13110e3a7a326abcab1957902">&#9670;&#160;</a></span>DumpRootTransforms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.DumpRootTransforms </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>[DEBUG] Выводит в лог информацию о всех корневых объектах сцены. </p>
+<p>Этот метод предназначен для отладки и может быть удален в релизных сборках. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00262">262</a></p>
+
+</div>
+</div>
+<a id="ae30064688823399113ed4f864792fd66" name="ae30064688823399113ed4f864792fd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30064688823399113ed4f864792fd66">&#9670;&#160;</a></span>FindChildRecursiveByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform Toolbox.GameObjectExt.FindChildRecursiveByName </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рекурсивно находит дочерний объект с указанным именем. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект, с которого начинается поиск.</td></tr>
+    <tr><td class="paramname">name</td><td>Имя дочернего объекта для поиска.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Transform найденного дочернего объекта или <span class="tt">null</span>, если не найден.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00077">77</a></p>
+
+</div>
+</div>
+<a id="a4305c8101d9a3629f1472fdf0ed79db2" name="a4305c8101d9a3629f1472fdf0ed79db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4305c8101d9a3629f1472fdf0ed79db2">&#9670;&#160;</a></span>FindTypeAboveObject&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Toolbox.GameObjectExt.FindTypeAboveObject&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Находит первый родительский игровой объект (включая текущий), на котором есть компонент указанного типа. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Тип компонента или интерфейса для поиска.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект, с которого начинается поиск вверх по иерархии.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Найденный <span class="tt">GameObject</span> или <span class="tt">null</span>, если ничего не найдено.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Согласование типов</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="a5b5887eda16599aad4269f02eb381683" name="a5b5887eda16599aad4269f02eb381683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b5887eda16599aad4269f02eb381683">&#9670;&#160;</a></span>FindTypeAboveObjectRecursive&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Toolbox.GameObjectExt.FindTypeAboveObjectRecursive&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рекурсивно поднимается по иерархии от <span class="tt">inst</span>, чтобы найти <span class="tt">GameObject</span> с компонентом типа <span class="tt">T</span>. </p>
+<p>Это рекурсивный вспомогательный метод для <span class="tt">FindTypeAboveObject</span>. Рекомендуется использовать <span class="tt">FindTypeAboveObject</span>. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Тип компонента или интерфейса для поиска.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Текущий проверяемый игровой объект.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Найденный <span class="tt">GameObject</span> или <span class="tt">null</span>, если достигнут корень иерархии без результата.</dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Согласование типов</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00048">48</a></p>
+
+</div>
+</div>
+<a id="a4ff12b5b4c08d92be3e81b3ec0a4f757" name="a4ff12b5b4c08d92be3e81b3ec0a4f757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff12b5b4c08d92be3e81b3ec0a4f757">&#9670;&#160;</a></span>GetDirectChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; GameObject &gt; Toolbox.GameObjectExt.GetDirectChildren </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает список непосредственных дочерних GameObject'ов у данного объекта (не рекурсивно). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Родительский GameObject.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Список дочерних GameObject'ов.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00342">342</a></p>
+
+</div>
+</div>
+<a id="a16b509d832d8329b832b2f43a0530982" name="a16b509d832d8329b832b2f43a0530982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b509d832d8329b832b2f43a0530982">&#9670;&#160;</a></span>Hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.Hide </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Скрывает игровой объект, устанавливая его неактивным. Является null-safe. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект для деактивации.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00119">119</a></p>
+
+</div>
+</div>
+<a id="a14784e66e6c90d73391f8b1022e62478" name="a14784e66e6c90d73391f8b1022e62478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14784e66e6c90d73391f8b1022e62478">&#9670;&#160;</a></span>HideRenderers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.HideRenderers </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отключает все рендереры на игровом объекте и во всех его дочерних объектах. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект, рендереры которого нужно отключить.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00237">237</a></p>
+
+</div>
+</div>
+<a id="a4233c73daf40a1858f5eccc30eee4c9e" name="a4233c73daf40a1858f5eccc30eee4c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4233c73daf40a1858f5eccc30eee4c9e">&#9670;&#160;</a></span>IsReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Toolbox.GameObjectExt.IsReady </td>
+          <td>(</td>
+          <td class="paramtype">this Object</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, что объект не равен null. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Проверяемый объект.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает <span class="tt">true</span>, если объект не <span class="tt">null</span>, иначе <span class="tt">false</span>.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00132">132</a></p>
+
+</div>
+</div>
+<a id="ae79a22cafa7cec6776b4230df291d96e" name="ae79a22cafa7cec6776b4230df291d96e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79a22cafa7cec6776b4230df291d96e">&#9670;&#160;</a></span>IsRenderersVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Toolbox.GameObjectExt.IsRenderersVisible </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, видим ли хотя бы один рендерер на игровом объекте или в его дочерних объектах. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект для проверки.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает <span class="tt">true</span>, если найден хотя бы один активный рендерер, иначе <span class="tt">false</span>.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00183">183</a></p>
+
+</div>
+</div>
+<a id="a9ad4ae69391ea28f173330089ab159ae" name="a9ad4ae69391ea28f173330089ab159ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad4ae69391ea28f173330089ab159ae">&#9670;&#160;</a></span>SetLayerRecursively()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.SetLayerRecursively </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рекурсивно устанавливает указанный слой для игрового объекта и всех его дочерних объектов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Корневой игровой объект, для которого нужно установить слой.</td></tr>
+    <tr><td class="paramname">layer</td><td>Номер слоя для установки.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="a1a472ab1e770c8a5538b5677497b6ef2" name="a1a472ab1e770c8a5538b5677497b6ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a472ab1e770c8a5538b5677497b6ef2">&#9670;&#160;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.Show </td>
+          <td>(</td>
+          <td class="paramtype">this GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Показывает игровой объект, устанавливая его активным. Является null-safe. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект для активации.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00107">107</a></p>
+
+</div>
+</div>
+<a id="ad1753ecbc9107f3f8e6b4032b4b0e849" name="ad1753ecbc9107f3f8e6b4032b4b0e849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1753ecbc9107f3f8e6b4032b4b0e849">&#9670;&#160;</a></span>ShowRenderers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Toolbox.GameObjectExt.ShowRenderers </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>inst</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Включает все рендереры на игровом объекте и во всех его дочерних объектах. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inst</td><td>Игровой объект, рендереры которого нужно включить.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a> строка <a class="el" href="_game_object_ext_8cs_source.html#l00214">214</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Scripts/Extensions/<a class="el" href="_game_object_ext_8cs_source.html">GameObjectExt.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_toolbox.html">Toolbox</a></li><li class="navelem"><a href="class_toolbox_1_1_game_object_ext.html">GameObjectExt</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

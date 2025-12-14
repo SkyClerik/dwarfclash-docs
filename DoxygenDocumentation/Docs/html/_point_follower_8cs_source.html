@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-unity/Components/Following/PointFollower.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_point_follower_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PointFollower.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define NEW_PREFAB_SYSTEM</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_spine_1_1_unity.html">Spine.Unity</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#if NEW_PREFAB_SYSTEM</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    [ExecuteAlways]</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    [ExecuteInEditMode]</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    [AddComponentMenu(<span class="stringliteral">&quot;Spine/Point Follower&quot;</span>)]</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    [HelpURL(<span class="stringliteral">&quot;http://esotericsoftware.com/spine-unity#PointFollower&quot;</span>)]</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_point_follower.html">   45</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_spine_1_1_unity_1_1_point_follower.html">PointFollower</a> : MonoBehaviour, <a class="code hl_interface" href="interface_spine_1_1_unity_1_1_i_has_skeleton_renderer.html">IHasSkeletonRenderer</a>, <a class="code hl_interface" href="interface_spine_1_1_unity_1_1_i_has_skeleton_component.html">IHasSkeletonComponent</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">public</span> SkeletonRenderer skeletonRenderer;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> SkeletonRenderer SkeletonRenderer { <span class="keyword">get</span> { <span class="keywordflow">return</span> this.skeletonRenderer; } }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">public</span> <a class="code hl_interface" href="interface_spine_1_1_unity_1_1_i_skeleton_component.html">ISkeletonComponent</a> SkeletonComponent { <span class="keyword">get</span> { <span class="keywordflow">return</span> skeletonRenderer as <a class="code hl_interface" href="interface_spine_1_1_unity_1_1_i_skeleton_component.html">ISkeletonComponent</a>; } }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        [<a class="code hl_class" href="class_spine_1_1_unity_1_1_spine_slot.html">SpineSlot</a>(dataField: <span class="stringliteral">&quot;skeletonRenderer&quot;</span>, includeNone: <span class="keyword">true</span>)]</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> slotName;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        [<a class="code hl_class" href="class_spine_1_1_unity_1_1_spine_attachment.html">SpineAttachment</a>(slotField: <span class="stringliteral">&quot;slotName&quot;</span>, dataField: <span class="stringliteral">&quot;skeletonRenderer&quot;</span>, fallbackToTextField: <span class="keyword">true</span>, includeNone: <span class="keyword">true</span>)]</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> pointAttachmentName;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> followRotation = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> followSkeletonFlip = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> followSkeletonZPosition = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        Transform skeletonTransform;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">bool</span> skeletonTransformIsParent;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_class" href="class_spine_1_1_point_attachment.html">PointAttachment</a> point;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="class_spine_1_1_bone.html">Bone</a> bone;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">bool</span> valid;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> IsValid { <span class="keyword">get</span> { <span class="keywordflow">return</span> valid; } }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize () {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            valid = skeletonRenderer != <span class="keyword">null</span> &amp;&amp; skeletonRenderer.valid;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!valid)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            UpdateReferences();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (Application.isEditor) LateUpdate();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> HandleRebuildRenderer (SkeletonRenderer skeletonRenderer) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            Initialize();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">void</span> UpdateReferences () {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            skeletonTransform = skeletonRenderer.transform;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            skeletonRenderer.OnRebuild -= HandleRebuildRenderer;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            skeletonRenderer.OnRebuild += HandleRebuildRenderer;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            skeletonTransformIsParent = Transform.ReferenceEquals(skeletonTransform, transform.parent);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            bone = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            point = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(pointAttachmentName)) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <a class="code hl_class" href="class_spine_1_1_skeleton.html">Skeleton</a> skeleton = skeletonRenderer.Skeleton;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <a class="code hl_class" href="class_spine_1_1_slot.html">Slot</a> slot = skeleton.<a class="code hl_function" href="class_spine_1_1_skeleton.html#aeeaf7abe56f807e6e57f3a2514e607ab">FindSlot</a>(slotName);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">if</span> (slot != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <span class="keywordtype">int</span> slotIndex = slot.<a class="code hl_property" href="class_spine_1_1_slot.html#a6e9a5703aa22dfe4a18aea4b22d97a65">Data</a>.<a class="code hl_property" href="class_spine_1_1_slot_data.html#a4de0d7e679e9f1d72d56705bd4a7301c">Index</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    bone = slot.<a class="code hl_property" href="class_spine_1_1_slot.html#a31ea34a42ecc5cc6791856d7937a70a3">Bone</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    point = skeleton.<a class="code hl_function" href="class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">GetAttachment</a>(slotIndex, pointAttachmentName) as <a class="code hl_class" href="class_spine_1_1_point_attachment.html">PointAttachment</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> OnDestroy () {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (skeletonRenderer != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                skeletonRenderer.OnRebuild -= HandleRebuildRenderer;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> LateUpdate () {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (!Application.isPlaying) skeletonTransformIsParent = Transform.ReferenceEquals(skeletonTransform, transform.parent);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">if</span> (point == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(pointAttachmentName)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                UpdateReferences();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">if</span> (point == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            Vector2 worldPos;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            point.ComputeWorldPosition(bone, out worldPos.x, out worldPos.y);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordtype">float</span> rotation = point.ComputeWorldRotation(bone);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            Transform thisTransform = this.transform;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (skeletonTransformIsParent) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="comment">// Recommended setup: Use local transform properties if Spine GameObject is the immediate parent</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                thisTransform.localPosition = <span class="keyword">new</span> Vector3(worldPos.x, worldPos.y, followSkeletonZPosition ? 0f : thisTransform.localPosition.z);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">if</span> (followRotation) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordtype">float</span> halfRotation = rotation * 0.5f * Mathf.Deg2Rad;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    Quaternion q = <span class="keywordflow">default</span>(Quaternion);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    q.z = Mathf.Sin(halfRotation);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    q.w = Mathf.Cos(halfRotation);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    thisTransform.localRotation = q;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="comment">// For special cases: Use transform world properties if transform relationship is complicated</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                Vector3 targetWorldPosition = skeletonTransform.TransformPoint(<span class="keyword">new</span> Vector3(worldPos.x, worldPos.y, 0f));</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                <span class="keywordflow">if</span> (!followSkeletonZPosition)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    targetWorldPosition.z = thisTransform.position.z;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                Transform transformParent = thisTransform.parent;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordflow">if</span> (transformParent != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    Matrix4x4 m = transformParent.localToWorldMatrix;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    <span class="keywordflow">if</span> (m.m00 * m.m11 - m.m01 * m.m10 &lt; 0) <span class="comment">// Determinant2D is negative</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        rotation = -rotation;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                <span class="keywordflow">if</span> (followRotation) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                    Vector3 transformWorldRotation = skeletonTransform.rotation.eulerAngles;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    thisTransform.SetPositionAndRotation(targetWorldPosition, Quaternion.Euler(transformWorldRotation.x, transformWorldRotation.y, transformWorldRotation.z + rotation));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                    thisTransform.position = targetWorldPosition;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keywordflow">if</span> (followSkeletonFlip) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                Vector3 localScale = thisTransform.localScale;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                localScale.y = Mathf.Abs(localScale.y) * Mathf.Sign(bone.Skeleton.ScaleX * bone.Skeleton.ScaleY);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                thisTransform.localScale = localScale;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_bone_html"><div class="ttname"><a href="class_spine_1_1_bone.html">Spine.Bone</a></div><div class="ttdoc">Stores a bone&#39;s current pose.</div><div class="ttdef"><b>Определения</b> <a href="_bone_8cs_source.html#l00043">Bone.cs:43</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_point_attachment_html"><div class="ttname"><a href="class_spine_1_1_point_attachment.html">Spine.PointAttachment</a></div><div class="ttdoc">An attachment which is a single point and a rotation. This can be used to spawn projectiles,...</div><div class="ttdef"><b>Определения</b> <a href="_point_attachment_8cs_source.html#l00040">PointAttachment.cs:40</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html"><div class="ttname"><a href="class_spine_1_1_skeleton.html">Spine.Skeleton</a></div><div class="ttdef"><b>Определения</b> <a href="_skeleton_8cs_source.html#l00033">Skeleton.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a49a6dfe7d4e66ba8d142541022f17a82"><div class="ttname"><a href="class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">Spine.Skeleton.GetAttachment</a></div><div class="ttdeci">Attachment GetAttachment(string slotName, string attachmentName)</div><div class="ttdoc">Finds an attachment by looking in the Skeleton.Skin and SkeletonData.DefaultSkin using the slot name ...</div><div class="ttdef"><b>Определения</b> <a href="_skeleton_8cs_source.html#l00607">Skeleton.cs:607</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_aeeaf7abe56f807e6e57f3a2514e607ab"><div class="ttname"><a href="class_spine_1_1_skeleton.html#aeeaf7abe56f807e6e57f3a2514e607ab">Spine.Skeleton.FindSlot</a></div><div class="ttdeci">Slot FindSlot(string slotName)</div><div class="ttdoc">Finds a slot by comparing each slot&#39;s name. It is more efficient to cache the results of this method ...</div><div class="ttdef"><b>Определения</b> <a href="_skeleton_8cs_source.html#l00554">Skeleton.cs:554</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_data_html_a4de0d7e679e9f1d72d56705bd4a7301c"><div class="ttname"><a href="class_spine_1_1_slot_data.html#a4de0d7e679e9f1d72d56705bd4a7301c">Spine.SlotData.Index</a></div><div class="ttdeci">int Index</div><div class="ttdoc">The index of the slot in Skeleton.Slots.</div><div class="ttdef"><b>Определения</b> <a href="_slot_data_8cs_source.html#l00047">SlotData.cs:47</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_html"><div class="ttname"><a href="class_spine_1_1_slot.html">Spine.Slot</a></div><div class="ttdoc">Stores a slot&#39;s current pose. Slots organize attachments for Skeleton.DrawOrder purposes and provide ...</div><div class="ttdef"><b>Определения</b> <a href="_slot_8cs_source.html#l00039">Slot.cs:39</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_html_a31ea34a42ecc5cc6791856d7937a70a3"><div class="ttname"><a href="class_spine_1_1_slot.html#a31ea34a42ecc5cc6791856d7937a70a3">Spine.Slot.Bone</a></div><div class="ttdeci">Bone Bone</div><div class="ttdoc">The bone this slot belongs to.</div><div class="ttdef"><b>Определения</b> <a href="_slot_8cs_source.html#l00093">Slot.cs:93</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_html_a6e9a5703aa22dfe4a18aea4b22d97a65"><div class="ttname"><a href="class_spine_1_1_slot.html#a6e9a5703aa22dfe4a18aea4b22d97a65">Spine.Slot.Data</a></div><div class="ttdeci">SlotData Data</div><div class="ttdoc">The slot&#39;s setup pose data.</div><div class="ttdef"><b>Определения</b> <a href="_slot_8cs_source.html#l00091">Slot.cs:91</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_point_follower_html"><div class="ttname"><a href="class_spine_1_1_unity_1_1_point_follower.html">Spine.Unity.PointFollower</a></div><div class="ttdef"><b>Определения</b> <a href="#l00045">PointFollower.cs:45</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_spine_attachment_html"><div class="ttname"><a href="class_spine_1_1_unity_1_1_spine_attachment.html">Spine.Unity.SpineAttachment</a></div><div class="ttdef"><b>Определения</b> <a href="_spine_attributes_8cs_source.html#l00224">SpineAttributes.cs:224</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_spine_slot_html"><div class="ttname"><a href="class_spine_1_1_unity_1_1_spine_slot.html">Spine.Unity.SpineSlot</a></div><div class="ttdef"><b>Определения</b> <a href="_spine_attributes_8cs_source.html#l00073">SpineAttributes.cs:73</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_unity_1_1_i_has_skeleton_component_html"><div class="ttname"><a href="interface_spine_1_1_unity_1_1_i_has_skeleton_component.html">Spine.Unity.IHasSkeletonComponent</a></div><div class="ttdoc">A Spine-Unity Component that holds a reference to an ISkeletonComponent.</div><div class="ttdef"><b>Определения</b> <a href="_i_skeleton_animation_8cs_source.html#l00101">ISkeletonAnimation.cs:101</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_unity_1_1_i_has_skeleton_renderer_html"><div class="ttname"><a href="interface_spine_1_1_unity_1_1_i_has_skeleton_renderer.html">Spine.Unity.IHasSkeletonRenderer</a></div><div class="ttdoc">A Spine-Unity Component that holds a reference to a SkeletonRenderer.</div><div class="ttdef"><b>Определения</b> <a href="_i_skeleton_animation_8cs_source.html#l00096">ISkeletonAnimation.cs:96</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_unity_1_1_i_skeleton_component_html"><div class="ttname"><a href="interface_spine_1_1_unity_1_1_i_skeleton_component.html">Spine.Unity.ISkeletonComponent</a></div><div class="ttdoc">A Spine-Unity Component that manages a Spine.Skeleton instance, instantiated from a SkeletonDataAsset...</div><div class="ttdef"><b>Определения</b> <a href="_i_skeleton_animation_8cs_source.html#l00075">ISkeletonAnimation.cs:75</a></div></div>
+<div class="ttc" id="anamespace_spine_1_1_unity_html"><div class="ttname"><a href="namespace_spine_1_1_unity.html">Spine.Unity</a></div><div class="ttdef"><b>Определения</b> <a href="_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-unity</b></li><li class="navelem"><b>Components</b></li><li class="navelem"><b>Following</b></li><li class="navelem"><b>PointFollower.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

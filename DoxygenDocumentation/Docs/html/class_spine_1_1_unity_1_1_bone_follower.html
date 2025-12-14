@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Spine.Unity.BoneFollower</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_spine_1_1_unity_1_1_bone_follower.html','','class_spine_1_1_unity_1_1_bone_follower-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Spine.Unity.BoneFollower</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Sets a GameObject's transform to match a bone on a <a class="el" href="namespace_spine.html">Spine</a> skeleton.  
+ <a href="#details">Подробнее...</a></p>
+
+<p>Базовые классы:UnityEngine.MonoBehaviour.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a2e3ef5005ee53490429fb74b6423e581" id="r_a2e3ef5005ee53490429fb74b6423e581"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>AxisOrientation</b> { <b>XAxis</b> = 1
+, <b>YAxis</b>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aaeb298e836b51bc2850864f44d0bf9e6" id="r_aaeb298e836b51bc2850864f44d0bf9e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeb298e836b51bc2850864f44d0bf9e6">SetBone</a> (string name)</td></tr>
+<tr class="memdesc:aaeb298e836b51bc2850864f44d0bf9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target bone by its bone name. Returns false if no bone was found. To set the bone by reference, use BoneFollower.bone directly.  <br /></td></tr>
+<tr class="memitem:acc32e4179216471ace406368295e6169" id="r_acc32e4179216471ace406368295e6169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc32e4179216471ace406368295e6169">Awake</a> ()</td></tr>
+<tr class="memitem:a1bcc44a28a29b73f476086b13d8534c6" id="r_a1bcc44a28a29b73f476086b13d8534c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bcc44a28a29b73f476086b13d8534c6">HandleRebuildRenderer</a> (SkeletonRenderer skeletonRenderer)</td></tr>
+<tr class="memitem:a131944ba0e630dfd045cc9cb8be7d252" id="r_a131944ba0e630dfd045cc9cb8be7d252"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a131944ba0e630dfd045cc9cb8be7d252">Initialize</a> ()</td></tr>
+<tr class="memitem:ad8c9251d6b054a0e7eb009ca382cf2b5" id="r_ad8c9251d6b054a0e7eb009ca382cf2b5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c9251d6b054a0e7eb009ca382cf2b5">LateUpdate</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:afe72d11badc7bba18a4a015cd4e173a6" id="r_afe72d11badc7bba18a4a015cd4e173a6"><td class="memItemLeft" align="right" valign="top">SkeletonRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe72d11badc7bba18a4a015cd4e173a6">skeletonRenderer</a></td></tr>
+<tr class="memitem:a23e4d06b33c198e2a63e0a83fa6085eb" id="r_a23e4d06b33c198e2a63e0a83fa6085eb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23e4d06b33c198e2a63e0a83fa6085eb">boneName</a></td></tr>
+<tr class="memdesc:a23e4d06b33c198e2a63e0a83fa6085eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If a bone isn't set in code, boneName is used to find the bone at the beginning. For runtime switching by name, use SetBoneByName. You can also set the BoneFollower.bone field directly.  <br /></td></tr>
+<tr class="memitem:a1feffffa1f7baab92232271b734c25eb" id="r_a1feffffa1f7baab92232271b734c25eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1feffffa1f7baab92232271b734c25eb">followXYPosition</a> = true</td></tr>
+<tr class="memitem:a298773a1c25683505d793d5070ad5460" id="r_a298773a1c25683505d793d5070ad5460"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a298773a1c25683505d793d5070ad5460">followZPosition</a> = true</td></tr>
+<tr class="memitem:abe249dcb34a038e96f595a7fa4b16429" id="r_abe249dcb34a038e96f595a7fa4b16429"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe249dcb34a038e96f595a7fa4b16429">followAttachmentZSpacing</a> = false</td></tr>
+<tr class="memitem:af867eb1093072551036b8848eb09ffa7" id="r_af867eb1093072551036b8848eb09ffa7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af867eb1093072551036b8848eb09ffa7">followBoneRotation</a> = true</td></tr>
+<tr class="memitem:ac3aba7d02b130355c5c036d4531e7e22" id="r_ac3aba7d02b130355c5c036d4531e7e22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3aba7d02b130355c5c036d4531e7e22">followSkeletonFlip</a> = true</td></tr>
+<tr class="memitem:a33d7c4ce6277f2b417942e2bace7b88c" id="r_a33d7c4ce6277f2b417942e2bace7b88c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33d7c4ce6277f2b417942e2bace7b88c">followLocalScale</a> = false</td></tr>
+<tr class="memitem:a481e5ab07883adc9764da5603411c451" id="r_a481e5ab07883adc9764da5603411c451"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481e5ab07883adc9764da5603411c451">followParentWorldScale</a> = false</td></tr>
+<tr class="memitem:ad14efb10beca00bf39ea87a9fa056585" id="r_ad14efb10beca00bf39ea87a9fa056585"><td class="memItemLeft" align="right" valign="top">AxisOrientation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad14efb10beca00bf39ea87a9fa056585">maintainedAxisOrientation</a> = AxisOrientation.XAxis</td></tr>
+<tr class="memitem:a40489a49ea71cf3dcddd4250fb18ab66" id="r_a40489a49ea71cf3dcddd4250fb18ab66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40489a49ea71cf3dcddd4250fb18ab66">initializeOnAwake</a> = true</td></tr>
+<tr class="memitem:ad672fc457f6c01edc65626de94f32380" id="r_ad672fc457f6c01edc65626de94f32380"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad672fc457f6c01edc65626de94f32380">valid</a></td></tr>
+<tr class="memitem:a973f9b0e521e536b61a71200a9e10799" id="r_a973f9b0e521e536b61a71200a9e10799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_bone.html">Bone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a973f9b0e521e536b61a71200a9e10799">bone</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a37f75c149c60196c48e3c12624e2fd6e" id="r_a37f75c149c60196c48e3c12624e2fd6e"><td class="memItemLeft" align="right" valign="top">SkeletonRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f75c149c60196c48e3c12624e2fd6e">SkeletonRenderer</a><code> [get, set]</code></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Sets a GameObject's transform to match a bone on a <a class="el" href="namespace_spine.html">Spine</a> skeleton. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00047">47</a></p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="a2e3ef5005ee53490429fb74b6423e581" name="a2e3ef5005ee53490429fb74b6423e581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3ef5005ee53490429fb74b6423e581">&#9670;&#160;</a></span>AxisOrientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum Spine.Unity.BoneFollower.AxisOrientation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00077">77</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="acc32e4179216471ace406368295e6169" name="acc32e4179216471ace406368295e6169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc32e4179216471ace406368295e6169">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.BoneFollower.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00109">109</a></p>
+
+</div>
+</div>
+<a id="a1bcc44a28a29b73f476086b13d8534c6" name="a1bcc44a28a29b73f476086b13d8534c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bcc44a28a29b73f476086b13d8534c6">&#9670;&#160;</a></span>HandleRebuildRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.BoneFollower.HandleRebuildRenderer </td>
+          <td>(</td>
+          <td class="paramtype">SkeletonRenderer</td>          <td class="paramname"><span class="paramname"><em>skeletonRenderer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00113">113</a></p>
+
+</div>
+</div>
+<a id="a131944ba0e630dfd045cc9cb8be7d252" name="a131944ba0e630dfd045cc9cb8be7d252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131944ba0e630dfd045cc9cb8be7d252">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Spine.Unity.BoneFollower.Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00117">117</a></p>
+
+</div>
+</div>
+<a id="ad8c9251d6b054a0e7eb009ca382cf2b5" name="ad8c9251d6b054a0e7eb009ca382cf2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c9251d6b054a0e7eb009ca382cf2b5">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Spine.Unity.BoneFollower.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a id="aaeb298e836b51bc2850864f44d0bf9e6" name="aaeb298e836b51bc2850864f44d0bf9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb298e836b51bc2850864f44d0bf9e6">&#9670;&#160;</a></span>SetBone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.SetBone </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the target bone by its bone name. Returns false if no bone was found. To set the bone by reference, use BoneFollower.bone directly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00099">99</a></p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a973f9b0e521e536b61a71200a9e10799" name="a973f9b0e521e536b61a71200a9e10799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973f9b0e521e536b61a71200a9e10799">&#9670;&#160;</a></span>bone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_bone.html">Bone</a> Spine.Unity.BoneFollower.bone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00092">92</a></p>
+
+</div>
+</div>
+<a id="a23e4d06b33c198e2a63e0a83fa6085eb" name="a23e4d06b33c198e2a63e0a83fa6085eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e4d06b33c198e2a63e0a83fa6085eb">&#9670;&#160;</a></span>boneName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Spine.Unity.BoneFollower.boneName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If a bone isn't set in code, boneName is used to find the bone at the beginning. For runtime switching by name, use SetBoneByName. You can also set the BoneFollower.bone field directly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="abe249dcb34a038e96f595a7fa4b16429" name="abe249dcb34a038e96f595a7fa4b16429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe249dcb34a038e96f595a7fa4b16429">&#9670;&#160;</a></span>followAttachmentZSpacing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followAttachmentZSpacing = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<a id="af867eb1093072551036b8848eb09ffa7" name="af867eb1093072551036b8848eb09ffa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af867eb1093072551036b8848eb09ffa7">&#9670;&#160;</a></span>followBoneRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followBoneRotation = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="a33d7c4ce6277f2b417942e2bace7b88c" name="a33d7c4ce6277f2b417942e2bace7b88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d7c4ce6277f2b417942e2bace7b88c">&#9670;&#160;</a></span>followLocalScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followLocalScale = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00073">73</a></p>
+
+</div>
+</div>
+<a id="a481e5ab07883adc9764da5603411c451" name="a481e5ab07883adc9764da5603411c451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481e5ab07883adc9764da5603411c451">&#9670;&#160;</a></span>followParentWorldScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followParentWorldScale = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00075">75</a></p>
+
+</div>
+</div>
+<a id="ac3aba7d02b130355c5c036d4531e7e22" name="ac3aba7d02b130355c5c036d4531e7e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3aba7d02b130355c5c036d4531e7e22">&#9670;&#160;</a></span>followSkeletonFlip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followSkeletonFlip = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00069">69</a></p>
+
+</div>
+</div>
+<a id="a1feffffa1f7baab92232271b734c25eb" name="a1feffffa1f7baab92232271b734c25eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1feffffa1f7baab92232271b734c25eb">&#9670;&#160;</a></span>followXYPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followXYPosition = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a id="a298773a1c25683505d793d5070ad5460" name="a298773a1c25683505d793d5070ad5460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298773a1c25683505d793d5070ad5460">&#9670;&#160;</a></span>followZPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.followZPosition = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00064">64</a></p>
+
+</div>
+</div>
+<a id="a40489a49ea71cf3dcddd4250fb18ab66" name="a40489a49ea71cf3dcddd4250fb18ab66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40489a49ea71cf3dcddd4250fb18ab66">&#9670;&#160;</a></span>initializeOnAwake</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.initializeOnAwake = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00088">88</a></p>
+
+</div>
+</div>
+<a id="ad14efb10beca00bf39ea87a9fa056585" name="ad14efb10beca00bf39ea87a9fa056585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14efb10beca00bf39ea87a9fa056585">&#9670;&#160;</a></span>maintainedAxisOrientation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AxisOrientation Spine.Unity.BoneFollower.maintainedAxisOrientation = AxisOrientation.XAxis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00085">85</a></p>
+
+</div>
+</div>
+<a id="afe72d11badc7bba18a4a015cd4e173a6" name="afe72d11badc7bba18a4a015cd4e173a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe72d11badc7bba18a4a015cd4e173a6">&#9670;&#160;</a></span>skeletonRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkeletonRenderer Spine.Unity.BoneFollower.skeletonRenderer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00050">50</a></p>
+
+</div>
+</div>
+<a id="ad672fc457f6c01edc65626de94f32380" name="ad672fc457f6c01edc65626de94f32380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad672fc457f6c01edc65626de94f32380">&#9670;&#160;</a></span>valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.BoneFollower.valid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00091">91</a></p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Полный список свойств</h2>
+<a id="a37f75c149c60196c48e3c12624e2fd6e" name="a37f75c149c60196c48e3c12624e2fd6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f75c149c60196c48e3c12624e2fd6e">&#9670;&#160;</a></span>SkeletonRenderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkeletonRenderer Spine.Unity.BoneFollower.SkeletonRenderer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a> строка <a class="el" href="_bone_follower_8cs_source.html#l00051">51</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-unity/Components/Following/<a class="el" href="_bone_follower_8cs_source.html">BoneFollower.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_spine.html">Spine</a></li><li class="navelem"><a href="namespace_spine_1_1_unity.html">Unity</a></li><li class="navelem"><a href="class_spine_1_1_unity_1_1_bone_follower.html">BoneFollower</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

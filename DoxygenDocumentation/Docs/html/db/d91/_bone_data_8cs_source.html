@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/BoneData.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('db/d91/_bone_data_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BoneData.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/de6/namespace_spine.html">Spine</a> {</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html">   33</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">BoneData</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">internal</span> <span class="keywordtype">int</span> index;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">internal</span> <span class="keywordtype">string</span> name;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">internal</span> <a class="code hl_function" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">BoneData</a> parent;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> length;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> x, y, rotation, scaleX = 1, scaleY = 1, shearX, shearY;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">internal</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">Inherit</a> inherit = <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">Inherit</a>.Normal;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">internal</span> <span class="keywordtype">bool</span> skinRequired;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a7379db786b19dbeabaadf3c3f373d0e1">   43</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a7379db786b19dbeabaadf3c3f373d0e1">Index</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> index; } }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a4333ca2630ac562a9561650ec128d864">   46</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a4333ca2630ac562a9561650ec128d864">Name</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> name; } }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#ade206a49ecef2aa7f724867c1d918b45">   49</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">BoneData</a> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#ade206a49ecef2aa7f724867c1d918b45">Parent</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> parent; } }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> Length { <span class="keyword">get</span> { <span class="keywordflow">return</span> length; } <span class="keyword">set</span> { length = value; } }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">   54</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">X</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> x; } <span class="keyword">set</span> { x = value; } }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">   57</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">Y</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> y; } <span class="keyword">set</span> { y = value; } }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#afc399c01b18612e4741b645a328c4727">   60</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#afc399c01b18612e4741b645a328c4727">Rotation</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> rotation; } <span class="keyword">set</span> { rotation = value; } }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#af9256615d23b57edde7bb435e1b75fd9">   63</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#af9256615d23b57edde7bb435e1b75fd9">ScaleX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleX; } <span class="keyword">set</span> { scaleX = value; } }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a7b76bed0929216bae2f83f33181de9b5">   66</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a7b76bed0929216bae2f83f33181de9b5">ScaleY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleY; } <span class="keyword">set</span> { scaleY = value; } }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#aa3df5d6bdbb847133ea930eb1e7117c9">   69</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#aa3df5d6bdbb847133ea930eb1e7117c9">ShearX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> shearX; } <span class="keyword">set</span> { shearX = value; } }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a93cd9a5aace82e0f986da69e5a081825">   72</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a93cd9a5aace82e0f986da69e5a081825">ShearY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> shearY; } <span class="keyword">set</span> { shearY = value; } }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">   75</a></span>        <span class="keyword">public</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">Inherit</a> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">Inherit</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> inherit; } <span class="keyword">set</span> { inherit = value; } }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#a1e84a4abb65757fac0f6816033659ec0">   80</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d6/d40/class_spine_1_1_bone_data.html#a1e84a4abb65757fac0f6816033659ec0">SkinRequired</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> skinRequired; } <span class="keyword">set</span> { skinRequired = value; } }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">   83</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">BoneData</a> (<span class="keywordtype">int</span> index, <span class="keywordtype">string</span> name, <a class="code hl_function" href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">BoneData</a> parent) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (index &lt; 0) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;index must be &gt;= 0&quot;</span>, <span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (name == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;name cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            this.index = index;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            this.name = name;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            this.parent = parent;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">override</span> <span class="keyword">public</span> <span class="keywordtype">string</span> ToString () {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">return</span> name;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">public</span> <span class="keyword">enum</span> Inherit {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        Normal,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        OnlyTranslation,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        NoRotationOrReflection,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        NoScale,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        NoScaleOrReflection</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="};">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../d7/d28/class_spine_1_1_inherit_enum.html">  104</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d7/d28/class_spine_1_1_inherit_enum.html">InheritEnum</a> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">public</span> <span class="keyword">static</span> readonly Inherit[] Values = {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            Inherit.Normal,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            Inherit.OnlyTranslation,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            Inherit.NoRotationOrReflection,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            Inherit.NoScale,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            Inherit.NoScaleOrReflection</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        };</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a1e84a4abb65757fac0f6816033659ec0"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a1e84a4abb65757fac0f6816033659ec0">Spine.BoneData.SkinRequired</a></div><div class="ttdeci">bool SkinRequired</div><div class="ttdoc">When true, Skeleton.UpdateWorldTransform(Skeleton.Physics) only updates this bone if the Skeleton....</div><div class="ttdef"><b>Определения</b> <a href="#l00080">BoneData.cs:80</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a3d79f0ae7355bce887dc1eb134fc971f"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a3d79f0ae7355bce887dc1eb134fc971f">Spine.BoneData.Inherit</a></div><div class="ttdeci">Inherit Inherit</div><div class="ttdoc">Determines how parent world transforms affect this bone.</div><div class="ttdef"><b>Определения</b> <a href="#l00075">BoneData.cs:75</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a40568774979340d29d188f0fb7e6d039"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">Spine.BoneData.Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Local Y translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00057">BoneData.cs:57</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a4333ca2630ac562a9561650ec128d864"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a4333ca2630ac562a9561650ec128d864">Spine.BoneData.Name</a></div><div class="ttdeci">string Name</div><div class="ttdoc">The name of the bone, which is unique across all bones in the skeleton.</div><div class="ttdef"><b>Определения</b> <a href="#l00046">BoneData.cs:46</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a7379db786b19dbeabaadf3c3f373d0e1"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a7379db786b19dbeabaadf3c3f373d0e1">Spine.BoneData.Index</a></div><div class="ttdeci">int Index</div><div class="ttdoc">The index of the bone in Skeleton.Bones.</div><div class="ttdef"><b>Определения</b> <a href="#l00043">BoneData.cs:43</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a7b76bed0929216bae2f83f33181de9b5"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a7b76bed0929216bae2f83f33181de9b5">Spine.BoneData.ScaleY</a></div><div class="ttdeci">float ScaleY</div><div class="ttdoc">Local scaleY.</div><div class="ttdef"><b>Определения</b> <a href="#l00066">BoneData.cs:66</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a904249dbb0be11f3e8b0156a7f504566"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">Spine.BoneData.X</a></div><div class="ttdeci">float X</div><div class="ttdoc">Local X translation.</div><div class="ttdef"><b>Определения</b> <a href="#l00054">BoneData.cs:54</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a93cd9a5aace82e0f986da69e5a081825"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#a93cd9a5aace82e0f986da69e5a081825">Spine.BoneData.ShearY</a></div><div class="ttdeci">float ShearY</div><div class="ttdoc">Local shearY.</div><div class="ttdef"><b>Определения</b> <a href="#l00072">BoneData.cs:72</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_aa3df5d6bdbb847133ea930eb1e7117c9"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#aa3df5d6bdbb847133ea930eb1e7117c9">Spine.BoneData.ShearX</a></div><div class="ttdeci">float ShearX</div><div class="ttdoc">Local shearX.</div><div class="ttdef"><b>Определения</b> <a href="#l00069">BoneData.cs:69</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_ad30e2c651b096fea44f7006b28bc5c83"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#ad30e2c651b096fea44f7006b28bc5c83">Spine.BoneData.BoneData</a></div><div class="ttdeci">BoneData(int index, string name, BoneData parent)</div><div class="ttdef"><b>Определения</b> <a href="#l00083">BoneData.cs:83</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_ade206a49ecef2aa7f724867c1d918b45"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#ade206a49ecef2aa7f724867c1d918b45">Spine.BoneData.Parent</a></div><div class="ttdeci">BoneData Parent</div><div class="ttdoc">May be null.</div><div class="ttdef"><b>Определения</b> <a href="#l00049">BoneData.cs:49</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_af9256615d23b57edde7bb435e1b75fd9"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#af9256615d23b57edde7bb435e1b75fd9">Spine.BoneData.ScaleX</a></div><div class="ttdeci">float ScaleX</div><div class="ttdoc">Local scaleX.</div><div class="ttdef"><b>Определения</b> <a href="#l00063">BoneData.cs:63</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_afc399c01b18612e4741b645a328c4727"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html#afc399c01b18612e4741b645a328c4727">Spine.BoneData.Rotation</a></div><div class="ttdeci">float Rotation</div><div class="ttdoc">Local rotation in degrees, counter clockwise.</div><div class="ttdef"><b>Определения</b> <a href="#l00060">BoneData.cs:60</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_inherit_enum_html"><div class="ttname"><a href="../../d7/d28/class_spine_1_1_inherit_enum.html">Spine.InheritEnum</a></div><div class="ttdef"><b>Определения</b> <a href="#l00104">BoneData.cs:104</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="../../de/de6/namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/de3/_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-csharp</b></li><li class="navelem"><b>BoneData.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

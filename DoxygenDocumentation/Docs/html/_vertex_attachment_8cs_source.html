@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/Attachments/VertexAttachment.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_vertex_attachment_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">VertexAttachment.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_spine.html">Spine</a> {</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_spine_1_1_vertex_attachment.html">   35</a></span>    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span>VertexAttachment : Attachment {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> nextID = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">static</span> readonly Object nextIdLock = <span class="keyword">new</span> Object();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">internal</span> readonly <span class="keywordtype">int</span> id;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">internal</span> VertexAttachment timelineAttachment;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">internal</span> <span class="keywordtype">int</span>[] bones;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span>[] vertices;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">internal</span> <span class="keywordtype">int</span> worldVerticesLength;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_spine_1_1_vertex_attachment.html#a68f9c385cb4e5cac2e682312c8fbd72a">   46</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_spine_1_1_vertex_attachment.html#a68f9c385cb4e5cac2e682312c8fbd72a">Id</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> id; } }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">public</span> <span class="keywordtype">int</span>[] Bones { <span class="keyword">get</span> { <span class="keywordflow">return</span> bones; } <span class="keyword">set</span> { bones = value; } }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> <span class="keywordtype">float</span>[] Vertices { <span class="keyword">get</span> { <span class="keywordflow">return</span> vertices; } <span class="keyword">set</span> { vertices = value; } }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> WorldVerticesLength { <span class="keyword">get</span> { <span class="keywordflow">return</span> worldVerticesLength; } <span class="keyword">set</span> { worldVerticesLength = value; } }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_spine_1_1_vertex_attachment.html#a742bdec5095f9cbd89dc45d45eef0fbd">   52</a></span>        <span class="keyword">public</span> VertexAttachment <a class="code hl_property" href="class_spine_1_1_vertex_attachment.html#a742bdec5095f9cbd89dc45d45eef0fbd">TimelineAttachment</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> timelineAttachment; } <span class="keyword">set</span> { timelineAttachment = value; } }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">public</span> <a class="code hl_class" href="class_spine_1_1_vertex_attachment.html">VertexAttachment</a> (<span class="keywordtype">string</span> name)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            : base(name) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            lock (<a class="code hl_class" href="class_spine_1_1_vertex_attachment.html">VertexAttachment</a>.nextIdLock) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordtype">id</span> = <a class="code hl_class" href="class_spine_1_1_vertex_attachment.html">VertexAttachment</a>.nextID++;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            timelineAttachment = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_spine_1_1_vertex_attachment.html#a6c3613fce3de5e29f0d145d67d026422">   64</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_spine_1_1_vertex_attachment.html#a6c3613fce3de5e29f0d145d67d026422">VertexAttachment</a> (VertexAttachment other)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            : base(other) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            lock (VertexAttachment.nextIdLock) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordtype">id</span> = VertexAttachment.nextID++;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            timelineAttachment = other.timelineAttachment;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">if</span> (other.bones != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                bones = <span class="keyword">new</span> <span class="keywordtype">int</span>[other.bones.Length];</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                Array.Copy(other.bones, 0, bones, 0, bones.Length);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                bones = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (other.vertices != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                vertices = <span class="keyword">new</span> <span class="keywordtype">float</span>[other.vertices.Length];</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                Array.Copy(other.vertices, 0, vertices, 0, vertices.Length);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            } <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                vertices = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            worldVerticesLength = other.worldVerticesLength;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ComputeWorldVertices (<a class="code hl_class" href="class_spine_1_1_slot.html">Slot</a> slot, <span class="keywordtype">float</span>[] worldVertices) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            ComputeWorldVertices(slot, 0, worldVerticesLength, worldVertices, 0);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_spine_1_1_vertex_attachment.html#a85602549f16091b7b8beeb1e0a0adf60">  102</a></span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_spine_1_1_vertex_attachment.html#a85602549f16091b7b8beeb1e0a0adf60">ComputeWorldVertices</a> (<a class="code hl_class" href="class_spine_1_1_slot.html">Slot</a> slot, <span class="keywordtype">int</span> start, <span class="keywordtype">int</span> count, <span class="keywordtype">float</span>[] worldVertices, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> stride = 2) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            count = offset + (count &gt;&gt; 1) * stride;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            ExposedList&lt;float&gt; deformArray = slot.deform;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordtype">float</span>[] vertices = this.vertices;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordtype">int</span>[] bones = this.bones;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span> (bones == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">if</span> (deformArray.Count &gt; 0) vertices = deformArray.Items;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <a class="code hl_class" href="class_spine_1_1_bone.html">Bone</a> bone = slot.bone;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordtype">float</span> x = bone.worldX, y = bone.worldY;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="keywordtype">float</span> a = bone.a, b = bone.b, c = bone.c, d = bone.d;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> vv = start, w = offset; w &lt; count; vv += 2, w += stride) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    <span class="keywordtype">float</span> vx = vertices[vv], vy = vertices[vv + 1];</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    worldVertices[w] = vx * a + vy * b + x;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    worldVertices[w + 1] = vx * c + vy * d + y;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">int</span> v = 0, skip = 0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; start; i += 2) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordtype">int</span> n = bones[v];</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                v += n + 1;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                skip += n;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_class" href="class_spine_1_1_bone.html">Bone</a>[] skeletonBones = slot.bone.skeleton.bones.Items;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">if</span> (deformArray.Count == 0) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w = offset, b = skip * 3; w &lt; count; w += stride) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    <span class="keywordtype">float</span> wx = 0, wy = 0;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordtype">int</span> n = bones[v++];</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    n += v;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keywordflow">for</span> (; v &lt; n; v++, b += 3) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        <a class="code hl_class" href="class_spine_1_1_bone.html">Bone</a> bone = skeletonBones[bones[v]];</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        <span class="keywordtype">float</span> vx = vertices[b], vy = vertices[b + 1], weight = vertices[b + 2];</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                        wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    worldVertices[w] = wx;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    worldVertices[w + 1] = wy;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordtype">float</span>[] deform = deformArray.Items;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> w = offset, b = skip * 3, f = skip &lt;&lt; 1; w &lt; count; w += stride) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <span class="keywordtype">float</span> wx = 0, wy = 0;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    <span class="keywordtype">int</span> n = bones[v++];</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    n += v;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                    <span class="keywordflow">for</span> (; v &lt; n; v++, b += 3, f += 2) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        <a class="code hl_class" href="class_spine_1_1_bone.html">Bone</a> bone = skeletonBones[bones[v]];</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                        <span class="keywordtype">float</span> vx = vertices[b] + deform[f], vy = vertices[b + 1] + deform[f + 1], weight = vertices[b + 2];</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        wx += (vx * bone.a + vy * bone.b + bone.worldX) * weight;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        wy += (vx * bone.c + vy * bone.d + bone.worldY) * weight;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    worldVertices[w] = wx;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                    worldVertices[w + 1] = wy;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_bone_html"><div class="ttname"><a href="class_spine_1_1_bone.html">Spine.Bone</a></div><div class="ttdoc">Stores a bone&#39;s current pose.</div><div class="ttdef"><b>Определения</b> <a href="_bone_8cs_source.html#l00043">Bone.cs:43</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_html"><div class="ttname"><a href="class_spine_1_1_slot.html">Spine.Slot</a></div><div class="ttdoc">Stores a slot&#39;s current pose. Slots organize attachments for Skeleton.DrawOrder purposes and provide ...</div><div class="ttdef"><b>Определения</b> <a href="_slot_8cs_source.html#l00039">Slot.cs:39</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_vertex_attachment_html"><div class="ttname"><a href="class_spine_1_1_vertex_attachment.html">Spine.VertexAttachment</a></div><div class="ttdoc">&gt;An attachment with vertices that are transformed by one or more bones and can be deformed by a slot&#39;...</div><div class="ttdef"><b>Определения</b> <a href="#l00035">VertexAttachment.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_vertex_attachment_html_a68f9c385cb4e5cac2e682312c8fbd72a"><div class="ttname"><a href="class_spine_1_1_vertex_attachment.html#a68f9c385cb4e5cac2e682312c8fbd72a">Spine.VertexAttachment.Id</a></div><div class="ttdeci">int Id</div><div class="ttdoc">Gets a unique ID for this attachment.</div><div class="ttdef"><b>Определения</b> <a href="#l00046">VertexAttachment.cs:46</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_vertex_attachment_html_a6c3613fce3de5e29f0d145d67d026422"><div class="ttname"><a href="class_spine_1_1_vertex_attachment.html#a6c3613fce3de5e29f0d145d67d026422">Spine.VertexAttachment.VertexAttachment</a></div><div class="ttdeci">VertexAttachment(VertexAttachment other)</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Определения</b> <a href="#l00064">VertexAttachment.cs:64</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_vertex_attachment_html_a742bdec5095f9cbd89dc45d45eef0fbd"><div class="ttname"><a href="class_spine_1_1_vertex_attachment.html#a742bdec5095f9cbd89dc45d45eef0fbd">Spine.VertexAttachment.TimelineAttachment</a></div><div class="ttdeci">VertexAttachment TimelineAttachment</div><div class="ttdoc">Timelines for the timeline attachment are also applied to this attachment. May be null if no attachme...</div><div class="ttdef"><b>Определения</b> <a href="#l00052">VertexAttachment.cs:52</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_vertex_attachment_html_a85602549f16091b7b8beeb1e0a0adf60"><div class="ttname"><a href="class_spine_1_1_vertex_attachment.html#a85602549f16091b7b8beeb1e0a0adf60">Spine.VertexAttachment.ComputeWorldVertices</a></div><div class="ttdeci">virtual void ComputeWorldVertices(Slot slot, int start, int count, float[] worldVertices, int offset, int stride=2)</div><div class="ttdoc">Transforms the attachment&#39;s local Vertices to world coordinates. If the slot&#39;s Slot....</div><div class="ttdef"><b>Определения</b> <a href="#l00102">VertexAttachment.cs:102</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-csharp</b></li><li class="navelem"><b>Attachments</b></li><li class="navelem"><b>VertexAttachment.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/Skeleton.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('df/d5f/_skeleton_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Skeleton.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/de6/namespace_spine.html">Spine</a> {</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html">   33</a></span>    <span class="keyword">public</span> <span class="keyword">class </span>Skeleton {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">static</span> <span class="keyword">private</span> readonly <span class="keywordtype">int</span>[] quadTriangles = { 0, 1, 2, 2, 3, 0 };</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">internal</span> <a class="code hl_class" href="../../d0/d8a/class_spine_1_1_skeleton_data.html">SkeletonData</a> data;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">internal</span> ExposedList&lt;Bone&gt; bones;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">internal</span> ExposedList&lt;Slot&gt; slots;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">internal</span> ExposedList&lt;Slot&gt; drawOrder;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">internal</span> ExposedList&lt;IkConstraint&gt; ikConstraints;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">internal</span> ExposedList&lt;TransformConstraint&gt; transformConstraints;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">internal</span> ExposedList&lt;PathConstraint&gt; pathConstraints;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">internal</span> ExposedList&lt;PhysicsConstraint&gt; physicsConstraints;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">internal</span> ExposedList&lt;IUpdatable&gt; updateCache = <span class="keyword">new</span> ExposedList&lt;IUpdatable&gt;();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">internal</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> skin;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> r = 1, g = 1, b = 1, a = 1;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> x, y, scaleX = 1, time;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">private</span> <span class="keywordtype">float</span> scaleY = 1;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#aa7ca532fb2a76b9998bb44b8066e99fc">   51</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d0/d8a/class_spine_1_1_skeleton_data.html">SkeletonData</a> <a class="code hl_namespace" href="../../de/d75/namespace_data.html">Data</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> data; } }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a430871be49c04e3d2ed24e44801e52ed">   53</a></span>        <span class="keyword">public</span> ExposedList&lt;Bone&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a430871be49c04e3d2ed24e44801e52ed">Bones</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> bones; } }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a2e2a2015c0ec4504f2f24528dd3d6e9e">   56</a></span>        <span class="keyword">public</span> ExposedList&lt;IUpdatable&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a2e2a2015c0ec4504f2f24528dd3d6e9e">UpdateCacheList</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> updateCache; } }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#af72992c14e5cab05511330483a21e902">   58</a></span>        <span class="keyword">public</span> ExposedList&lt;Slot&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#af72992c14e5cab05511330483a21e902">Slots</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> slots; } }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a6a451d2b789c6b916a978bd0f27a7c22">   61</a></span>        <span class="keyword">public</span> ExposedList&lt;Slot&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a6a451d2b789c6b916a978bd0f27a7c22">DrawOrder</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> drawOrder; } }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a9fc9acb3f7d51836ebc40388758e13c6">   63</a></span>        <span class="keyword">public</span> ExposedList&lt;IkConstraint&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a9fc9acb3f7d51836ebc40388758e13c6">IkConstraints</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> ikConstraints; } }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ab55c5668b8473f8df274ac017a16bb4f">   65</a></span>        <span class="keyword">public</span> ExposedList&lt;PathConstraint&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#ab55c5668b8473f8df274ac017a16bb4f">PathConstraints</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> pathConstraints; } }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a25f7a72084591daddc4fa51236651766">   67</a></span>        <span class="keyword">public</span> ExposedList&lt;PhysicsConstraint&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a25f7a72084591daddc4fa51236651766">PhysicsConstraints</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> physicsConstraints; } }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ae0407b2eb25cb28c9eebaf87ef83e505">   69</a></span>        <span class="keyword">public</span> ExposedList&lt;TransformConstraint&gt; <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#ae0407b2eb25cb28c9eebaf87ef83e505">TransformConstraints</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> transformConstraints; } }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">   72</a></span>        <span class="keyword">public</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> skin; }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">set</span> { <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af80bbbc3b2b5d588152eba7e83430dc8">SetSkin</a>(value); }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> R { <span class="keyword">get</span> { <span class="keywordflow">return</span> r; } <span class="keyword">set</span> { r = value; } }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> G { <span class="keyword">get</span> { <span class="keywordflow">return</span> g; } <span class="keyword">set</span> { g = value; } }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> B { <span class="keyword">get</span> { <span class="keywordflow">return</span> b; } <span class="keyword">set</span> { b = value; } }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> A { <span class="keyword">get</span> { <span class="keywordflow">return</span> a; } <span class="keyword">set</span> { a = value; } }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#aa6929dedee376680ea44420a32977548">   85</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#aa6929dedee376680ea44420a32977548">X</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> x; } <span class="keyword">set</span> { x = value; } }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ad076b350b843c874fb5cff64f826d9de">   89</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#ad076b350b843c874fb5cff64f826d9de">Y</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> y; } <span class="keyword">set</span> { y = value; } }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a0f883b19b2bc80d4d5db65fba9f1f99c">   93</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a0f883b19b2bc80d4d5db65fba9f1f99c">ScaleX</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleX; } <span class="keyword">set</span> { scaleX = value; } }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a43db6d20181ea0ddbb8710df9d0eba3a">   97</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a43db6d20181ea0ddbb8710df9d0eba3a">ScaleY</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleY * (Bone.yDown ? -1 : 1); } <span class="keyword">set</span> { scaleY = value; } }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        [Obsolete(<span class="stringliteral">&quot;Use ScaleX instead. FlipX is when ScaleX is negative.&quot;</span>)]</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> FlipX { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleX &lt; 0; } <span class="keyword">set</span> { scaleX = value ? -1f : 1f; } }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        [Obsolete(<span class="stringliteral">&quot;Use ScaleY instead. FlipY is when ScaleY is negative.&quot;</span>)]</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> FlipY { <span class="keyword">get</span> { <span class="keywordflow">return</span> scaleY &lt; 0; } <span class="keyword">set</span> { scaleY = value ? -1f : 1f; } }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#acf7de15bbd875858c27156727dda9a7b">  106</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#acf7de15bbd875858c27156727dda9a7b">Time</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> time; } <span class="keyword">set</span> { time = value; } }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="};">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a9238949a0febaa09e57777e47c8bf251">  109</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a9238949a0febaa09e57777e47c8bf251">RootBone</a> {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> bones.Count == 0 ? null : bones.Items[0]; }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> (<a class="code hl_class" href="../../d0/d8a/class_spine_1_1_skeleton_data.html">SkeletonData</a> data) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">if</span> (data == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;data&quot;</span>, <span class="stringliteral">&quot;data cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            this.data = data;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            bones = <span class="keyword">new</span> ExposedList&lt;Bone&gt;(data.bones.Count);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bonesItems = this.bones.Items;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a> boneData <span class="keywordflow">in</span> data.bones) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">if</span> (boneData.parent == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    bone = <span class="keyword">new</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>(boneData, <span class="keyword">this</span>, <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    Bone parent = bonesItems[boneData.parent.index];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    bone = <span class="keyword">new</span> Bone(boneData, <span class="keyword">this</span>, parent);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    parent.children.Add(bone);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                this.bones.Add(bone);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            slots = <span class="keyword">new</span> ExposedList&lt;Slot&gt;(data.slots.Count);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            drawOrder = <span class="keyword">new</span> ExposedList&lt;Slot&gt;(data.slots.Count);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">foreach</span> (SlotData slotData <span class="keywordflow">in</span> data.slots) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                Bone bone = bonesItems[slotData.boneData.index];</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                Slot slot = <span class="keyword">new</span> Slot(slotData, bone);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                slots.Add(slot);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                drawOrder.Add(slot);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            ikConstraints = <span class="keyword">new</span> ExposedList&lt;IkConstraint&gt;(data.ikConstraints.Count);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">foreach</span> (IkConstraintData ikConstraintData <span class="keywordflow">in</span> data.ikConstraints)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                ikConstraints.Add(<span class="keyword">new</span> IkConstraint(ikConstraintData, <span class="keyword">this</span>));</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            transformConstraints = <span class="keyword">new</span> ExposedList&lt;TransformConstraint&gt;(data.transformConstraints.Count);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">foreach</span> (TransformConstraintData transformConstraintData <span class="keywordflow">in</span> data.transformConstraints)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                transformConstraints.Add(<span class="keyword">new</span> TransformConstraint(transformConstraintData, <span class="keyword">this</span>));</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            pathConstraints = <span class="keyword">new</span> ExposedList&lt;PathConstraint&gt;(data.pathConstraints.Count);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">foreach</span> (PathConstraintData pathConstraintData <span class="keywordflow">in</span> data.pathConstraints)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                pathConstraints.Add(<span class="keyword">new</span> PathConstraint(pathConstraintData, <span class="keyword">this</span>));</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            physicsConstraints = <span class="keyword">new</span> ExposedList&lt;PhysicsConstraint&gt;(data.physicsConstraints.Count);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordflow">foreach</span> (PhysicsConstraintData physicsConstraintData <span class="keywordflow">in</span> data.physicsConstraints)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                physicsConstraints.Add(<span class="keyword">new</span> PhysicsConstraint(physicsConstraintData, <span class="keyword">this</span>));</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">UpdateCache</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a866c0b6a8d06555e160a2eef6eba2239">  160</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a866c0b6a8d06555e160a2eef6eba2239">Skeleton</a> (Skeleton skeleton) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">if</span> (skeleton == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;skeleton&quot;</span>, <span class="stringliteral">&quot;skeleton cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            data = skeleton.data;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            bones = <span class="keyword">new</span> ExposedList&lt;Bone&gt;(skeleton.bones.Count);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone <span class="keywordflow">in</span> skeleton.bones) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> newBone;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                <span class="keywordflow">if</span> (bone.parent == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    newBone = <span class="keyword">new</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>(bone, <span class="keyword">this</span>, <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> parent = bones.Items[bone.parent.data.index];</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    newBone = <span class="keyword">new</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>(bone, <span class="keyword">this</span>, parent);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    parent.children.Add(newBone);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                bones.Add(newBone);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            slots = <span class="keyword">new</span> ExposedList&lt;Slot&gt;(skeleton.slots.Count);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bonesItems = bones.Items;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot <span class="keywordflow">in</span> skeleton.slots) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone = bonesItems[slot.bone.data.index];</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                slots.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>(slot, bone));</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            drawOrder = <span class="keyword">new</span> ExposedList&lt;Slot&gt;(slots.Count);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] slotsItems = slots.Items;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot <span class="keywordflow">in</span> skeleton.drawOrder)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                drawOrder.Add(slotsItems[slot.data.index]);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            ikConstraints = <span class="keyword">new</span> ExposedList&lt;IkConstraint&gt;(skeleton.ikConstraints.Count);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a> ikConstraint <span class="keywordflow">in</span> skeleton.ikConstraints)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                ikConstraints.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a>(ikConstraint, skeleton));</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            transformConstraints = <span class="keyword">new</span> ExposedList&lt;TransformConstraint&gt;(skeleton.transformConstraints.Count);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a> transformConstraint <span class="keywordflow">in</span> skeleton.transformConstraints)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                transformConstraints.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a>(transformConstraint, skeleton));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            pathConstraints = <span class="keyword">new</span> ExposedList&lt;PathConstraint&gt;(skeleton.pathConstraints.Count);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a> pathConstraint <span class="keywordflow">in</span> skeleton.pathConstraints)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                pathConstraints.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a>(pathConstraint, skeleton));</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            physicsConstraints = <span class="keyword">new</span> ExposedList&lt;PhysicsConstraint&gt;(skeleton.physicsConstraints.Count);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a> physicsConstraint <span class="keywordflow">in</span> skeleton.physicsConstraints)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                physicsConstraints.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>(physicsConstraint, skeleton));</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            skin = skeleton.skin;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            r = skeleton.r;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            g = skeleton.g;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            b = skeleton.b;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            a = skeleton.a;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            x = skeleton.x;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            y = skeleton.y;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            scaleX = skeleton.scaleX;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            scaleY = skeleton.scaleY;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            time = skeleton.time;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">UpdateCache</a>();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        }</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="}">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">  221</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">UpdateCache</a> () {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            ExposedList&lt;IUpdatable&gt; updateCache = this.updateCache;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            updateCache.Clear();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordtype">int</span> boneCount = this.bones.Count;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bones = this.bones.Items;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone = bones[i];</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                bone.sorted = bone.data.skinRequired;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                bone.active = !bone.sorted;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">if</span> (skin != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <a class="code hl_class" href="../../d6/d40/class_spine_1_1_bone_data.html">BoneData</a>[] skinBones = skin.bones.Items;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = skin.bones.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                    <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone = bones[skinBones[i].index];</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                        bone.sorted = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                        bone.active = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                        bone = bone.parent;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    } <span class="keywordflow">while</span> (bone != <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordtype">int</span> ikCount = this.ikConstraints.Count, transformCount = this.transformConstraints.Count, pathCount = this.pathConstraints.Count,</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                physicsCount = this.physicsConstraints.Count;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a>[] ikConstraints = this.ikConstraints.Items;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a>[] transformConstraints = this.transformConstraints.Items;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a>[] pathConstraints = this.pathConstraints.Items;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>[] physicsConstraints = this.physicsConstraints.Items;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="keywordtype">int</span> constraintCount = ikCount + transformCount + pathCount + physicsCount;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; constraintCount; i++) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; ikCount; ii++) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a> constraint = ikConstraints[ii];</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                    <span class="keywordflow">if</span> (constraint.data.order == i) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                        SortIkConstraint(constraint);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        <span class="keywordflow">goto</span> continue_outer;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; transformCount; ii++) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                    <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a> constraint = transformConstraints[ii];</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                    <span class="keywordflow">if</span> (constraint.data.order == i) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                        SortTransformConstraint(constraint);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                        <span class="keywordflow">goto</span> continue_outer;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; pathCount; ii++) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                    <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a> constraint = pathConstraints[ii];</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                    <span class="keywordflow">if</span> (constraint.data.order == i) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                        SortPathConstraint(constraint);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                        <span class="keywordflow">goto</span> continue_outer;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; physicsCount; ii++) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                    <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a> constraint = physicsConstraints[ii];</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                    <span class="keywordflow">if</span> (constraint.data.order == i) {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                        SortPhysicsConstraint(constraint);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                        <span class="keywordflow">goto</span> continue_outer;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                continue_outer: { }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                SortBone(bones[i]);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
+</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortIkConstraint (<a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a> constraint) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            constraint.active = constraint.target.active</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                &amp;&amp; (!constraint.data.skinRequired || (skin != <span class="keyword">null</span> &amp;&amp; skin.constraints.Contains(constraint.data)));</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">if</span> (!constraint.active) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> target = constraint.target;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            SortBone(target);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            ExposedList&lt;Bone&gt; constrained = constraint.bones;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> parent = constrained.Items[0];</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            SortBone(parent);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            <span class="keywordflow">if</span> (constrained.Count == 1) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                updateCache.Add(constraint);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                SortReset(parent.children);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                Bone child = constrained.Items[constrained.Count - 1];</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                SortBone(child);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                updateCache.Add(constraint);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                SortReset(parent.children);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                child.sorted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortTransformConstraint (TransformConstraint constraint) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            constraint.active = constraint.target.active</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                &amp;&amp; (!constraint.data.skinRequired || (skin != <span class="keyword">null</span> &amp;&amp; skin.constraints.Contains(constraint.data)));</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keywordflow">if</span> (!constraint.active) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            SortBone(constraint.target);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            Bone[] constrained = constraint.bones.Items;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordtype">int</span> boneCount = constraint.bones.Count;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">if</span> (constraint.data.local) {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++) {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    Bone child = constrained[i];</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    SortBone(child.parent);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    SortBone(child);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    SortBone(constrained[i]);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            updateCache.Add(constraint);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                SortReset(constrained[i].children);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                constrained[i].sorted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortPathConstraint (PathConstraint constraint) {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            constraint.active = constraint.target.bone.active</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                &amp;&amp; (!constraint.data.skinRequired || (skin != <span class="keyword">null</span> &amp;&amp; skin.constraints.Contains(constraint.data)));</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keywordflow">if</span> (!constraint.active) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            Slot slot = constraint.target;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            <span class="keywordtype">int</span> slotIndex = slot.data.index;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            Bone slotBone = slot.bone;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">if</span> (skin != <span class="keyword">null</span>) SortPathConstraintAttachment(skin, slotIndex, slotBone);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keywordflow">if</span> (data.defaultSkin != <span class="keyword">null</span> &amp;&amp; data.defaultSkin != skin)</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                SortPathConstraintAttachment(data.defaultSkin, slotIndex, slotBone);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            Attachment attachment = slot.attachment;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">if</span> (attachment is PathAttachment) SortPathConstraintAttachment(attachment, slotBone);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            Bone[] constrained = constraint.bones.Items;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            <span class="keywordtype">int</span> boneCount = constraint.bones.Count;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                SortBone(constrained[i]);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            updateCache.Add(constraint);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                SortReset(constrained[i].children);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boneCount; i++)</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                constrained[i].sorted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortPathConstraintAttachment (<a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> skin, <span class="keywordtype">int</span> slotIndex, Bone slotBone) {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <span class="keywordflow">foreach</span> (<a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a>.SkinEntry entry in skin.Attachments)</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                <span class="keywordflow">if</span> (entry.SlotIndex == slotIndex) SortPathConstraintAttachment(entry.Attachment, slotBone);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        }</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortPathConstraintAttachment (Attachment attachment, Bone slotBone) {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <span class="keywordflow">if</span> (!(attachment is PathAttachment)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordtype">int</span>[] pathBones = ((PathAttachment)attachment).bones;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            <span class="keywordflow">if</span> (pathBones == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                SortBone(slotBone);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                Bone[] bones = this.bones.Items;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = pathBones.Length; i &lt; n;) {</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                    <span class="keywordtype">int</span> nn = pathBones[i++];</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                    nn += i;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                    <span class="keywordflow">while</span> (i &lt; nn)</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                        SortBone(bones[pathBones[i++]]);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>                }</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            }</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        }</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortPhysicsConstraint (PhysicsConstraint constraint) {</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>            Bone bone = constraint.bone;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            constraint.active = bone.active</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                &amp;&amp; (!constraint.data.skinRequired || (skin != <span class="keyword">null</span> &amp;&amp; skin.constraints.Contains(constraint.data)));</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            <span class="keywordflow">if</span> (!constraint.active) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            SortBone(bone);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            updateCache.Add(constraint);</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            SortReset(bone.children);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            bone.sorted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        }</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SortBone (Bone bone) {</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            <span class="keywordflow">if</span> (bone.sorted) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            Bone parent = bone.parent;</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            <span class="keywordflow">if</span> (parent != <span class="keyword">null</span>) SortBone(parent);</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            bone.sorted = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            updateCache.Add(bone);</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>        }</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span> </div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SortReset (ExposedList&lt;Bone&gt; bones) {</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>            Bone[] bonesItems = bones.Items;</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = bones.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                Bone bone = bonesItems[i];</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                <span class="keywordflow">if</span> (!bone.active) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">if</span> (bone.sorted) SortReset(bone.children);</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                bone.sorted = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            }</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span></div>
+<div class="foldopen" id="foldopen00428" data-start="{" data-end="}">
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#af50f9c4c4f3349cdb108e29d8f96f52e">  428</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af50f9c4c4f3349cdb108e29d8f96f52e">UpdateWorldTransform</a> (<a class="code hl_enumeration" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Physics</a> physics) {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bones = this.bones.Items;</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.bones.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone = bones[i];</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>                bone.ax = bone.x;</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>                bone.ay = bone.y;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                bone.arotation = bone.rotation;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>                bone.ascaleX = bone.scaleX;</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>                bone.ascaleY = bone.scaleY;</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>                bone.ashearX = bone.shearX;</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                bone.ashearY = bone.shearY;</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>            }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>            <a class="code hl_interface" href="../../da/d98/interface_spine_1_1_i_updatable.html">IUpdatable</a>[] updateCache = this.updateCache.Items;</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.updateCache.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>                updateCache[i].<a class="code hl_function" href="../../da/d98/interface_spine_1_1_i_updatable.html#a96146796a111eb677afe30ca6495a81e">Update</a>(physics);</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        }</div>
+</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span></div>
+<div class="foldopen" id="foldopen00450" data-start="{" data-end="}">
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a1bd863a548463ff477cf5e47639832e5">  450</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a1bd863a548463ff477cf5e47639832e5">UpdateWorldTransform</a> (<a class="code hl_enumeration" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Physics</a> physics, <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> parent) {</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;parent&quot;</span>, <span class="stringliteral">&quot;parent cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>            <span class="comment">// Apply the parent bone transform to the root bone. The root bone always inherits scale, rotation and reflection.</span></div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> rootBone = this.RootBone;</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>            <span class="keywordtype">float</span> pa = parent.a, pb = parent.b, pc = parent.c, pd = parent.d;</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>            rootBone.worldX = pa * x + pb * y + parent.worldX;</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>            rootBone.worldY = pc * x + pd * y + parent.worldY;</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>            <span class="keywordtype">float</span> rx = (rootBone.rotation + rootBone.shearX) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>            <span class="keywordtype">float</span> ry = (rootBone.rotation + 90 + rootBone.shearY) * <a class="code hl_class" href="../../d0/d97/class_spine_1_1_math_utils.html">MathUtils</a>.DegRad;</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>            <span class="keywordtype">float</span> la = (float)Math.Cos(rx) * rootBone.scaleX;</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>            <span class="keywordtype">float</span> lb = (float)Math.Cos(ry) * rootBone.scaleY;</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>            <span class="keywordtype">float</span> lc = (float)Math.Sin(rx) * rootBone.scaleX;</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>            <span class="keywordtype">float</span> ld = (float)Math.Sin(ry) * rootBone.scaleY;</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>            rootBone.a = (pa * la + pb * lc) * scaleX;</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>            rootBone.b = (pa * lb + pb * ld) * scaleX;</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>            rootBone.c = (pc * la + pd * lc) * scaleY;</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>            rootBone.d = (pc * lb + pd * ld) * scaleY;</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>            <span class="comment">// Update everything except root bone.</span></div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>            <a class="code hl_interface" href="../../da/d98/interface_spine_1_1_i_updatable.html">IUpdatable</a>[] updateCache = this.updateCache.Items;</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.updateCache.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>                <a class="code hl_interface" href="../../da/d98/interface_spine_1_1_i_updatable.html">IUpdatable</a> updatable = updateCache[i];</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>                <span class="keywordflow">if</span> (updatable != rootBone) updatable.<a class="code hl_function" href="../../da/d98/interface_spine_1_1_i_updatable.html#a96146796a111eb677afe30ca6495a81e">Update</a>(physics);</div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>            }</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>        }</div>
+</div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span></div>
+<div class="foldopen" id="foldopen00481" data-start="{" data-end="}">
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ab6f73191374f6b37ae82db1cdae8c990">  481</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ab6f73191374f6b37ae82db1cdae8c990">PhysicsTranslate</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) {</div>
+<div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>            <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>[] physicsConstraints = this.physicsConstraints.Items;</div>
+<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.physicsConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>                physicsConstraints[i].<a class="code hl_function" href="../../df/d12/class_spine_1_1_physics_constraint.html#a39308aeecf2926d5829dcd5d00e73ee4">Translate</a>(x, y);</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>        }</div>
+</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span></div>
+<div class="foldopen" id="foldopen00490" data-start="{" data-end="}">
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a4c7819824f7ebae7c12bee4e77867637">  490</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a4c7819824f7ebae7c12bee4e77867637">PhysicsRotate</a> (<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> degrees) {</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>            <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>[] physicsConstraints = this.physicsConstraints.Items;</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.physicsConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>                physicsConstraints[i].<a class="code hl_function" href="../../df/d12/class_spine_1_1_physics_constraint.html#aff3041f2590852e2556b276c0e825ac8">Rotate</a>(x, y, degrees);</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>        }</div>
+</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span></div>
+<div class="foldopen" id="foldopen00497" data-start="{" data-end="}">
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#af8830164174fb0fc3b1f2c140ba5884b">  497</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af8830164174fb0fc3b1f2c140ba5884b">Update</a> (<span class="keywordtype">float</span> delta) {</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>            time += delta;</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>        }</div>
+</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span></div>
+<div class="foldopen" id="foldopen00502" data-start="{" data-end="}">
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">  502</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">SetToSetupPose</a> () {</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#acdcb41164c617375a198124234134312">SetBonesToSetupPose</a>();</div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>            SetSlotsToSetupPose();</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        }</div>
+</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span></div>
+<div class="foldopen" id="foldopen00508" data-start="{" data-end="}">
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#acdcb41164c617375a198124234134312">  508</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#acdcb41164c617375a198124234134312">SetBonesToSetupPose</a> () {</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bones = this.bones.Items;</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.bones.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>                bones[i].<a class="code hl_function" href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">SetToSetupPose</a>();</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>            <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a>[] ikConstraints = this.ikConstraints.Items;</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.ikConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>                ikConstraints[i].SetToSetupPose();</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>            <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a>[] transformConstraints = this.transformConstraints.Items;</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.transformConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                transformConstraints[i].SetToSetupPose();</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>            <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a>[] pathConstraints = this.pathConstraints.Items;</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.pathConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                pathConstraints[i].SetToSetupPose();</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span> </div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>            <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>[] physicsConstraints = this.physicsConstraints.Items;</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.physicsConstraints.Count; i &lt; n; i++)</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                physicsConstraints[i].SetToSetupPose();</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>        }</div>
+</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span> </div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetSlotsToSetupPose () {</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>            <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] slots = this.slots.Items;</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>            <span class="keywordtype">int</span> n = this.slots.Count;</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>            Array.Copy(slots, 0, drawOrder.Items, 0, n);</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++)</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                slots[i].<a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">SetToSetupPose</a>();</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>        }</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span></div>
+<div class="foldopen" id="foldopen00541" data-start="{" data-end="}">
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ac17fa59f8524f84672419a2e9c676666">  541</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ac17fa59f8524f84672419a2e9c676666">FindBone</a> (<span class="keywordtype">string</span> boneName) {</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>            <span class="keywordflow">if</span> (boneName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;boneName&quot;</span>, <span class="stringliteral">&quot;boneName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a>[] bones = this.bones.Items;</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.bones.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                <a class="code hl_class" href="../../de/d22/class_spine_1_1_bone.html">Bone</a> bone = bones[i];</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="keywordflow">if</span> (bone.data.name == boneName) <span class="keywordflow">return</span> bone;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>            }</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        }</div>
+</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span></div>
+<div class="foldopen" id="foldopen00554" data-start="{" data-end="}">
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#aeeaf7abe56f807e6e57f3a2514e607ab">  554</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#aeeaf7abe56f807e6e57f3a2514e607ab">FindSlot</a> (<span class="keywordtype">string</span> slotName) {</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>            <span class="keywordflow">if</span> (slotName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;slotName&quot;</span>, <span class="stringliteral">&quot;slotName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] slots = this.slots.Items;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.slots.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot = slots[i];</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                <span class="keywordflow">if</span> (slot.data.name == slotName) <span class="keywordflow">return</span> slot;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            }</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        }</div>
+</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span></div>
+<div class="foldopen" id="foldopen00565" data-start="{" data-end="}">
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#af80bbbc3b2b5d588152eba7e83430dc8">  565</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af80bbbc3b2b5d588152eba7e83430dc8">SetSkin</a> (<span class="keywordtype">string</span> skinName) {</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> foundSkin = data.FindSkin(skinName);</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="keywordflow">if</span> (foundSkin == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;Skin not found: &quot;</span> + skinName, <span class="stringliteral">&quot;skinName&quot;</span>);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af80bbbc3b2b5d588152eba7e83430dc8">SetSkin</a>(foundSkin);</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        }</div>
+</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span></div>
+<div class="foldopen" id="foldopen00584" data-start="{" data-end="}">
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a1c9eb9cbfcc387526acef6f83d1edfae">  584</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a1c9eb9cbfcc387526acef6f83d1edfae">SetSkin</a> (<a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Skin</a> newSkin) {</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            <span class="keywordflow">if</span> (newSkin == skin) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>            <span class="keywordflow">if</span> (newSkin != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>                <span class="keywordflow">if</span> (skin != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                    newSkin.AttachAll(<span class="keyword">this</span>, skin);</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                    <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] slots = this.slots.Items;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.slots.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                        <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot = slots[i];</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                        <span class="keywordtype">string</span> name = slot.data.attachmentName;</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>                        <span class="keywordflow">if</span> (name != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>                            <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> attachment = newSkin.<a class="code hl_function" href="../../d0/d20/class_spine_1_1_skin.html#a8e1b079b629865148f809487fbda7938">GetAttachment</a>(i, name);</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>                            <span class="keywordflow">if</span> (attachment != <span class="keyword">null</span>) slot.Attachment = attachment;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>                        }</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>                    }</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>                }</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>            }</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            skin = newSkin;</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">UpdateCache</a>();</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>        }</div>
+</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span></div>
+<div class="foldopen" id="foldopen00607" data-start="{" data-end="}">
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">  607</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">GetAttachment</a> (<span class="keywordtype">string</span> slotName, <span class="keywordtype">string</span> attachmentName) {</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">GetAttachment</a>(data.FindSlot(slotName).index, attachmentName);</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        }</div>
+</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span></div>
+<div class="foldopen" id="foldopen00613" data-start="{" data-end="}">
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#acb9d085b8c537828a1e3e0c0bdce52bd">  613</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#acb9d085b8c537828a1e3e0c0bdce52bd">GetAttachment</a> (<span class="keywordtype">int</span> slotIndex, <span class="keywordtype">string</span> attachmentName) {</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>            <span class="keywordflow">if</span> (attachmentName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;attachmentName&quot;</span>, <span class="stringliteral">&quot;attachmentName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>            <span class="keywordflow">if</span> (skin != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>                <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> attachment = skin.GetAttachment(slotIndex, attachmentName);</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                <span class="keywordflow">if</span> (attachment != <span class="keyword">null</span>) <span class="keywordflow">return</span> attachment;</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>            }</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>            <span class="keywordflow">return</span> data.defaultSkin != <span class="keyword">null</span> ? data.defaultSkin.GetAttachment(slotIndex, attachmentName) : <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        }</div>
+</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span></div>
+<div class="foldopen" id="foldopen00624" data-start="{" data-end="}">
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a37c49ddd794a12ea5cda13ef8dc5ff46">  624</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a37c49ddd794a12ea5cda13ef8dc5ff46">SetAttachment</a> (<span class="keywordtype">string</span> slotName, <span class="keywordtype">string</span> attachmentName) {</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            <span class="keywordflow">if</span> (slotName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;slotName&quot;</span>, <span class="stringliteral">&quot;slotName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>            <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] slots = this.slots.Items;</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.slots.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>                <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot = slots[i];</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>                <span class="keywordflow">if</span> (slot.data.name == slotName) {</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                    <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> attachment = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>                    <span class="keywordflow">if</span> (attachmentName != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>                        attachment = <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">GetAttachment</a>(i, attachmentName);</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>                        <span class="keywordflow">if</span> (attachment == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Attachment not found: &quot;</span> + attachmentName + <span class="stringliteral">&quot;, for slot: &quot;</span> + slotName);</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>                    }</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                    slot.Attachment = attachment;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>                }</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>            }</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<span class="stringliteral">&quot;Slot not found: &quot;</span> + slotName);</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>        }</div>
+</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span></div>
+<div class="foldopen" id="foldopen00645" data-start="{" data-end="}">
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a8fbf9f59c4d2209ac0015e6220b059d1">  645</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a8fbf9f59c4d2209ac0015e6220b059d1">FindIkConstraint</a> (<span class="keywordtype">string</span> constraintName) {</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>            <span class="keywordflow">if</span> (constraintName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;constraintName&quot;</span>, <span class="stringliteral">&quot;constraintName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>            <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a>[] ikConstraints = this.ikConstraints.Items;</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.ikConstraints.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>                <a class="code hl_class" href="../../d5/d93/class_spine_1_1_ik_constraint.html">IkConstraint</a> ikConstraint = ikConstraints[i];</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>                <span class="keywordflow">if</span> (ikConstraint.data.name == constraintName) <span class="keywordflow">return</span> ikConstraint;</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>            }</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        }</div>
+</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span></div>
+<div class="foldopen" id="foldopen00658" data-start="{" data-end="}">
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a33d14540429ad370c8a0fdd878a2cd09">  658</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a33d14540429ad370c8a0fdd878a2cd09">FindTransformConstraint</a> (<span class="keywordtype">string</span> constraintName) {</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>            <span class="keywordflow">if</span> (constraintName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;constraintName&quot;</span>, <span class="stringliteral">&quot;constraintName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>            <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a>[] transformConstraints = this.transformConstraints.Items;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.transformConstraints.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>                <a class="code hl_class" href="../../db/d5c/class_spine_1_1_transform_constraint.html">TransformConstraint</a> transformConstraint = transformConstraints[i];</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>                <span class="keywordflow">if</span> (transformConstraint.data.<a class="code hl_property" href="../../d5/dab/class_spine_1_1_constraint_data.html#a3f9d843e264f5166870fbf8fa6f52c38">Name</a> == constraintName) <span class="keywordflow">return</span> transformConstraint;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>            }</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        }</div>
+</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span></div>
+<div class="foldopen" id="foldopen00671" data-start="{" data-end="}">
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a7cd9e65dd7b7575d3eb00b725ae57aa8">  671</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a7cd9e65dd7b7575d3eb00b725ae57aa8">FindPathConstraint</a> (<span class="keywordtype">string</span> constraintName) {</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>            <span class="keywordflow">if</span> (constraintName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;constraintName&quot;</span>, <span class="stringliteral">&quot;constraintName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>            <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a>[] pathConstraints = this.pathConstraints.Items;</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.pathConstraints.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>                <a class="code hl_class" href="../../de/d3b/class_spine_1_1_path_constraint.html">PathConstraint</a> constraint = pathConstraints[i];</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>                <span class="keywordflow">if</span> (constraint.data.<a class="code hl_property" href="../../d5/dab/class_spine_1_1_constraint_data.html#a3f9d843e264f5166870fbf8fa6f52c38">Name</a>.Equals(constraintName)) <span class="keywordflow">return</span> constraint;</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>            }</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>        }</div>
+</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span></div>
+<div class="foldopen" id="foldopen00684" data-start="{" data-end="}">
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#ac978931e347393a0d02fc4266cce2d3c">  684</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#ac978931e347393a0d02fc4266cce2d3c">FindPhysicsConstraint</a> (String constraintName) {</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            <span class="keywordflow">if</span> (constraintName == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;constraintName&quot;</span>, <span class="stringliteral">&quot;constraintName cannot be null.&quot;</span>);</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a>[] physicsConstraints = this.physicsConstraints.Items;</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.physicsConstraints.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>                <a class="code hl_class" href="../../df/d12/class_spine_1_1_physics_constraint.html">PhysicsConstraint</a> constraint = physicsConstraints[i];</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>                <span class="keywordflow">if</span> (constraint.data.name.Equals(constraintName)) <span class="keywordflow">return</span> constraint;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>            }</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>        }</div>
+</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span></div>
+<div class="foldopen" id="foldopen00700" data-start="{" data-end="}">
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a7487f50de022043e17eab922b7d62de7">  700</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a7487f50de022043e17eab922b7d62de7">GetBounds</a> (out <span class="keywordtype">float</span> x, out <span class="keywordtype">float</span> y, out <span class="keywordtype">float</span> width, out <span class="keywordtype">float</span> height, ref <span class="keywordtype">float</span>[] vertexBuffer,</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>            <a class="code hl_class" href="../../d9/dee/class_spine_1_1_skeleton_clipping.html">SkeletonClipping</a> clipper = <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>            <span class="keywordtype">float</span>[] temp = vertexBuffer;</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>            temp = temp ?? <span class="keyword">new</span> <span class="keywordtype">float</span>[8];</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>            <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>[] drawOrder = this.drawOrder.Items;</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>            <span class="keywordtype">float</span> minX = <span class="keywordtype">int</span>.MaxValue, minY = <span class="keywordtype">int</span>.MaxValue, maxX = <span class="keywordtype">int</span>.MinValue, maxY = <span class="keywordtype">int</span>.MinValue;</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, n = this.drawOrder.Count; i &lt; n; i++) {</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>                <a class="code hl_class" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> slot = drawOrder[i];</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>                <span class="keywordflow">if</span> (!slot.bone.active) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>                <span class="keywordtype">int</span> verticesLength = 0;</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>                <span class="keywordtype">float</span>[] vertices = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                <span class="keywordtype">int</span>[] triangles = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>                <a class="code hl_class" href="../../df/de7/class_spine_1_1_attachment.html">Attachment</a> attachment = slot.attachment;</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>                <a class="code hl_class" href="../../d0/d0c/class_spine_1_1_region_attachment.html">RegionAttachment</a> region = attachment as <a class="code hl_class" href="../../d0/d0c/class_spine_1_1_region_attachment.html">RegionAttachment</a>;</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                <span class="keywordflow">if</span> (region != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                    verticesLength = 8;</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    vertices = temp;</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                    <span class="keywordflow">if</span> (vertices.Length &lt; 8) vertices = temp = <span class="keyword">new</span> <span class="keywordtype">float</span>[8];</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                    region.<a class="code hl_function" href="../../d0/d0c/class_spine_1_1_region_attachment.html#ac61dc01cec8dbd170d0311f2d30956f8">ComputeWorldVertices</a>(slot, temp, 0, 2);</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>                    triangles = quadTriangles;</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                    <a class="code hl_class" href="../../da/dd7/class_spine_1_1_mesh_attachment.html">MeshAttachment</a> mesh = attachment as <a class="code hl_class" href="../../da/dd7/class_spine_1_1_mesh_attachment.html">MeshAttachment</a>;</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                    <span class="keywordflow">if</span> (mesh != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                        verticesLength = mesh.WorldVerticesLength;</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                        vertices = temp;</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                        <span class="keywordflow">if</span> (vertices.Length &lt; verticesLength) vertices = temp = <span class="keyword">new</span> <span class="keywordtype">float</span>[verticesLength];</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                        mesh.<a class="code hl_function" href="../../da/dd7/class_spine_1_1_mesh_attachment.html#a0fe8ac96ac299d18d0a69e662a01310d">ComputeWorldVertices</a>(slot, 0, verticesLength, temp, 0, 2);</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                        triangles = mesh.Triangles;</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (clipper != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                        <a class="code hl_class" href="../../d0/dfe/class_spine_1_1_clipping_attachment.html">ClippingAttachment</a> clip = attachment as <a class="code hl_class" href="../../d0/dfe/class_spine_1_1_clipping_attachment.html">ClippingAttachment</a>;</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                        <span class="keywordflow">if</span> (clip != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                            clipper.ClipStart(slot, clip);</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                        }</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                    }</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>                }</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                <span class="keywordflow">if</span> (vertices != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                    <span class="keywordflow">if</span> (clipper != <span class="keyword">null</span> &amp;&amp; clipper.IsClipping) {</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                        clipper.ClipTriangles(vertices, triangles, triangles.Length);</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                        vertices = clipper.ClippedVertices.Items;</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                        verticesLength = clipper.ClippedVertices.Count;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    }</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span> </div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; verticesLength; ii += 2) {</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>                        <span class="keywordtype">float</span> vx = vertices[ii], vy = vertices[ii + 1];</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                        minX = Math.Min(minX, vx);</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                        minY = Math.Min(minY, vy);</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                        maxX = Math.Max(maxX, vx);</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                        maxY = Math.Max(maxY, vy);</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                    }</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>                }</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                <span class="keywordflow">if</span> (clipper != <span class="keyword">null</span>) clipper.ClipEnd(slot);</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>            }</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            <span class="keywordflow">if</span> (clipper != <span class="keyword">null</span>) clipper.ClipEnd();</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>            x = minX;</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>            y = minY;</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            width = maxX - minX;</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>            height = maxY - minY;</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>            vertexBuffer = temp;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        }</div>
+</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>        <span class="keyword">override</span> <span class="keyword">public</span> <span class="keywordtype">string</span> ToString () {</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            <span class="keywordflow">return</span> data.name;</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span></div>
+<div class="foldopen" id="foldopen00768" data-start="{" data-end="};">
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">  768</a></span>        <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Physics</a> {</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a6adf97f83acf6453d4a6a4b1070f3754">  770</a></span>            <a class="code hl_enumvalue" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span></div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a526d688f37a86d3c3f27d0c5016eb71d">  773</a></span>            <a class="code hl_enumvalue" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a526d688f37a86d3c3f27d0c5016eb71d">Reset</a>,</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a06933067aafd48425d67bcb01bba5cb6">  776</a></span>            <a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#af8830164174fb0fc3b1f2c140ba5884b">Update</a>,</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span></div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno"><a class="line" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a8109c9c9d6a2ca3bec3e006fe51a5f3e">  779</a></span>            <a class="code hl_enumvalue" href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a8109c9c9d6a2ca3bec3e006fe51a5f3e">Pose</a></div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>        }</div>
+</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    }</div>
+</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_attachment_html"><div class="ttname"><a href="../../df/de7/class_spine_1_1_attachment.html">Spine.Attachment</a></div><div class="ttdoc">The base class for all attachments.</div><div class="ttdef"><b>Определения</b> <a href="../../d9/d96/_attachment_8cs_source.html#l00035">Attachment.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html"><div class="ttname"><a href="../../d6/d40/class_spine_1_1_bone_data.html">Spine.BoneData</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/d91/_bone_data_8cs_source.html#l00033">BoneData.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html">Spine.Bone</a></div><div class="ttdoc">Stores a bone&#39;s current pose.</div><div class="ttdef"><b>Определения</b> <a href="../../d9/dc9/_bone_8cs_source.html#l00043">Bone.cs:43</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_html_a714357ad49be82fa9247e231ce917aaa"><div class="ttname"><a href="../../de/d22/class_spine_1_1_bone.html#a714357ad49be82fa9247e231ce917aaa">Spine.Bone.SetToSetupPose</a></div><div class="ttdeci">void SetToSetupPose()</div><div class="ttdoc">Sets this bone&#39;s local transform to the setup pose.</div><div class="ttdef"><b>Определения</b> <a href="../../d9/dc9/_bone_8cs_source.html#l00285">Bone.cs:285</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_clipping_attachment_html"><div class="ttname"><a href="../../d0/dfe/class_spine_1_1_clipping_attachment.html">Spine.ClippingAttachment</a></div><div class="ttdef"><b>Определения</b> <a href="../../dc/db8/_clipping_attachment_8cs_source.html#l00033">ClippingAttachment.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_constraint_data_html_a3f9d843e264f5166870fbf8fa6f52c38"><div class="ttname"><a href="../../d5/dab/class_spine_1_1_constraint_data.html#a3f9d843e264f5166870fbf8fa6f52c38">Spine.ConstraintData.Name</a></div><div class="ttdeci">string Name</div><div class="ttdoc">The constraint&#39;s name, which is unique across all constraints in the skeleton of the same type.</div><div class="ttdef"><b>Определения</b> <a href="../../da/d83/_constraint_data_8cs_source.html#l00046">ConstraintData.cs:46</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_html"><div class="ttname"><a href="../../d5/d93/class_spine_1_1_ik_constraint.html">Spine.IkConstraint</a></div><div class="ttdef"><b>Определения</b> <a href="../../da/d35/_ik_constraint_8cs_source.html#l00042">IkConstraint.cs:42</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_math_utils_html"><div class="ttname"><a href="../../d0/d97/class_spine_1_1_math_utils.html">Spine.MathUtils</a></div><div class="ttdef"><b>Определения</b> <a href="../../d8/d1c/_math_utils_8cs_source.html#l00035">MathUtils.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_mesh_attachment_html"><div class="ttname"><a href="../../da/dd7/class_spine_1_1_mesh_attachment.html">Spine.MeshAttachment</a></div><div class="ttdoc">Attachment that displays a texture region using a mesh.</div><div class="ttdef"><b>Определения</b> <a href="../../d0/d64/_mesh_attachment_8cs_source.html#l00034">MeshAttachment.cs:34</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_mesh_attachment_html_a0fe8ac96ac299d18d0a69e662a01310d"><div class="ttname"><a href="../../da/dd7/class_spine_1_1_mesh_attachment.html#a0fe8ac96ac299d18d0a69e662a01310d">Spine.MeshAttachment.ComputeWorldVertices</a></div><div class="ttdeci">override void ComputeWorldVertices(Slot slot, int start, int count, float[] worldVertices, int offset, int stride=2)</div><div class="ttdoc">If the attachment has a Sequence, the region may be changed.</div><div class="ttdef"><b>Определения</b> <a href="../../d0/d64/_mesh_attachment_8cs_source.html#l00195">MeshAttachment.cs:195</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_path_constraint_html"><div class="ttname"><a href="../../de/d3b/class_spine_1_1_path_constraint.html">Spine.PathConstraint</a></div><div class="ttdef"><b>Определения</b> <a href="../../dc/ddd/_path_constraint_8cs_source.html#l00042">PathConstraint.cs:42</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_physics_constraint_html"><div class="ttname"><a href="../../df/d12/class_spine_1_1_physics_constraint.html">Spine.PhysicsConstraint</a></div><div class="ttdoc">Stores the current pose for a physics constraint. A physics constraint applies physics to bones.</div><div class="ttdef"><b>Определения</b> <a href="../../d9/d68/_physics_constraint_8cs_source.html#l00040">PhysicsConstraint.cs:40</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_physics_constraint_html_a39308aeecf2926d5829dcd5d00e73ee4"><div class="ttname"><a href="../../df/d12/class_spine_1_1_physics_constraint.html#a39308aeecf2926d5829dcd5d00e73ee4">Spine.PhysicsConstraint.Translate</a></div><div class="ttdeci">void Translate(float x, float y)</div><div class="ttdoc">Translates the physics constraint so next Update(Physics) forces are applied as if the bone moved an ...</div><div class="ttdef"><b>Определения</b> <a href="../../d9/d68/_physics_constraint_8cs_source.html#l00116">PhysicsConstraint.cs:116</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_physics_constraint_html_aff3041f2590852e2556b276c0e825ac8"><div class="ttname"><a href="../../df/d12/class_spine_1_1_physics_constraint.html#aff3041f2590852e2556b276c0e825ac8">Spine.PhysicsConstraint.Rotate</a></div><div class="ttdeci">void Rotate(float x, float y, float degrees)</div><div class="ttdoc">Rotates the physics constraint so next Update(Physics) forces are applied as if the bone rotated arou...</div><div class="ttdef"><b>Определения</b> <a href="../../d9/d68/_physics_constraint_8cs_source.html#l00127">PhysicsConstraint.cs:127</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_region_attachment_html"><div class="ttname"><a href="../../d0/d0c/class_spine_1_1_region_attachment.html">Spine.RegionAttachment</a></div><div class="ttdoc">Attachment that displays a texture region.</div><div class="ttdef"><b>Определения</b> <a href="../../d8/d83/_region_attachment_8cs_source.html#l00034">RegionAttachment.cs:34</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_region_attachment_html_ac61dc01cec8dbd170d0311f2d30956f8"><div class="ttname"><a href="../../d0/d0c/class_spine_1_1_region_attachment.html#ac61dc01cec8dbd170d0311f2d30956f8">Spine.RegionAttachment.ComputeWorldVertices</a></div><div class="ttdeci">void ComputeWorldVertices(Slot slot, float[] worldVertices, int offset, int stride=2)</div><div class="ttdoc">Transforms the attachment&#39;s four vertices to world coordinates. If the attachment has a Sequence the ...</div><div class="ttdef"><b>Определения</b> <a href="../../d8/d83/_region_attachment_8cs_source.html#l00181">RegionAttachment.cs:181</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_clipping_html"><div class="ttname"><a href="../../d9/dee/class_spine_1_1_skeleton_clipping.html">Spine.SkeletonClipping</a></div><div class="ttdef"><b>Определения</b> <a href="../../dc/dde/_skeleton_clipping_8cs_source.html#l00033">SkeletonClipping.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_data_html"><div class="ttname"><a href="../../d0/d8a/class_spine_1_1_skeleton_data.html">Spine.SkeletonData</a></div><div class="ttdoc">Stores the setup pose and all of the stateless data for a skeleton.</div><div class="ttdef"><b>Определения</b> <a href="../../da/de7/_skeleton_data_8cs_source.html#l00035">SkeletonData.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html">Spine.Skeleton</a></div><div class="ttdef"><b>Определения</b> <a href="#l00033">Skeleton.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a0f883b19b2bc80d4d5db65fba9f1f99c"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a0f883b19b2bc80d4d5db65fba9f1f99c">Spine.Skeleton.ScaleX</a></div><div class="ttdeci">float ScaleX</div><div class="ttdef"><b>Определения</b> <a href="#l00093">Skeleton.cs:93</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a1633fed9631208f0f1da9a29c75eb90a"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">Spine.Skeleton.SetToSetupPose</a></div><div class="ttdeci">void SetToSetupPose()</div><div class="ttdoc">Sets the bones, constraints, and slots to their setup pose values.</div><div class="ttdef"><b>Определения</b> <a href="#l00502">Skeleton.cs:502</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a1bd863a548463ff477cf5e47639832e5"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a1bd863a548463ff477cf5e47639832e5">Spine.Skeleton.UpdateWorldTransform</a></div><div class="ttdeci">void UpdateWorldTransform(Physics physics, Bone parent)</div><div class="ttdoc">Temporarily sets the root bone as a child of the specified bone, then updates the world transform for...</div><div class="ttdef"><b>Определения</b> <a href="#l00450">Skeleton.cs:450</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a1c9eb9cbfcc387526acef6f83d1edfae"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a1c9eb9cbfcc387526acef6f83d1edfae">Spine.Skeleton.SetSkin</a></div><div class="ttdeci">void SetSkin(Skin newSkin)</div><div class="ttdef"><b>Определения</b> <a href="#l00584">Skeleton.cs:584</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a25f7a72084591daddc4fa51236651766"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a25f7a72084591daddc4fa51236651766">Spine.Skeleton.PhysicsConstraints</a></div><div class="ttdeci">ExposedList&lt; PhysicsConstraint &gt; PhysicsConstraints</div><div class="ttdoc">The skeleton&#39;s physics constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00067">Skeleton.cs:67</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a2e2a2015c0ec4504f2f24528dd3d6e9e"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a2e2a2015c0ec4504f2f24528dd3d6e9e">Spine.Skeleton.UpdateCacheList</a></div><div class="ttdeci">ExposedList&lt; IUpdatable &gt; UpdateCacheList</div><div class="ttdoc">The list of bones and constraints, sorted in the order they should be updated, as computed by UpdateC...</div><div class="ttdef"><b>Определения</b> <a href="#l00056">Skeleton.cs:56</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a33d14540429ad370c8a0fdd878a2cd09"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a33d14540429ad370c8a0fdd878a2cd09">Spine.Skeleton.FindTransformConstraint</a></div><div class="ttdeci">TransformConstraint FindTransformConstraint(string constraintName)</div><div class="ttdoc">Finds a transform constraint by comparing each transform constraint&#39;s name. It is more efficient to c...</div><div class="ttdef"><b>Определения</b> <a href="#l00658">Skeleton.cs:658</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a37c49ddd794a12ea5cda13ef8dc5ff46"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a37c49ddd794a12ea5cda13ef8dc5ff46">Spine.Skeleton.SetAttachment</a></div><div class="ttdeci">void SetAttachment(string slotName, string attachmentName)</div><div class="ttdoc">A convenience method to set an attachment by finding the slot with FindSlot, finding the attachment w...</div><div class="ttdef"><b>Определения</b> <a href="#l00624">Skeleton.cs:624</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a430871be49c04e3d2ed24e44801e52ed"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a430871be49c04e3d2ed24e44801e52ed">Spine.Skeleton.Bones</a></div><div class="ttdeci">ExposedList&lt; Bone &gt; Bones</div><div class="ttdoc">The skeleton&#39;s bones, sorted parent first. The root bone is always the first bone.</div><div class="ttdef"><b>Определения</b> <a href="#l00053">Skeleton.cs:53</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a43db6d20181ea0ddbb8710df9d0eba3a"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a43db6d20181ea0ddbb8710df9d0eba3a">Spine.Skeleton.ScaleY</a></div><div class="ttdeci">float ScaleY</div><div class="ttdef"><b>Определения</b> <a href="#l00097">Skeleton.cs:97</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a49a6dfe7d4e66ba8d142541022f17a82"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a49a6dfe7d4e66ba8d142541022f17a82">Spine.Skeleton.GetAttachment</a></div><div class="ttdeci">Attachment GetAttachment(string slotName, string attachmentName)</div><div class="ttdoc">Finds an attachment by looking in the Skeleton.Skin and SkeletonData.DefaultSkin using the slot name ...</div><div class="ttdef"><b>Определения</b> <a href="#l00607">Skeleton.cs:607</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a4c7819824f7ebae7c12bee4e77867637"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a4c7819824f7ebae7c12bee4e77867637">Spine.Skeleton.PhysicsRotate</a></div><div class="ttdeci">void PhysicsRotate(float x, float y, float degrees)</div><div class="ttdoc">Calls PhysicsConstraint.Rotate(float, float, float) for each physics constraint.</div><div class="ttdef"><b>Определения</b> <a href="#l00490">Skeleton.cs:490</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a4e21d4e0b6aa6dd23ae81cc6dfabfd8e"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">Spine.Skeleton.Skin</a></div><div class="ttdeci">Skin Skin</div><div class="ttdoc">The skeleton&#39;s current skin. May be null. See SetSkin(Spine.Skin).</div><div class="ttdef"><b>Определения</b> <a href="#l00072">Skeleton.cs:72</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a6a451d2b789c6b916a978bd0f27a7c22"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a6a451d2b789c6b916a978bd0f27a7c22">Spine.Skeleton.DrawOrder</a></div><div class="ttdeci">ExposedList&lt; Slot &gt; DrawOrder</div><div class="ttdoc">The skeleton&#39;s slots in the order they should be drawn. The returned array may be modified to change ...</div><div class="ttdef"><b>Определения</b> <a href="#l00061">Skeleton.cs:61</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a7487f50de022043e17eab922b7d62de7"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a7487f50de022043e17eab922b7d62de7">Spine.Skeleton.GetBounds</a></div><div class="ttdeci">void GetBounds(out float x, out float y, out float width, out float height, ref float[] vertexBuffer, SkeletonClipping clipper=null)</div><div class="ttdoc">Returns the axis aligned bounding box (AABB) of the region and mesh attachments for the current pose.</div><div class="ttdef"><b>Определения</b> <a href="#l00700">Skeleton.cs:700</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a76c2052feb3e27c26a6ec7aa3d377343"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343">Spine.Skeleton.Physics</a></div><div class="ttdeci">Physics</div><div class="ttdoc">Determines how physics and other non-deterministic updates are applied.</div><div class="ttdef"><b>Определения</b> <a href="#l00768">Skeleton.cs:768</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a76c2052feb3e27c26a6ec7aa3d377343a526d688f37a86d3c3f27d0c5016eb71d"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a526d688f37a86d3c3f27d0c5016eb71d">Spine.Skeleton.Physics.Reset</a></div><div class="ttdeci">@ Reset</div><div class="ttdoc">Physics are reset to the current pose.</div><div class="ttdef"><b>Определения</b> <a href="#l00773">Skeleton.cs:773</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a76c2052feb3e27c26a6ec7aa3d377343a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a6adf97f83acf6453d4a6a4b1070f3754">Spine.Skeleton.Physics.None</a></div><div class="ttdeci">@ None</div><div class="ttdoc">Physics are not updated or applied.</div><div class="ttdef"><b>Определения</b> <a href="#l00770">Skeleton.cs:770</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a76c2052feb3e27c26a6ec7aa3d377343a8109c9c9d6a2ca3bec3e006fe51a5f3e"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a76c2052feb3e27c26a6ec7aa3d377343a8109c9c9d6a2ca3bec3e006fe51a5f3e">Spine.Skeleton.Physics.Pose</a></div><div class="ttdeci">@ Pose</div><div class="ttdoc">Physics are not updated but the pose from physics is applied.</div><div class="ttdef"><b>Определения</b> <a href="#l00779">Skeleton.cs:779</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a7cd9e65dd7b7575d3eb00b725ae57aa8"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a7cd9e65dd7b7575d3eb00b725ae57aa8">Spine.Skeleton.FindPathConstraint</a></div><div class="ttdeci">PathConstraint FindPathConstraint(string constraintName)</div><div class="ttdoc">Finds a path constraint by comparing each path constraint&#39;s name. It is more efficient to cache the r...</div><div class="ttdef"><b>Определения</b> <a href="#l00671">Skeleton.cs:671</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a866c0b6a8d06555e160a2eef6eba2239"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a866c0b6a8d06555e160a2eef6eba2239">Spine.Skeleton.Skeleton</a></div><div class="ttdeci">Skeleton(Skeleton skeleton)</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Определения</b> <a href="#l00160">Skeleton.cs:160</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a8fbf9f59c4d2209ac0015e6220b059d1"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a8fbf9f59c4d2209ac0015e6220b059d1">Spine.Skeleton.FindIkConstraint</a></div><div class="ttdeci">IkConstraint FindIkConstraint(string constraintName)</div><div class="ttdoc">Finds an IK constraint by comparing each IK constraint&#39;s name. It is more efficient to cache the resu...</div><div class="ttdef"><b>Определения</b> <a href="#l00645">Skeleton.cs:645</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a9238949a0febaa09e57777e47c8bf251"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a9238949a0febaa09e57777e47c8bf251">Spine.Skeleton.RootBone</a></div><div class="ttdeci">Bone RootBone</div><div class="ttdoc">Returns the root bone, or null if the skeleton has no bones.</div><div class="ttdef"><b>Определения</b> <a href="#l00109">Skeleton.cs:109</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a9fc9acb3f7d51836ebc40388758e13c6"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a9fc9acb3f7d51836ebc40388758e13c6">Spine.Skeleton.IkConstraints</a></div><div class="ttdeci">ExposedList&lt; IkConstraint &gt; IkConstraints</div><div class="ttdoc">The skeleton&#39;s IK constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00063">Skeleton.cs:63</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_aa6929dedee376680ea44420a32977548"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#aa6929dedee376680ea44420a32977548">Spine.Skeleton.X</a></div><div class="ttdeci">float X</div><div class="ttdef"><b>Определения</b> <a href="#l00085">Skeleton.cs:85</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ab55c5668b8473f8df274ac017a16bb4f"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ab55c5668b8473f8df274ac017a16bb4f">Spine.Skeleton.PathConstraints</a></div><div class="ttdeci">ExposedList&lt; PathConstraint &gt; PathConstraints</div><div class="ttdoc">The skeleton&#39;s path constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00065">Skeleton.cs:65</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ab6f73191374f6b37ae82db1cdae8c990"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ab6f73191374f6b37ae82db1cdae8c990">Spine.Skeleton.PhysicsTranslate</a></div><div class="ttdeci">void PhysicsTranslate(float x, float y)</div><div class="ttdoc">Calls PhysicsConstraint.Translate(float, float) for each physics constraint.</div><div class="ttdef"><b>Определения</b> <a href="#l00481">Skeleton.cs:481</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ac17fa59f8524f84672419a2e9c676666"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ac17fa59f8524f84672419a2e9c676666">Spine.Skeleton.FindBone</a></div><div class="ttdeci">Bone FindBone(string boneName)</div><div class="ttdoc">Finds a bone by comparing each bone&#39;s name. It is more efficient to cache the results of this method ...</div><div class="ttdef"><b>Определения</b> <a href="#l00541">Skeleton.cs:541</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ac978931e347393a0d02fc4266cce2d3c"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ac978931e347393a0d02fc4266cce2d3c">Spine.Skeleton.FindPhysicsConstraint</a></div><div class="ttdeci">PhysicsConstraint FindPhysicsConstraint(String constraintName)</div><div class="ttdoc">Finds a physics constraint by comparing each physics constraint&#39;s name. It is more efficient to cache...</div><div class="ttdef"><b>Определения</b> <a href="#l00684">Skeleton.cs:684</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_acb9d085b8c537828a1e3e0c0bdce52bd"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#acb9d085b8c537828a1e3e0c0bdce52bd">Spine.Skeleton.GetAttachment</a></div><div class="ttdeci">Attachment GetAttachment(int slotIndex, string attachmentName)</div><div class="ttdoc">Finds an attachment by looking in the skin and skeletonData.defaultSkin using the slot index and atta...</div><div class="ttdef"><b>Определения</b> <a href="#l00613">Skeleton.cs:613</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_acdcb41164c617375a198124234134312"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#acdcb41164c617375a198124234134312">Spine.Skeleton.SetBonesToSetupPose</a></div><div class="ttdeci">void SetBonesToSetupPose()</div><div class="ttdoc">Sets the bones and constraints to their setup pose values.</div><div class="ttdef"><b>Определения</b> <a href="#l00508">Skeleton.cs:508</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_acf7de15bbd875858c27156727dda9a7b"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#acf7de15bbd875858c27156727dda9a7b">Spine.Skeleton.Time</a></div><div class="ttdeci">float Time</div><div class="ttdoc">Returns the skeleton&#39;s time. This is used for time-based manipulations, such as PhysicsConstraint.</div><div class="ttdef"><b>Определения</b> <a href="#l00106">Skeleton.cs:106</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ad076b350b843c874fb5cff64f826d9de"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ad076b350b843c874fb5cff64f826d9de">Spine.Skeleton.Y</a></div><div class="ttdeci">float Y</div><div class="ttdef"><b>Определения</b> <a href="#l00089">Skeleton.cs:89</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ad747a544ba5de279e479eb5733199db1"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ad747a544ba5de279e479eb5733199db1">Spine.Skeleton.UpdateCache</a></div><div class="ttdeci">void UpdateCache()</div><div class="ttdoc">Caches information about bones and constraints. Must be called if the Skin is modified or if bones,...</div><div class="ttdef"><b>Определения</b> <a href="#l00221">Skeleton.cs:221</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_ae0407b2eb25cb28c9eebaf87ef83e505"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#ae0407b2eb25cb28c9eebaf87ef83e505">Spine.Skeleton.TransformConstraints</a></div><div class="ttdeci">ExposedList&lt; TransformConstraint &gt; TransformConstraints</div><div class="ttdoc">The skeleton&#39;s transform constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00069">Skeleton.cs:69</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_aeeaf7abe56f807e6e57f3a2514e607ab"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#aeeaf7abe56f807e6e57f3a2514e607ab">Spine.Skeleton.FindSlot</a></div><div class="ttdeci">Slot FindSlot(string slotName)</div><div class="ttdoc">Finds a slot by comparing each slot&#39;s name. It is more efficient to cache the results of this method ...</div><div class="ttdef"><b>Определения</b> <a href="#l00554">Skeleton.cs:554</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_af50f9c4c4f3349cdb108e29d8f96f52e"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#af50f9c4c4f3349cdb108e29d8f96f52e">Spine.Skeleton.UpdateWorldTransform</a></div><div class="ttdeci">void UpdateWorldTransform(Physics physics)</div><div class="ttdoc">Updates the world transform for each bone and applies all constraints.</div><div class="ttdef"><b>Определения</b> <a href="#l00428">Skeleton.cs:428</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_af72992c14e5cab05511330483a21e902"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#af72992c14e5cab05511330483a21e902">Spine.Skeleton.Slots</a></div><div class="ttdeci">ExposedList&lt; Slot &gt; Slots</div><div class="ttdoc">The skeleton&#39;s slots.</div><div class="ttdef"><b>Определения</b> <a href="#l00058">Skeleton.cs:58</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_af80bbbc3b2b5d588152eba7e83430dc8"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#af80bbbc3b2b5d588152eba7e83430dc8">Spine.Skeleton.SetSkin</a></div><div class="ttdeci">void SetSkin(string skinName)</div><div class="ttdoc">Sets a skin by name (see SetSkin(Spine.Skin)).</div><div class="ttdef"><b>Определения</b> <a href="#l00565">Skeleton.cs:565</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_af8830164174fb0fc3b1f2c140ba5884b"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#af8830164174fb0fc3b1f2c140ba5884b">Spine.Skeleton.Update</a></div><div class="ttdeci">void Update(float delta)</div><div class="ttdoc">Increments the skeleton&#39;s time.</div><div class="ttdef"><b>Определения</b> <a href="#l00497">Skeleton.cs:497</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skin_html_a8e1b079b629865148f809487fbda7938"><div class="ttname"><a href="../../d0/d20/class_spine_1_1_skin.html#a8e1b079b629865148f809487fbda7938">Spine.Skin.GetAttachment</a></div><div class="ttdeci">Attachment GetAttachment(int slotIndex, string name)</div><div class="ttdoc">Returns the attachment for the specified slot index and name, or null.</div><div class="ttdef"><b>Определения</b> <a href="../../dd/d3e/_skin_8cs_source.html#l00099">Skin.cs:99</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_slot_html"><div class="ttname"><a href="../../da/dd8/class_spine_1_1_slot.html">Spine.Slot</a></div><div class="ttdoc">Stores a slot&#39;s current pose. Slots organize attachments for Skeleton.DrawOrder purposes and provide ...</div><div class="ttdef"><b>Определения</b> <a href="../../de/db4/_slot_8cs_source.html#l00039">Slot.cs:39</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_transform_constraint_html"><div class="ttname"><a href="../../db/d5c/class_spine_1_1_transform_constraint.html">Spine.TransformConstraint</a></div><div class="ttdef"><b>Определения</b> <a href="../../d2/d3d/_transform_constraint_8cs_source.html#l00042">TransformConstraint.cs:42</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_i_updatable_html"><div class="ttname"><a href="../../da/d98/interface_spine_1_1_i_updatable.html">Spine.IUpdatable</a></div><div class="ttdoc">The interface for items updated by Skeleton.UpdateWorldTransform(Physics).</div><div class="ttdef"><b>Определения</b> <a href="../../d7/d1b/_i_updatable_8cs_source.html#l00034">IUpdatable.cs:34</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_i_updatable_html_a96146796a111eb677afe30ca6495a81e"><div class="ttname"><a href="../../da/d98/interface_spine_1_1_i_updatable.html#a96146796a111eb677afe30ca6495a81e">Spine.IUpdatable.Update</a></div><div class="ttdeci">void Update(Physics physics)</div></div>
+<div class="ttc" id="anamespace_data_html"><div class="ttname"><a href="../../de/d75/namespace_data.html">Data</a></div><div class="ttdef"><b>Определения</b> <a href="../../de/d3b/_template_object_8cs_source.html#l00004">TemplateObject.cs:5</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="../../de/de6/namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/de3/_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-csharp</b></li><li class="navelem"><b>Skeleton.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

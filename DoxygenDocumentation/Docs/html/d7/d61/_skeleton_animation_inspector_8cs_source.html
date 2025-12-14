@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Editor/spine-unity/Editor/Components/SkeletonAnimationInspector.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d7/d61/_skeleton_animation_inspector_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SkeletonAnimationInspector.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span><a class="code hl_namespace" href="../../de/de6/namespace_spine.html">Spine</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>UnityEditor;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dd/de7/namespace_spine_1_1_unity_1_1_editor.html">Spine.Unity.Editor</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    [CustomEditor(typeof(SkeletonAnimation))]</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    [CanEditMultipleObjects]</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../db/d1b/class_spine_1_1_unity_1_1_editor_1_1_skeleton_animation_inspector.html">   38</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/d1b/class_spine_1_1_unity_1_1_editor_1_1_skeleton_animation_inspector.html">SkeletonAnimationInspector</a> : <a class="code hl_class" href="../../d5/d7b/class_spine_1_1_unity_1_1_editor_1_1_skeleton_renderer_inspector.html">SkeletonRendererInspector</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">protected</span> SerializedProperty animationName, loop, timeScale, unscaledTime, autoReset;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">protected</span> <span class="keywordtype">bool</span> wasAnimationParameterChanged = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        readonly GUIContent LoopLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Loop&quot;</span>, <span class="stringliteral">&quot;Whether or not .AnimationName should loop. This only applies to the initial animation specified in the inspector, or any subsequent Animations played through .AnimationName. Animations set through state.SetAnimation are unaffected.&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        readonly GUIContent TimeScaleLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Time Scale&quot;</span>, <span class="stringliteral">&quot;The rate at which animations progress over time. 1 means normal speed. 0.5 means 50% speed.&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        readonly GUIContent UnscaledTimeLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Unscaled Time&quot;</span>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="stringliteral">&quot;If enabled, AnimationState uses unscaled game time (Time.unscaledDeltaTime), &quot;</span> +</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="stringliteral">&quot;running animations independent of e.g. game pause (Time.timeScale). &quot;</span> +</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="stringliteral">&quot;Instance SkeletonAnimation.timeScale will still be applied.&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnEnable () {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            base.OnEnable();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            animationName = serializedObject.FindProperty(<span class="stringliteral">&quot;_animationName&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            loop = serializedObject.FindProperty(<span class="stringliteral">&quot;loop&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            timeScale = serializedObject.FindProperty(<span class="stringliteral">&quot;timeScale&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            unscaledTime = serializedObject.FindProperty(<span class="stringliteral">&quot;unscaledTime&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> DrawInspectorGUI (<span class="keywordtype">bool</span> multi) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            base.DrawInspectorGUI(multi);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">if</span> (!TargetIsValid) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordtype">bool</span> sameData = <a class="code hl_class" href="../../d5/d3e/class_spine_1_1_unity_1_1_editor_1_1_spine_inspector_utility.html">SpineInspectorUtility</a>.TargetsUseSameData(serializedObject);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">foreach</span> (UnityEngine.Object o in targets)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                TrySetAnimation(o as <a class="code hl_class" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html">SkeletonAnimation</a>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            EditorGUILayout.Space();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!sameData) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                EditorGUILayout.DelayedTextField(animationName);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                EditorGUILayout.PropertyField(animationName);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                wasAnimationParameterChanged |= EditorGUI.EndChangeCheck(); <span class="comment">// Value used in the next update.</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            EditorGUILayout.PropertyField(loop, LoopLabel);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            wasAnimationParameterChanged |= EditorGUI.EndChangeCheck(); <span class="comment">// Value used in the next update.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            EditorGUILayout.PropertyField(timeScale, TimeScaleLabel);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">foreach</span> (UnityEngine.Object o in targets) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <a class="code hl_class" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html">SkeletonAnimation</a> component = o as <a class="code hl_class" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html">SkeletonAnimation</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                component.timeScale = Mathf.Max(component.<a class="code hl_variable" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#a835661d8d02afc2f6ff8e9fff371bdf7">timeScale</a>, 0);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            EditorGUILayout.PropertyField(unscaledTime, UnscaledTimeLabel);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            EditorGUILayout.Space();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            SkeletonRootMotionParameter();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> TrySetAnimation (<a class="code hl_class" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html">SkeletonAnimation</a> skeletonAnimation) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">if</span> (skeletonAnimation == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (!skeletonAnimation.valid || skeletonAnimation.<a class="code hl_property" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ab1694ead3860e2f34dd892747aef356b">AnimationState</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <a class="code hl_class" href="../../da/d60/class_spine_1_1_track_entry.html">TrackEntry</a> current = skeletonAnimation.<a class="code hl_property" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ab1694ead3860e2f34dd892747aef356b">AnimationState</a>.<a class="code hl_function" href="../../db/d99/class_spine_1_1_animation_state.html#adea0484a352f1cb9a8ebcef446a2311c">GetCurrent</a>(0);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">if</span> (!isInspectingPrefab) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordtype">string</span> activeAnimation = (current != <span class="keyword">null</span>) ? current.<a class="code hl_property" href="../../da/d60/class_spine_1_1_track_entry.html#ac36eff87ff69899a0f334e3204bd52b5">Animation</a>.<a class="code hl_property" href="../../d7/d07/class_spine_1_1_animation.html#a51bf7cf1ccd2e3ae1fa03f62336b85a7">Name</a> : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="keywordtype">bool</span> activeLoop = (current != <span class="keyword">null</span>) ? current.<a class="code hl_property" href="../../da/d60/class_spine_1_1_track_entry.html#a70e1121898ba103bb8d1a4dea9ee54c0">Loop</a> : <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="keywordtype">bool</span> animationParameterChanged = this.wasAnimationParameterChanged &amp;&amp;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    ((activeAnimation != animationName.stringValue) || (activeLoop != loop.boolValue));</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">if</span> (animationParameterChanged) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    this.wasAnimationParameterChanged = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    <a class="code hl_class" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> skeleton = skeletonAnimation.<a class="code hl_property" href="../../d3/d0f/class_spine_1_1_unity_1_1_skeleton_renderer.html#aca997f96ffb5a89579dc325b790f0fd6">Skeleton</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    <a class="code hl_class" href="../../db/d99/class_spine_1_1_animation_state.html">AnimationState</a> state = skeletonAnimation.<a class="code hl_property" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ab1694ead3860e2f34dd892747aef356b">AnimationState</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    <span class="keywordflow">if</span> (!Application.isPlaying) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                        <span class="keywordflow">if</span> (state != <span class="keyword">null</span>) state.<a class="code hl_function" href="../../db/d99/class_spine_1_1_animation_state.html#a496bc0594f1770e08bea3c93b83f070a">ClearTrack</a>(0);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                        skeleton.<a class="code hl_function" href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">SetToSetupPose</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    <a class="code hl_class" href="../../d7/d07/class_spine_1_1_animation.html">Spine.Animation</a> animationToUse = skeleton.<a class="code hl_property" href="../../d9/dae/class_spine_1_1_skeleton.html#aa7ca532fb2a76b9998bb44b8066e99fc">Data</a>.<a class="code hl_function" href="../../d0/d8a/class_spine_1_1_skeleton_data.html#a16a1061325d5653eb3632fe5bf12d4ef">FindAnimation</a>(animationName.stringValue);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    <span class="keywordflow">if</span> (!Application.isPlaying) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                        <span class="keywordflow">if</span> (animationToUse != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                            skeletonAnimation.<a class="code hl_property" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ab1694ead3860e2f34dd892747aef356b">AnimationState</a>.<a class="code hl_function" href="../../db/d99/class_spine_1_1_animation_state.html#aea0a186fda0d6f935f588f9753da1492">SetAnimation</a>(0, animationToUse, loop.boolValue);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                        }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                        skeletonAnimation.Update(0);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                        skeletonAnimation.<a class="code hl_function" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#a3b493475c6735986ea4695383376547d">LateUpdate</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                        requireRepaint = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        <span class="keywordflow">if</span> (animationToUse != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                            state.<a class="code hl_function" href="../../db/d99/class_spine_1_1_animation_state.html#aea0a186fda0d6f935f588f9753da1492">SetAnimation</a>(0, animationToUse, loop.boolValue);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                            state.<a class="code hl_function" href="../../db/d99/class_spine_1_1_animation_state.html#a496bc0594f1770e08bea3c93b83f070a">ClearTrack</a>(0);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="comment">// Reflect animationName serialized property in the inspector even if SetAnimation API was used.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">if</span> (Application.isPlaying) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordflow">if</span> (current != <span class="keyword">null</span> &amp;&amp; current.<a class="code hl_property" href="../../da/d60/class_spine_1_1_track_entry.html#ac36eff87ff69899a0f334e3204bd52b5">Animation</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        <span class="keywordflow">if</span> (skeletonAnimation.<a class="code hl_property" href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#af00a3331f6c5ba828bb7bc32086bb13c">AnimationName</a> != animationName.stringValue)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                            animationName.stringValue = current.<a class="code hl_property" href="../../da/d60/class_spine_1_1_track_entry.html#ac36eff87ff69899a0f334e3204bd52b5">Animation</a>.<a class="code hl_property" href="../../d7/d07/class_spine_1_1_animation.html#a51bf7cf1ccd2e3ae1fa03f62336b85a7">Name</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_animation_html"><div class="ttname"><a href="../../d7/d07/class_spine_1_1_animation.html">Spine.Animation</a></div><div class="ttdoc">Stores a list of timelines to animate a skeleton&#39;s pose over time.</div><div class="ttdef"><b>Определения</b> <a href="../../d5/d02/_animation_8cs_source.html#l00037">Animation.cs:37</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_animation_html_a51bf7cf1ccd2e3ae1fa03f62336b85a7"><div class="ttname"><a href="../../d7/d07/class_spine_1_1_animation.html#a51bf7cf1ccd2e3ae1fa03f62336b85a7">Spine.Animation.Name</a></div><div class="ttdeci">string Name</div><div class="ttdoc">The animation&#39;s name, which is unique across all animations in the skeleton.</div><div class="ttdef"><b>Определения</b> <a href="../../d5/d02/_animation_8cs_source.html#l00081">Animation.cs:81</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_animation_state_html"><div class="ttname"><a href="../../db/d99/class_spine_1_1_animation_state.html">Spine.AnimationState</a></div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l00042">AnimationState.cs:42</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_animation_state_html_a496bc0594f1770e08bea3c93b83f070a"><div class="ttname"><a href="../../db/d99/class_spine_1_1_animation_state.html#a496bc0594f1770e08bea3c93b83f070a">Spine.AnimationState.ClearTrack</a></div><div class="ttdeci">void ClearTrack(int trackIndex)</div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l00640">AnimationState.cs:640</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_animation_state_html_adea0484a352f1cb9a8ebcef446a2311c"><div class="ttname"><a href="../../db/d99/class_spine_1_1_animation_state.html#adea0484a352f1cb9a8ebcef446a2311c">Spine.AnimationState.GetCurrent</a></div><div class="ttdeci">TrackEntry GetCurrent(int trackIndex)</div><div class="ttdoc">The track entry for the animation currently playing on the track, or null if no animation is currentl...</div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l00935">AnimationState.cs:935</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_animation_state_html_aea0a186fda0d6f935f588f9753da1492"><div class="ttname"><a href="../../db/d99/class_spine_1_1_animation_state.html#aea0a186fda0d6f935f588f9753da1492">Spine.AnimationState.SetAnimation</a></div><div class="ttdeci">TrackEntry SetAnimation(int trackIndex, string animationName, bool loop)</div><div class="ttdoc">Sets an animation by name. SetAnimation(int, Animation, bool).</div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l00687">AnimationState.cs:687</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_data_html_a16a1061325d5653eb3632fe5bf12d4ef"><div class="ttname"><a href="../../d0/d8a/class_spine_1_1_skeleton_data.html#a16a1061325d5653eb3632fe5bf12d4ef">Spine.SkeletonData.FindAnimation</a></div><div class="ttdeci">Animation FindAnimation(string animationName)</div><div class="ttdoc">May be null.</div><div class="ttdef"><b>Определения</b> <a href="../../da/de7/_skeleton_data_8cs_source.html#l00164">SkeletonData.cs:164</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html">Spine.Skeleton</a></div><div class="ttdef"><b>Определения</b> <a href="../../df/d5f/_skeleton_8cs_source.html#l00033">Skeleton.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_a1633fed9631208f0f1da9a29c75eb90a"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#a1633fed9631208f0f1da9a29c75eb90a">Spine.Skeleton.SetToSetupPose</a></div><div class="ttdeci">void SetToSetupPose()</div><div class="ttdoc">Sets the bones, constraints, and slots to their setup pose values.</div><div class="ttdef"><b>Определения</b> <a href="../../df/d5f/_skeleton_8cs_source.html#l00502">Skeleton.cs:502</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_html_aa7ca532fb2a76b9998bb44b8066e99fc"><div class="ttname"><a href="../../d9/dae/class_spine_1_1_skeleton.html#aa7ca532fb2a76b9998bb44b8066e99fc">Spine.Skeleton.Data</a></div><div class="ttdeci">SkeletonData Data</div><div class="ttdoc">The skeleton&#39;s setup pose data.</div><div class="ttdef"><b>Определения</b> <a href="../../df/d5f/_skeleton_8cs_source.html#l00051">Skeleton.cs:51</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_track_entry_html"><div class="ttname"><a href="../../da/d60/class_spine_1_1_track_entry.html">Spine.TrackEntry</a></div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l00990">AnimationState.cs:990</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_track_entry_html_a70e1121898ba103bb8d1a4dea9ee54c0"><div class="ttname"><a href="../../da/d60/class_spine_1_1_track_entry.html#a70e1121898ba103bb8d1a4dea9ee54c0">Spine.TrackEntry.Loop</a></div><div class="ttdeci">bool Loop</div><div class="ttdoc">If true, the animation will repeat. If false it will not, instead its last frame is applied if played...</div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l01049">AnimationState.cs:1049</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_track_entry_html_ac36eff87ff69899a0f334e3204bd52b5"><div class="ttname"><a href="../../da/d60/class_spine_1_1_track_entry.html#ac36eff87ff69899a0f334e3204bd52b5">Spine.TrackEntry.Animation</a></div><div class="ttdeci">Animation Animation</div><div class="ttdoc">The animation to apply for this track entry.</div><div class="ttdef"><b>Определения</b> <a href="../../d4/d31/_animation_state_8cs_source.html#l01044">AnimationState.cs:1044</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_editor_1_1_skeleton_animation_inspector_html"><div class="ttname"><a href="../../db/d1b/class_spine_1_1_unity_1_1_editor_1_1_skeleton_animation_inspector.html">Spine.Unity.Editor.SkeletonAnimationInspector</a></div><div class="ttdef"><b>Определения</b> <a href="#l00038">SkeletonAnimationInspector.cs:38</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_editor_1_1_skeleton_renderer_inspector_html"><div class="ttname"><a href="../../d5/d7b/class_spine_1_1_unity_1_1_editor_1_1_skeleton_renderer_inspector.html">Spine.Unity.Editor.SkeletonRendererInspector</a></div><div class="ttdef"><b>Определения</b> <a href="../../d8/d32/_skeleton_renderer_inspector_8cs_source.html#l00058">SkeletonRendererInspector.cs:58</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_editor_1_1_spine_inspector_utility_html"><div class="ttname"><a href="../../d5/d3e/class_spine_1_1_unity_1_1_editor_1_1_spine_inspector_utility.html">Spine.Unity.Editor.SpineInspectorUtility</a></div><div class="ttdef"><b>Определения</b> <a href="../../d3/d53/_spine_inspector_utility_8cs_source.html#l00036">SpineInspectorUtility.cs:36</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_animation_html"><div class="ttname"><a href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html">Spine.Unity.SkeletonAnimation</a></div><div class="ttdef"><b>Определения</b> <a href="../../d0/df5/_skeleton_animation_8cs_source.html#l00045">SkeletonAnimation.cs:45</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_animation_html_a3b493475c6735986ea4695383376547d"><div class="ttname"><a href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#a3b493475c6735986ea4695383376547d">Spine.Unity.SkeletonAnimation.LateUpdate</a></div><div class="ttdeci">override void LateUpdate()</div><div class="ttdoc">Generates a new UnityEngine.Mesh from the internal Skeleton.</div><div class="ttdef"><b>Определения</b> <a href="../../d0/df5/_skeleton_animation_8cs_source.html#l00285">SkeletonAnimation.cs:285</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_animation_html_a835661d8d02afc2f6ff8e9fff371bdf7"><div class="ttname"><a href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#a835661d8d02afc2f6ff8e9fff371bdf7">Spine.Unity.SkeletonAnimation.timeScale</a></div><div class="ttdeci">float timeScale</div><div class="ttdoc">The rate at which animations progress over time. 1 means 100%. 0.5 means 50%.</div><div class="ttdef"><b>Определения</b> <a href="../../d0/df5/_skeleton_animation_8cs_source.html#l00152">SkeletonAnimation.cs:152</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_animation_html_ab1694ead3860e2f34dd892747aef356b"><div class="ttname"><a href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#ab1694ead3860e2f34dd892747aef356b">Spine.Unity.SkeletonAnimation.AnimationState</a></div><div class="ttdeci">Spine.AnimationState AnimationState</div><div class="ttdoc">This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through...</div><div class="ttdef"><b>Определения</b> <a href="../../d0/df5/_skeleton_animation_8cs_source.html#l00055">SkeletonAnimation.cs:55</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_animation_html_af00a3331f6c5ba828bb7bc32086bb13c"><div class="ttname"><a href="../../d4/db2/class_spine_1_1_unity_1_1_skeleton_animation.html#af00a3331f6c5ba828bb7bc32086bb13c">Spine.Unity.SkeletonAnimation.AnimationName</a></div><div class="ttdeci">string AnimationName</div><div class="ttdoc">Setting this property sets the animation of the skeleton. If invalid, it will store the animation nam...</div><div class="ttdef"><b>Определения</b> <a href="../../d0/df5/_skeleton_animation_8cs_source.html#l00118">SkeletonAnimation.cs:118</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_skeleton_renderer_html_aca997f96ffb5a89579dc325b790f0fd6"><div class="ttname"><a href="../../d3/d0f/class_spine_1_1_unity_1_1_skeleton_renderer.html#aca997f96ffb5a89579dc325b790f0fd6">Spine.Unity.SkeletonRenderer.Skeleton</a></div><div class="ttdeci">Skeleton Skeleton</div><div class="ttdoc">Gets the Spine.Skeleton instance of the Spine Component. This is equivalent to SkeletonRenderer&#39;s ....</div><div class="ttdef"><b>Определения</b> <a href="../../d7/d5b/_skeleton_renderer_8cs_source.html#l00289">SkeletonRenderer.cs:289</a></div></div>
+<div class="ttc" id="anamespace_spine_1_1_unity_1_1_editor_html"><div class="ttname"><a href="../../dd/de7/namespace_spine_1_1_unity_1_1_editor.html">Spine.Unity.Editor</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/de3/_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="../../de/de6/namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="../../db/de3/_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Editor</b></li><li class="navelem"><b>spine-unity</b></li><li class="navelem"><b>Editor</b></li><li class="navelem"><b>Components</b></li><li class="navelem"><b>SkeletonAnimationInspector.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

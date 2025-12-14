@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Scripts/Extensions/StringExt.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('dc/d63/_string_ext_8cs_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StringExt.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Text.RegularExpressions;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Globalization;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d3f/namespace_toolbox.html">Toolbox</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">partial class </span><a class="code hl_class" href="../../d7/d7e/class_toolbox_1_1_string_ext.html">StringExt</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8d451134eeb646ae538291bd5537efe8">   14</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8d451134eeb646ae538291bd5537efe8">AreAllNullOrEmpty</a>(params <span class="keywordtype">string</span>[] array)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> array)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(item))</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a1c56b9b73a53e1551467541771cdfe90">   30</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a1c56b9b73a53e1551467541771cdfe90">AreAllNotNullOrEmpty</a>(params <span class="keywordtype">string</span>[] array)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> array)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(item))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#af585885c31742fbc6dd5698ff9b403a9">   47</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#af585885c31742fbc6dd5698ff9b403a9">In</a>(<span class="keyword">this</span> <span class="keywordtype">string</span> value, params <span class="keywordtype">string</span>[] array)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> array.Contains(value);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#aaa6cffc83187fcef9e5ea5adbed589bc">   58</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#aaa6cffc83187fcef9e5ea5adbed589bc">ContainsAny</a>(<span class="keyword">this</span> <span class="keywordtype">string</span> str, params <span class="keywordtype">string</span>[] values)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> values.Any(s =&gt; str.Contains(s));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ae313de6af398409c5325ebeb74075577">   68</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ae313de6af398409c5325ebeb74075577">ToPriceStyle</a>(<span class="keywordtype">int</span> value)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            var nfi = (NumberFormatInfo)CultureInfo.InvariantCulture.NumberFormat.Clone();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            nfi.NumberGroupSeparator = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> value.ToString(<span class="stringliteral">&quot;N0&quot;</span>, nfi);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ac504fcecf5db30d137ef63603df4dafb">   80</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ac504fcecf5db30d137ef63603df4dafb">ToPriceStyle</a>(<span class="keyword">this</span> <span class="keywordtype">string</span> str)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (<span class="keywordtype">int</span>.TryParse(str, out <span class="keywordtype">int</span> value))</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                var nfi = (NumberFormatInfo)CultureInfo.InvariantCulture.NumberFormat.Clone();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                nfi.NumberGroupSeparator = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">return</span> value.ToString(<span class="stringliteral">&quot;N0&quot;</span>, nfi);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">return</span> str;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8e5261fd044fdc64f5c50709ceef79cf">   96</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8e5261fd044fdc64f5c50709ceef79cf">IsValidEmail</a>(<span class="keyword">this</span> <span class="keywordtype">string</span> email)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">return</span> Regex.IsMatch(email, <span class="stringliteral">@&quot;^([\w-\.]+)@((\&zwj;[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\&zwj;]?)$&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a2fb7bf4d813b03cbcf1d70adf7556bac">  106</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a2fb7bf4d813b03cbcf1d70adf7556bac">ToReadableString</a>(<span class="keyword">this</span> System.TimeSpan timeSpan)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordtype">string</span> result = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (timeSpan.Days &gt; 0)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                result += $<span class="stringliteral">&quot;{timeSpan.Days}д. &quot;</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">if</span> (timeSpan.Hours &gt; 0)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                result += $<span class="stringliteral">&quot;{timeSpan.Hours}ч. &quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">if</span> (timeSpan.Minutes &gt; 0)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                result += $<span class="stringliteral">&quot;{timeSpan.Minutes}м. &quot;</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (timeSpan.Seconds &gt; 0 || result == <span class="stringliteral">&quot;&quot;</span>) <span class="comment">// Если нет дней, часов, минут, то показываем секунды</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                result += $<span class="stringliteral">&quot;{timeSpan.Seconds}с.&quot;</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">return</span> result.Trim();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html">Toolbox.StringExt</a></div><div class="ttdef"><b>Определения</b> <a href="#l00007">StringExt.cs:8</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_a1c56b9b73a53e1551467541771cdfe90"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a1c56b9b73a53e1551467541771cdfe90">Toolbox.StringExt.AreAllNotNullOrEmpty</a></div><div class="ttdeci">static bool AreAllNotNullOrEmpty(params string[] array)</div><div class="ttdoc">Проверяет, имеют ли все переданные строки значение (то есть ни одна не является null или пустой).</div><div class="ttdef"><b>Определения</b> <a href="#l00030">StringExt.cs:30</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_a2fb7bf4d813b03cbcf1d70adf7556bac"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a2fb7bf4d813b03cbcf1d70adf7556bac">Toolbox.StringExt.ToReadableString</a></div><div class="ttdeci">static string ToReadableString(this System.TimeSpan timeSpan)</div><div class="ttdoc">Преобразует объект TimeSpan в удобочитаемую строку, отображая дни, часы, минуты и секунды.</div><div class="ttdef"><b>Определения</b> <a href="#l00106">StringExt.cs:106</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_a8d451134eeb646ae538291bd5537efe8"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8d451134eeb646ae538291bd5537efe8">Toolbox.StringExt.AreAllNullOrEmpty</a></div><div class="ttdeci">static bool AreAllNullOrEmpty(params string[] array)</div><div class="ttdoc">Проверяет, являются ли все переданные строки null или пустыми.</div><div class="ttdef"><b>Определения</b> <a href="#l00014">StringExt.cs:14</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_a8e5261fd044fdc64f5c50709ceef79cf"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#a8e5261fd044fdc64f5c50709ceef79cf">Toolbox.StringExt.IsValidEmail</a></div><div class="ttdeci">static bool IsValidEmail(this string email)</div><div class="ttdoc">Проверяет, соответствует ли строка формату электронной почты.</div><div class="ttdef"><b>Определения</b> <a href="#l00096">StringExt.cs:96</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_aaa6cffc83187fcef9e5ea5adbed589bc"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#aaa6cffc83187fcef9e5ea5adbed589bc">Toolbox.StringExt.ContainsAny</a></div><div class="ttdeci">static bool ContainsAny(this string str, params string[] values)</div><div class="ttdoc">Возвращает значение, указывающее, содержит ли данная строка хотя бы одну из переданных подстрок.</div><div class="ttdef"><b>Определения</b> <a href="#l00058">StringExt.cs:58</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_ac504fcecf5db30d137ef63603df4dafb"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ac504fcecf5db30d137ef63603df4dafb">Toolbox.StringExt.ToPriceStyle</a></div><div class="ttdeci">static string ToPriceStyle(this string str)</div><div class="ttdoc">Форматирует строку, предполагая, что она является числом, добавляя пробелы в качестве разделителей ты...</div><div class="ttdef"><b>Определения</b> <a href="#l00080">StringExt.cs:80</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_ae313de6af398409c5325ebeb74075577"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#ae313de6af398409c5325ebeb74075577">Toolbox.StringExt.ToPriceStyle</a></div><div class="ttdeci">static string ToPriceStyle(int value)</div><div class="ttdoc">Форматирует целое число, добавляя пробелы в качестве разделителей тысяч.</div><div class="ttdef"><b>Определения</b> <a href="#l00068">StringExt.cs:68</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_string_ext_html_af585885c31742fbc6dd5698ff9b403a9"><div class="ttname"><a href="../../d7/d7e/class_toolbox_1_1_string_ext.html#af585885c31742fbc6dd5698ff9b403a9">Toolbox.StringExt.In</a></div><div class="ttdeci">static bool In(this string value, params string[] array)</div><div class="ttdoc">Проверяет наличие текущей строки в переданном наборе значений.</div><div class="ttdef"><b>Определения</b> <a href="#l00047">StringExt.cs:47</a></div></div>
+<div class="ttc" id="anamespace_toolbox_html"><div class="ttname"><a href="../../df/d3f/namespace_toolbox.html">Toolbox</a></div><div class="ttdef"><b>Определения</b> <a href="../../d8/d6e/_color_ext_8cs_source.html#l00003">ColorExt.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Scripts</b></li><li class="navelem"><b>Extensions</b></li><li class="navelem"><b>StringExt.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

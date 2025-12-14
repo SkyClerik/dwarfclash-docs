@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['name_0',['Name',['../d7/d07/class_spine_1_1_animation.html#a51bf7cf1ccd2e3ae1fa03f62336b85a7',1,'Spine.Animation.Name'],['../df/de7/class_spine_1_1_attachment.html#a63a616e3fcbfe9641abf8bd282e64ce8',1,'Spine.Attachment.Name'],['../d6/d40/class_spine_1_1_bone_data.html#a4333ca2630ac562a9561650ec128d864',1,'Spine.BoneData.Name'],['../d5/dab/class_spine_1_1_constraint_data.html#a3f9d843e264f5166870fbf8fa6f52c38',1,'Spine.ConstraintData.Name'],['../d5/d5e/class_spine_1_1_event_data.html#a226a896f66bc71f04732c504e3618c45',1,'Spine.EventData.Name'],['../d0/d8a/class_spine_1_1_skeleton_data.html#ab173c91d7eb5ff999ef59b3373a162be',1,'Spine.SkeletonData.Name'],['../dd/deb/struct_spine_1_1_skin_1_1_skin_entry.html#a6f9de83cbe4cd3789215ed152dd6dad2',1,'Spine.Skin.SkinEntry.Name'],['../d8/d0b/class_spine_1_1_slot_data.html#ac5d0ab3762c4e4b8eeab0c6a99e25fc4',1,'Spine.SlotData.Name']]],
+  ['next_1',['Next',['../da/d60/class_spine_1_1_track_entry.html#ab2737f1203eb20e073666b12529242ee',1,'Spine::TrackEntry']]]
+];

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Дополнительные команды Doxygen</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('db/dd2/md__doxygen_documentation_2_manual_2_commands_doxygen.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Дополнительные команды Doxygen </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<div class="fragment"><div class="line">Doxygen использует специальные команды, которые начинаются с \ или @, внутри твоих XML-комментариев (/// или /** ... */).</div>
+<div class="line"> </div>
+<div class="line">1. \todo (или @todo)</div>
+<div class="line"> </div>
+<div class="line"> * Назначение: Используется, чтобы пометить код или часть документации, которая требует дальнейшей работы, улучшения или исправления.</div>
+<div class="line"> * Что делает Doxygen: Он собирает все \todo элементы из всего проекта и создаёт отдельную страницу &quot;Todo List&quot; в сгенерированной документации.</div>
+<div class="line">   Это позволяет легко отслеживать незавершённые задачи.</div>
+<div class="line"> * Синтаксис:</div>
+<div class="line"> </div>
+<div class="line"> 1     /// &lt;summary&gt;</div>
+<div class="line"> 2     /// Этот метод делает что-то важное.</div>
+<div class="line"> 3     /// &lt;/summary&gt;</div>
+<div class="line"> 4     /// &lt;param name=&quot;param1&quot;&gt;Описание параметра.&lt;/param&gt;</div>
+<div class="line"> 5     /// &lt;returns&gt;Возвращает результат.&lt;/returns&gt;</div>
+<div class="line"> 6     /// \todo Добавить обработку граничных случаев для param1.</div>
+<div class="line"> 7     /// \todo Оптимизировать этот цикл, он работает медленно.</div>
+<div class="line"> 8     public void MyMethod(int param1) { /* ... */ }</div>
+</div><!-- fragment --><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Необходимо сделать</a></b></dt><dd><p class="startdd">Добавить обработку граничных случаев для param1. </p>
+<p class="enddd">Оптимизировать этот цикл, он работает медленно.</p>
+</dd></dl>
+<div class="fragment"><div class="line">2. \note (или @note)</div>
+<div class="line"> </div>
+<div class="line"> * Назначение: Используется для добавления важной заметки или пояснения, которое не является частью основного описания метода или класса. Обычно</div>
+<div class="line">   Doxygen оформляет такие заметки как отдельный блок.</div>
+<div class="line"> * Синтаксис:</div>
+<div class="line"> </div>
+<div class="line"> 1     /// &lt;summary&gt;</div>
+<div class="line"> 2     /// Этот метод выполняет сложную операцию.</div>
+<div class="line"> 3     /// &lt;/summary&gt;</div>
+<div class="line"> 4     /// \note Убедитесь, что перед вызовом этого метода все зависимости инициализированы.</div>
+<div class="line"> 5     /// \note Для лучшей производительности рассмотрите асинхронный вызов.</div>
+<div class="line"> 6     public void ComplexOperation() { /* ... */ }</div>
+</div><!-- fragment --><dl class="section note"><dt>Заметки</dt><dd>Убедитесь, что перед вызовом этого метода все зависимости инициализированы. </dd>
+<dd>
+Для лучшей производительности рассмотрите асинхронный вызов.</dd></dl>
+<div class="fragment"><div class="line">3. \warning (или @warning)</div>
+<div class="line"> </div>
+<div class="line"> * Назначение: Очень похоже на \note, но используется специально для предупреждений о потенциальных проблемах, подводных камнях или критических</div>
+<div class="line">   моментах, которые должен знать пользователь кода. Часто Doxygen отображает их с особым значком или цветом.</div>
+<div class="line"> * Синтаксис:</div>
+<div class="line"> </div>
+<div class="line"> 1     /// &lt;summary&gt;</div>
+<div class="line"> 2     /// Удаляет все данные пользователя.</div>
+<div class="line"> 3     /// &lt;/summary&gt;</div>
+<div class="line"> 4     /// \warning Эта операция необратима и приведет к потере всех пользовательских данных. Используйте с крайней осторожностью.</div>
+<div class="line"> 5     public void DeleteAllUserData() { /* ... */ }</div>
+</div><!-- fragment --><dl class="section warning"><dt>Предупреждения</dt><dd>Эта операция необратима и приведет к потере всех пользовательских данных. Используйте с крайней осторожностью.</dd></dl>
+<div class="fragment"><div class="line">4. \remarks (или @remarks)</div>
+<div class="line"> </div>
+<div class="line"> * Назначение: Для более обширных замечаний, дополнительной информации или пояснений, которые не умещаются в summary. В XML-комментариях это</div>
+<div class="line">   эквивалент &lt;remarks&gt;...&lt;/remarks&gt;.</div>
+<div class="line"> * Синтаксис:</div>
+<div class="line"> </div>
+<div class="line"> 1     /// &lt;summary&gt;</div>
+<div class="line"> 2     /// Этот метод вычисляет ...</div>
+<div class="line"> 3     /// &lt;/summary&gt;</div>
+<div class="line"> 4     /// \remarks</div>
+<div class="line"> 5     /// Детальное описание алгоритма и его производительности.</div>
+<div class="line"> 6     /// Объяснение, почему был выбран именно этот подход.</div>
+<div class="line"> 7     /// &lt;/remarks&gt;</div>
+<div class="line"> 8     public float CalculateValue() { /* ... */ }</div>
+</div><!-- fragment --> <dl class="section remark"><dt>Прим.</dt><dd>Детальное описание алгоритма и его производительности. Объяснение, почему был выбран именно этот подход. </dd></dl>
+<div class="fragment"><div class="line">---</div>
+<div class="line"> </div>
+<div class="line">Как это работает:</div>
+<div class="line"> </div>
+<div class="line">Когда ты запускаешь Doxygen, он сканирует все твои комментарии.</div>
+<div class="line"> * Для \todo, \bug, \deprecated, \test он создаёт отдельные страницы со списками. (Мы уже включили GENERATE_TODOLIST = YES в твоём Doxyfile).</div>
+<div class="line"> * \note, \warning, \remarks отображаются непосредственно в документации к тому элементу, к которому они относятся.</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

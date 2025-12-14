@@ -1,0 +1,5 @@
+var class_spine_1_1_unity_1_1_blend_mode_materials =
+[
+    [ "ReplacementMaterial", "class_spine_1_1_unity_1_1_blend_mode_materials_1_1_replacement_material.html", null ],
+    [ "TemplateMaterials", "class_spine_1_1_unity_1_1_blend_mode_materials_1_1_template_materials.html", null ]
+];

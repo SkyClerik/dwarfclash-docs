@@ -1,0 +1,18 @@
+/* Custom Doxygen CSS - Final refinement based on user feedback */
+
+.memitem .memname {
+    /* Remove all visual styling */
+    background-color: transparent !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    /* Keep the rules to try and force single line display */
+    white-space: nowrap !important; /* Force onto a single line */
+    word-break: break-all; /* Allow words to break if necessary to prevent overflow */
+    overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+    display: block; /* Ensure it behaves like a block to get scrollbar */
+    max-width: 100%; /* Ensure it respects parent width */
+}

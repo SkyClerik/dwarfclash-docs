@@ -1,0 +1,1570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Spine.Bone</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_spine_1_1_bone.html','','class_spine_1_1_bone-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Spine.Bone</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Stores a bone's current pose.  
+ <a href="#details">Подробнее...</a></p>
+
+<p>Базовые классы:<a class="el" href="interface_spine_1_1_i_updatable.html">Spine.IUpdatable</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a87509d67b3dade6dd4574626836e1552" id="r_a87509d67b3dade6dd4574626836e1552"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87509d67b3dade6dd4574626836e1552">Bone</a> (<a class="el" href="class_spine_1_1_bone_data.html">BoneData</a> data, Skeleton skeleton, Bone parent)</td></tr>
+<tr class="memitem:a6520a5f5576ed3f567cbd68a4fb15749" id="r_a6520a5f5576ed3f567cbd68a4fb15749"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a> (Bone bone, Skeleton skeleton, Bone parent)</td></tr>
+<tr class="memdesc:a6520a5f5576ed3f567cbd68a4fb15749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. Does not copy the Children bones.  <br /></td></tr>
+<tr class="memitem:a50fb82f9790751ea0a1e118c793de5ee" id="r_a50fb82f9790751ea0a1e118c793de5ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50fb82f9790751ea0a1e118c793de5ee">Update</a> (Physics physics)</td></tr>
+<tr class="memdesc:a50fb82f9790751ea0a1e118c793de5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the world transform using the parent bone and this bone's local applied transform.  <br /></td></tr>
+<tr class="memitem:a7cb46c9bf47dc1c82334464ddad0f4f3" id="r_a7cb46c9bf47dc1c82334464ddad0f4f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cb46c9bf47dc1c82334464ddad0f4f3">UpdateWorldTransform</a> ()</td></tr>
+<tr class="memdesc:a7cb46c9bf47dc1c82334464ddad0f4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the world transform using the parent bone and this bone's local transform.  <br /></td></tr>
+<tr class="memitem:aec562a1c4a29fd87849e77161dbd2f58" id="r_aec562a1c4a29fd87849e77161dbd2f58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec562a1c4a29fd87849e77161dbd2f58">UpdateWorldTransform</a> (float x, float y, float rotation, float scaleX, float scaleY, float shearX, float shearY)</td></tr>
+<tr class="memdesc:aec562a1c4a29fd87849e77161dbd2f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the world transform using the parent bone and the specified local transform. The applied transform is set to the specified local transform. Child bones are not updated.  <br /></td></tr>
+<tr class="memitem:a714357ad49be82fa9247e231ce917aaa" id="r_a714357ad49be82fa9247e231ce917aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714357ad49be82fa9247e231ce917aaa">SetToSetupPose</a> ()</td></tr>
+<tr class="memdesc:a714357ad49be82fa9247e231ce917aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this bone's local transform to the setup pose.  <br /></td></tr>
+<tr class="memitem:aa1ac7180d78c77b4ff5f0823bfc0b8ac" id="r_aa1ac7180d78c77b4ff5f0823bfc0b8ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac">UpdateAppliedTransform</a> ()</td></tr>
+<tr class="memdesc:aa1ac7180d78c77b4ff5f0823bfc0b8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the applied transform values from the world transform.  <br /></td></tr>
+<tr class="memitem:a85285deba5f815ed0c4afaf5fa265ccd" id="r_a85285deba5f815ed0c4afaf5fa265ccd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85285deba5f815ed0c4afaf5fa265ccd">WorldToLocal</a> (float worldX, float worldY, out float localX, out float localY)</td></tr>
+<tr class="memdesc:a85285deba5f815ed0c4afaf5fa265ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point from world coordinates to the bone's local coordinates.  <br /></td></tr>
+<tr class="memitem:a42e6bcd5d837faec67110fe71087be3a" id="r_a42e6bcd5d837faec67110fe71087be3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e6bcd5d837faec67110fe71087be3a">LocalToWorld</a> (float localX, float localY, out float worldX, out float worldY)</td></tr>
+<tr class="memdesc:a42e6bcd5d837faec67110fe71087be3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point from the bone's local coordinates to world coordinates.  <br /></td></tr>
+<tr class="memitem:ab0aa8a98bdd0871ab801adb375724bf7" id="r_ab0aa8a98bdd0871ab801adb375724bf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0aa8a98bdd0871ab801adb375724bf7">WorldToParent</a> (float worldX, float worldY, out float parentX, out float parentY)</td></tr>
+<tr class="memdesc:ab0aa8a98bdd0871ab801adb375724bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point from world coordinates to the parent bone's local coordinates.  <br /></td></tr>
+<tr class="memitem:a1d93a8c2d1dfc270dafd7d0032859616" id="r_a1d93a8c2d1dfc270dafd7d0032859616"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d93a8c2d1dfc270dafd7d0032859616">ParentToWorld</a> (float parentX, float parentY, out float worldX, out float worldY)</td></tr>
+<tr class="memdesc:a1d93a8c2d1dfc270dafd7d0032859616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point from the parent bone's coordinates to world coordinates.  <br /></td></tr>
+<tr class="memitem:a900f988a99dde5481b6f3cfe3da7eebd" id="r_a900f988a99dde5481b6f3cfe3da7eebd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a900f988a99dde5481b6f3cfe3da7eebd">WorldToLocalRotation</a> (float worldRotation)</td></tr>
+<tr class="memdesc:a900f988a99dde5481b6f3cfe3da7eebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a world rotation to a local rotation.  <br /></td></tr>
+<tr class="memitem:aaba512ff57ace74ea287eaf67ffe683c" id="r_aaba512ff57ace74ea287eaf67ffe683c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaba512ff57ace74ea287eaf67ffe683c">LocalToWorldRotation</a> (float localRotation)</td></tr>
+<tr class="memdesc:aaba512ff57ace74ea287eaf67ffe683c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a local rotation to a world rotation.  <br /></td></tr>
+<tr class="memitem:aa8c440acc7431298b9ccafe6d54f10e5" id="r_aa8c440acc7431298b9ccafe6d54f10e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8c440acc7431298b9ccafe6d54f10e5">RotateWorld</a> (float degrees)</td></tr>
+<tr class="memdesc:aa8c440acc7431298b9ccafe6d54f10e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the world transform the specified amount.  <br /></td></tr>
+<tr class="memitem:afb63677fe64ce4237a8079ce8a423e39" id="r_afb63677fe64ce4237a8079ce8a423e39"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb63677fe64ce4237a8079ce8a423e39">ToString</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a3edbc88c04ce1c88e3524d9e3fee3e85" id="r_a3edbc88c04ce1c88e3524d9e3fee3e85"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3edbc88c04ce1c88e3524d9e3fee3e85">yDown</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a3c4ec0f40027d9604f8d46a68af8052c" id="r_a3c4ec0f40027d9604f8d46a68af8052c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_bone_data.html">BoneData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4ec0f40027d9604f8d46a68af8052c">Data</a><code> [get]</code></td></tr>
+<tr class="memitem:abc9d3a82cd486753bd30f02e1f537bcc" id="r_abc9d3a82cd486753bd30f02e1f537bcc"><td class="memItemLeft" align="right" valign="top">Skeleton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9d3a82cd486753bd30f02e1f537bcc">Skeleton</a><code> [get]</code></td></tr>
+<tr class="memitem:aabeafbc6e34199fa8660adef6461c7c0" id="r_aabeafbc6e34199fa8660adef6461c7c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabeafbc6e34199fa8660adef6461c7c0">Parent</a><code> [get]</code></td></tr>
+<tr class="memitem:a1b8a66d5894a29a97b2073226c38ccd5" id="r_a1b8a66d5894a29a97b2073226c38ccd5"><td class="memItemLeft" align="right" valign="top">ExposedList&lt; <a class="el" href="#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b8a66d5894a29a97b2073226c38ccd5">Children</a><code> [get]</code></td></tr>
+<tr class="memitem:ae61f8ff89dc9a52134aa745c8b717aaa" id="r_ae61f8ff89dc9a52134aa745c8b717aaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae61f8ff89dc9a52134aa745c8b717aaa">Active</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae61f8ff89dc9a52134aa745c8b717aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false when this item won't be updated by Skeleton.UpdateWorldTransform(Skeleton.Physics) because a skin is required and the <a class="el" href="class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">active skin</a> does not contain this item.  <br /></td></tr>
+<tr class="memitem:a449250768b89e6b5cda2a158207b219e" id="r_a449250768b89e6b5cda2a158207b219e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a449250768b89e6b5cda2a158207b219e">X</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a449250768b89e6b5cda2a158207b219e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local X translation.  <br /></td></tr>
+<tr class="memitem:a4a7a8d0b99b6f3d2e042189bc1620b2a" id="r_a4a7a8d0b99b6f3d2e042189bc1620b2a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a7a8d0b99b6f3d2e042189bc1620b2a">Y</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4a7a8d0b99b6f3d2e042189bc1620b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local Y translation.  <br /></td></tr>
+<tr class="memitem:ae3e3b5774fb19a846db3b39c565d6313" id="r_ae3e3b5774fb19a846db3b39c565d6313"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3e3b5774fb19a846db3b39c565d6313">Rotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae3e3b5774fb19a846db3b39c565d6313"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local rotation.  <br /></td></tr>
+<tr class="memitem:a41c41f1378421d1cf2ad21fd29c15a7e" id="r_a41c41f1378421d1cf2ad21fd29c15a7e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41c41f1378421d1cf2ad21fd29c15a7e">ScaleX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a41c41f1378421d1cf2ad21fd29c15a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local scaleX.  <br /></td></tr>
+<tr class="memitem:a4b0e658f9b264ccd6fe056dddc490a2c" id="r_a4b0e658f9b264ccd6fe056dddc490a2c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b0e658f9b264ccd6fe056dddc490a2c">ScaleY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4b0e658f9b264ccd6fe056dddc490a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local scaleY.  <br /></td></tr>
+<tr class="memitem:a7a0ccfe4f730da0491be616bb49b0401" id="r_a7a0ccfe4f730da0491be616bb49b0401"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a0ccfe4f730da0491be616bb49b0401">ShearX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a7a0ccfe4f730da0491be616bb49b0401"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local shearX.  <br /></td></tr>
+<tr class="memitem:a9496340b8f39d2f3b70de79457363f7f" id="r_a9496340b8f39d2f3b70de79457363f7f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9496340b8f39d2f3b70de79457363f7f">ShearY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a9496340b8f39d2f3b70de79457363f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The local shearY.  <br /></td></tr>
+<tr class="memitem:a8dbae327b49f4560162756f62220e511" id="r_a8dbae327b49f4560162756f62220e511"><td class="memItemLeft" align="right" valign="top">Inherit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dbae327b49f4560162756f62220e511">Inherit</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8dbae327b49f4560162756f62220e511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how parent world transforms affect this bone.  <br /></td></tr>
+<tr class="memitem:a6a3cc7c4448f3859b6bfc6f0157c3a6f" id="r_a6a3cc7c4448f3859b6bfc6f0157c3a6f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a3cc7c4448f3859b6bfc6f0157c3a6f">AppliedRotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6a3cc7c4448f3859b6bfc6f0157c3a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation, as calculated by any constraints.  <br /></td></tr>
+<tr class="memitem:ab3811661c5330a129f8ce8c74292266b" id="r_ab3811661c5330a129f8ce8c74292266b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3811661c5330a129f8ce8c74292266b">AX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab3811661c5330a129f8ce8c74292266b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local x translation.  <br /></td></tr>
+<tr class="memitem:a1c2696d7e1094ed06f4d0fe6ec5abc5b" id="r_a1c2696d7e1094ed06f4d0fe6ec5abc5b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c2696d7e1094ed06f4d0fe6ec5abc5b">AY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1c2696d7e1094ed06f4d0fe6ec5abc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local y translation.  <br /></td></tr>
+<tr class="memitem:a0f21d0b0d5f45d8ff19f098d456970e9" id="r_a0f21d0b0d5f45d8ff19f098d456970e9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f21d0b0d5f45d8ff19f098d456970e9">AScaleX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0f21d0b0d5f45d8ff19f098d456970e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local scaleX.  <br /></td></tr>
+<tr class="memitem:a835fb922b0bcaf127ecc44e6cf247c98" id="r_a835fb922b0bcaf127ecc44e6cf247c98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a835fb922b0bcaf127ecc44e6cf247c98">AScaleY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a835fb922b0bcaf127ecc44e6cf247c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local scaleY.  <br /></td></tr>
+<tr class="memitem:a967c874d90fdd83604c2c7d7bc798283" id="r_a967c874d90fdd83604c2c7d7bc798283"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a967c874d90fdd83604c2c7d7bc798283">AShearX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a967c874d90fdd83604c2c7d7bc798283"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local shearX.  <br /></td></tr>
+<tr class="memitem:a2b851cfd7e6b8ee35434f90844a4e1a4" id="r_a2b851cfd7e6b8ee35434f90844a4e1a4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b851cfd7e6b8ee35434f90844a4e1a4">AShearY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a2b851cfd7e6b8ee35434f90844a4e1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The applied local shearY.  <br /></td></tr>
+<tr class="memitem:a934009fcbf471670ddb717896d9c339e" id="r_a934009fcbf471670ddb717896d9c339e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a934009fcbf471670ddb717896d9c339e">A</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a934009fcbf471670ddb717896d9c339e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Part of the world transform matrix for the X axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:ad99c616c62995e4b0c207b1f6608a52c" id="r_ad99c616c62995e4b0c207b1f6608a52c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad99c616c62995e4b0c207b1f6608a52c">B</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad99c616c62995e4b0c207b1f6608a52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Part of the world transform matrix for the Y axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:a0f8f536da6e17eeda7cdc25051f29a5c" id="r_a0f8f536da6e17eeda7cdc25051f29a5c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f8f536da6e17eeda7cdc25051f29a5c">C</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0f8f536da6e17eeda7cdc25051f29a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Part of the world transform matrix for the X axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:a6b370338082cd2e642c06de548847021" id="r_a6b370338082cd2e642c06de548847021"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b370338082cd2e642c06de548847021">D</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a6b370338082cd2e642c06de548847021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Part of the world transform matrix for the Y axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:ac8f234829fb48b94eb694537100b3570" id="r_ac8f234829fb48b94eb694537100b3570"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8f234829fb48b94eb694537100b3570">WorldX</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac8f234829fb48b94eb694537100b3570"><td class="mdescLeft">&#160;</td><td class="mdescRight">The world X position. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:af22e54e68b742c6378c87fa2f5ad7d6c" id="r_af22e54e68b742c6378c87fa2f5ad7d6c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af22e54e68b742c6378c87fa2f5ad7d6c">WorldY</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af22e54e68b742c6378c87fa2f5ad7d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The world Y position. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called.  <br /></td></tr>
+<tr class="memitem:a6f9dcc12c596710439b0545275401ccf" id="r_a6f9dcc12c596710439b0545275401ccf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f9dcc12c596710439b0545275401ccf">WorldRotationX</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6f9dcc12c596710439b0545275401ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The world rotation for the X axis, calculated using a and c.  <br /></td></tr>
+<tr class="memitem:a33a7ce850ec092ca76ebb8292796f483" id="r_a33a7ce850ec092ca76ebb8292796f483"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a7ce850ec092ca76ebb8292796f483">WorldRotationY</a><code> [get]</code></td></tr>
+<tr class="memdesc:a33a7ce850ec092ca76ebb8292796f483"><td class="mdescLeft">&#160;</td><td class="mdescRight">The world rotation for the Y axis, calculated using b and d.  <br /></td></tr>
+<tr class="memitem:a2d81978145b54c3531ef3ceeb70904d5" id="r_a2d81978145b54c3531ef3ceeb70904d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d81978145b54c3531ef3ceeb70904d5">WorldScaleX</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2d81978145b54c3531ef3ceeb70904d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the magnitide (always positive) of the world scale X.  <br /></td></tr>
+<tr class="memitem:ad86cf0fe043b18cd39791f38f411fb2a" id="r_ad86cf0fe043b18cd39791f38f411fb2a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86cf0fe043b18cd39791f38f411fb2a">WorldScaleY</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad86cf0fe043b18cd39791f38f411fb2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the magnitide (always positive) of the world scale Y.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Stores a bone's current pose. </p>
+<p>A bone has a local transform which is used to compute its world transform. A bone also has an applied transform, which is a local transform that can be applied to compute the world transform. The local transform and applied transform may differ if a constraint or application code modifies the world transform after it was computed from the local transform. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00043">43</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a87509d67b3dade6dd4574626836e1552" name="a87509d67b3dade6dd4574626836e1552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87509d67b3dade6dd4574626836e1552">&#9670;&#160;</a></span>Bone() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.Bone.Bone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_bone_data.html">BoneData</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Skeleton</td>          <td class="paramname"><span class="paramname"><em>skeleton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bone</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00130">130</a></p>
+
+</div>
+</div>
+<a id="a6520a5f5576ed3f567cbd68a4fb15749" name="a6520a5f5576ed3f567cbd68a4fb15749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6520a5f5576ed3f567cbd68a4fb15749">&#9670;&#160;</a></span>Bone() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.Bone.Bone </td>
+          <td>(</td>
+          <td class="paramtype">Bone</td>          <td class="paramname"><span class="paramname"><em>bone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Skeleton</td>          <td class="paramname"><span class="paramname"><em>skeleton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Bone</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. Does not copy the Children bones. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>May be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a42e6bcd5d837faec67110fe71087be3a" name="a42e6bcd5d837faec67110fe71087be3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e6bcd5d837faec67110fe71087be3a">&#9670;&#160;</a></span>LocalToWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.LocalToWorld </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>localX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>localY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>worldX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>worldY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a point from the bone's local coordinates to world coordinates. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00399">399</a></p>
+
+</div>
+</div>
+<a id="aaba512ff57ace74ea287eaf67ffe683c" name="aaba512ff57ace74ea287eaf67ffe683c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba512ff57ace74ea287eaf67ffe683c">&#9670;&#160;</a></span>LocalToWorldRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.LocalToWorldRotation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>localRotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a local rotation to a world rotation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00432">432</a></p>
+
+</div>
+</div>
+<a id="a1d93a8c2d1dfc270dafd7d0032859616" name="a1d93a8c2d1dfc270dafd7d0032859616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d93a8c2d1dfc270dafd7d0032859616">&#9670;&#160;</a></span>ParentToWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.ParentToWorld </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>parentX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>parentY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>worldX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>worldY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a point from the parent bone's coordinates to world coordinates. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00415">415</a></p>
+
+</div>
+</div>
+<a id="aa8c440acc7431298b9ccafe6d54f10e5" name="aa8c440acc7431298b9ccafe6d54f10e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c440acc7431298b9ccafe6d54f10e5">&#9670;&#160;</a></span>RotateWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.RotateWorld </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>degrees</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotates the world transform the specified amount. </p>
+<p>After changes are made to the world transform, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called and Update(Skeleton.Physics) will need to be called on any child bones, recursively. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00444">444</a></p>
+
+</div>
+</div>
+<a id="a714357ad49be82fa9247e231ce917aaa" name="a714357ad49be82fa9247e231ce917aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714357ad49be82fa9247e231ce917aaa">&#9670;&#160;</a></span>SetToSetupPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.SetToSetupPose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets this bone's local transform to the setup pose. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00285">285</a></p>
+
+</div>
+</div>
+<a id="afb63677fe64ce4237a8079ce8a423e39" name="afb63677fe64ce4237a8079ce8a423e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb63677fe64ce4237a8079ce8a423e39">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string Spine.Bone.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00454">454</a></p>
+
+</div>
+</div>
+<a id="a50fb82f9790751ea0a1e118c793de5ee" name="a50fb82f9790751ea0a1e118c793de5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50fb82f9790751ea0a1e118c793de5ee">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.Update </td>
+          <td>(</td>
+          <td class="paramtype">Physics</td>          <td class="paramname"><span class="paramname"><em>physics</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the world transform using the parent bone and this bone's local applied transform. </p>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_i_updatable.html#a96146796a111eb677afe30ca6495a81e">Spine.IUpdatable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00158">158</a></p>
+
+</div>
+</div>
+<a id="aa1ac7180d78c77b4ff5f0823bfc0b8ac" name="aa1ac7180d78c77b4ff5f0823bfc0b8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac">&#9670;&#160;</a></span>UpdateAppliedTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.UpdateAppliedTransform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the applied transform values from the world transform. </p>
+<p>If the world transform is modified (by a constraint, <a class="el" href="#aa8c440acc7431298b9ccafe6d54f10e5" title="Rotates the world transform the specified amount.">RotateWorld(float)</a>, etc) then this method should be called so the applied transform matches the world transform. The applied transform may be needed by other code (eg to apply another constraint). </p>
+<p>Some information is ambiguous in the world transform, such as -1,-1 scale versus 180 rotation. The applied transform after calling this method is equivalent to the local transform used to compute the world transform, but may not be identical. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00307">307</a></p>
+
+</div>
+</div>
+<a id="a7cb46c9bf47dc1c82334464ddad0f4f3" name="a7cb46c9bf47dc1c82334464ddad0f4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb46c9bf47dc1c82334464ddad0f4f3">&#9670;&#160;</a></span>UpdateWorldTransform() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.UpdateWorldTransform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the world transform using the parent bone and this bone's local transform. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00163">163</a></p>
+
+</div>
+</div>
+<a id="aec562a1c4a29fd87849e77161dbd2f58" name="aec562a1c4a29fd87849e77161dbd2f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec562a1c4a29fd87849e77161dbd2f58">&#9670;&#160;</a></span>UpdateWorldTransform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.UpdateWorldTransform </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scaleX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scaleY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>shearX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>shearY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the world transform using the parent bone and the specified local transform. The applied transform is set to the specified local transform. Child bones are not updated. </p>
+<p>See <a href="http://esotericsoftware.com/spine-runtime-skeletons#World-transforms">World transforms</a> in the <a class="el" href="namespace_spine.html">Spine</a> Runtimes Guide.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00172">172</a></p>
+
+</div>
+</div>
+<a id="a85285deba5f815ed0c4afaf5fa265ccd" name="a85285deba5f815ed0c4afaf5fa265ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85285deba5f815ed0c4afaf5fa265ccd">&#9670;&#160;</a></span>WorldToLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.WorldToLocal </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>worldX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>worldY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>localX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>localY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a point from world coordinates to the bone's local coordinates. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00390">390</a></p>
+
+</div>
+</div>
+<a id="a900f988a99dde5481b6f3cfe3da7eebd" name="a900f988a99dde5481b6f3cfe3da7eebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a900f988a99dde5481b6f3cfe3da7eebd">&#9670;&#160;</a></span>WorldToLocalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldToLocalRotation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>worldRotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a world rotation to a local rotation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00425">425</a></p>
+
+</div>
+</div>
+<a id="ab0aa8a98bdd0871ab801adb375724bf7" name="ab0aa8a98bdd0871ab801adb375724bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0aa8a98bdd0871ab801adb375724bf7">&#9670;&#160;</a></span>WorldToParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Bone.WorldToParent </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>worldX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>worldY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>parentX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>parentY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforms a point from world coordinates to the parent bone's local coordinates. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00405">405</a></p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a3edbc88c04ce1c88e3524d9e3fee3e85" name="a3edbc88c04ce1c88e3524d9e3fee3e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3edbc88c04ce1c88e3524d9e3fee3e85">&#9670;&#160;</a></span>yDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Bone.yDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00044">44</a></p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Полный список свойств</h2>
+<a id="a934009fcbf471670ddb717896d9c339e" name="a934009fcbf471670ddb717896d9c339e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934009fcbf471670ddb717896d9c339e">&#9670;&#160;</a></span>A</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.A</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Part of the world transform matrix for the X axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00108">108</a></p>
+
+</div>
+</div>
+<a id="ae61f8ff89dc9a52134aa745c8b717aaa" name="ae61f8ff89dc9a52134aa745c8b717aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61f8ff89dc9a52134aa745c8b717aaa">&#9670;&#160;</a></span>Active</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Bone.Active</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns false when this item won't be updated by Skeleton.UpdateWorldTransform(Skeleton.Physics) because a skin is required and the <a class="el" href="class_spine_1_1_skeleton.html#a4e21d4e0b6aa6dd23ae81cc6dfabfd8e">active skin</a> does not contain this item. </p>
+<dl class="section see"><dt>См. также</dt><dd>Skin.Bones, Skin.Constraints, <a class="el" href="class_spine_1_1_bone_data.html#a1e84a4abb65757fac0f6816033659ec0" title="When true, Skeleton.UpdateWorldTransform(Skeleton.Physics) only updates this bone if the Skeleton....">BoneData.SkinRequired</a>, <a class="el" href="class_spine_1_1_constraint_data.html#a00565b871fb0968be4126de726462b39" title="When true, Skeleton.UpdateWorldTransform(Skeleton.Physics) only updates this constraint if the Skelet...">ConstraintData.SkinRequired</a></dd></dl>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_i_updatable.html#a98a24b18563168b4e5939af366cf5c24">Spine.IUpdatable</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a id="a6a3cc7c4448f3859b6bfc6f0157c3a6f" name="a6a3cc7c4448f3859b6bfc6f0157c3a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3cc7c4448f3859b6bfc6f0157c3a6f">&#9670;&#160;</a></span>AppliedRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AppliedRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The rotation, as calculated by any constraints. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00087">87</a></p>
+
+</div>
+</div>
+<a id="a0f21d0b0d5f45d8ff19f098d456970e9" name="a0f21d0b0d5f45d8ff19f098d456970e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f21d0b0d5f45d8ff19f098d456970e9">&#9670;&#160;</a></span>AScaleX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AScaleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local scaleX. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00096">96</a></p>
+
+</div>
+</div>
+<a id="a835fb922b0bcaf127ecc44e6cf247c98" name="a835fb922b0bcaf127ecc44e6cf247c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835fb922b0bcaf127ecc44e6cf247c98">&#9670;&#160;</a></span>AScaleY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AScaleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local scaleY. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00099">99</a></p>
+
+</div>
+</div>
+<a id="a967c874d90fdd83604c2c7d7bc798283" name="a967c874d90fdd83604c2c7d7bc798283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967c874d90fdd83604c2c7d7bc798283">&#9670;&#160;</a></span>AShearX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AShearX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local shearX. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00102">102</a></p>
+
+</div>
+</div>
+<a id="a2b851cfd7e6b8ee35434f90844a4e1a4" name="a2b851cfd7e6b8ee35434f90844a4e1a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b851cfd7e6b8ee35434f90844a4e1a4">&#9670;&#160;</a></span>AShearY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AShearY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local shearY. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00105">105</a></p>
+
+</div>
+</div>
+<a id="ab3811661c5330a129f8ce8c74292266b" name="ab3811661c5330a129f8ce8c74292266b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3811661c5330a129f8ce8c74292266b">&#9670;&#160;</a></span>AX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local x translation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00090">90</a></p>
+
+</div>
+</div>
+<a id="a1c2696d7e1094ed06f4d0fe6ec5abc5b" name="a1c2696d7e1094ed06f4d0fe6ec5abc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2696d7e1094ed06f4d0fe6ec5abc5b">&#9670;&#160;</a></span>AY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.AY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The applied local y translation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00093">93</a></p>
+
+</div>
+</div>
+<a id="ad99c616c62995e4b0c207b1f6608a52c" name="ad99c616c62995e4b0c207b1f6608a52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99c616c62995e4b0c207b1f6608a52c">&#9670;&#160;</a></span>B</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.B</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Part of the world transform matrix for the Y axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00110">110</a></p>
+
+</div>
+</div>
+<a id="a0f8f536da6e17eeda7cdc25051f29a5c" name="a0f8f536da6e17eeda7cdc25051f29a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f8f536da6e17eeda7cdc25051f29a5c">&#9670;&#160;</a></span>C</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.C</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Part of the world transform matrix for the X axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00112">112</a></p>
+
+</div>
+</div>
+<a id="a1b8a66d5894a29a97b2073226c38ccd5" name="a1b8a66d5894a29a97b2073226c38ccd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b8a66d5894a29a97b2073226c38ccd5">&#9670;&#160;</a></span>Children</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExposedList&lt;<a class="el" href="#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a>&gt; Spine.Bone.Children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00062">62</a></p>
+
+</div>
+</div>
+<a id="a6b370338082cd2e642c06de548847021" name="a6b370338082cd2e642c06de548847021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b370338082cd2e642c06de548847021">&#9670;&#160;</a></span>D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Part of the world transform matrix for the Y axis. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00114">114</a></p>
+
+</div>
+</div>
+<a id="a3c4ec0f40027d9604f8d46a68af8052c" name="a3c4ec0f40027d9604f8d46a68af8052c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4ec0f40027d9604f8d46a68af8052c">&#9670;&#160;</a></span>Data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_bone_data.html">BoneData</a> Spine.Bone.Data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<a id="a8dbae327b49f4560162756f62220e511" name="a8dbae327b49f4560162756f62220e511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbae327b49f4560162756f62220e511">&#9670;&#160;</a></span>Inherit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Inherit Spine.Bone.Inherit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Controls how parent world transforms affect this bone. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00084">84</a></p>
+
+</div>
+</div>
+<a id="aabeafbc6e34199fa8660adef6461c7c0" name="aabeafbc6e34199fa8660adef6461c7c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabeafbc6e34199fa8660adef6461c7c0">&#9670;&#160;</a></span>Parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6520a5f5576ed3f567cbd68a4fb15749">Bone</a> Spine.Bone.Parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="ae3e3b5774fb19a846db3b39c565d6313" name="ae3e3b5774fb19a846db3b39c565d6313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e3b5774fb19a846db3b39c565d6313">&#9670;&#160;</a></span>Rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.Rotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local rotation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00069">69</a></p>
+
+</div>
+</div>
+<a id="a41c41f1378421d1cf2ad21fd29c15a7e" name="a41c41f1378421d1cf2ad21fd29c15a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c41f1378421d1cf2ad21fd29c15a7e">&#9670;&#160;</a></span>ScaleX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.ScaleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local scaleX. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00072">72</a></p>
+
+</div>
+</div>
+<a id="a4b0e658f9b264ccd6fe056dddc490a2c" name="a4b0e658f9b264ccd6fe056dddc490a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0e658f9b264ccd6fe056dddc490a2c">&#9670;&#160;</a></span>ScaleY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.ScaleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local scaleY. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00075">75</a></p>
+
+</div>
+</div>
+<a id="a7a0ccfe4f730da0491be616bb49b0401" name="a7a0ccfe4f730da0491be616bb49b0401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0ccfe4f730da0491be616bb49b0401">&#9670;&#160;</a></span>ShearX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.ShearX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local shearX. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00078">78</a></p>
+
+</div>
+</div>
+<a id="a9496340b8f39d2f3b70de79457363f7f" name="a9496340b8f39d2f3b70de79457363f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9496340b8f39d2f3b70de79457363f7f">&#9670;&#160;</a></span>ShearY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.ShearY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local shearY. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00081">81</a></p>
+
+</div>
+</div>
+<a id="abc9d3a82cd486753bd30f02e1f537bcc" name="abc9d3a82cd486753bd30f02e1f537bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d3a82cd486753bd30f02e1f537bcc">&#9670;&#160;</a></span>Skeleton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Skeleton Spine.Bone.Skeleton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00060">60</a></p>
+
+</div>
+</div>
+<a id="a6f9dcc12c596710439b0545275401ccf" name="a6f9dcc12c596710439b0545275401ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9dcc12c596710439b0545275401ccf">&#9670;&#160;</a></span>WorldRotationX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldRotationX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The world rotation for the X axis, calculated using a and c. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00121">121</a></p>
+
+</div>
+</div>
+<a id="a33a7ce850ec092ca76ebb8292796f483" name="a33a7ce850ec092ca76ebb8292796f483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a7ce850ec092ca76ebb8292796f483">&#9670;&#160;</a></span>WorldRotationY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldRotationY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The world rotation for the Y axis, calculated using b and d. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<a id="a2d81978145b54c3531ef3ceeb70904d5" name="a2d81978145b54c3531ef3ceeb70904d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d81978145b54c3531ef3ceeb70904d5">&#9670;&#160;</a></span>WorldScaleX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldScaleX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the magnitide (always positive) of the world scale X. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00126">126</a></p>
+
+</div>
+</div>
+<a id="ad86cf0fe043b18cd39791f38f411fb2a" name="ad86cf0fe043b18cd39791f38f411fb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86cf0fe043b18cd39791f38f411fb2a">&#9670;&#160;</a></span>WorldScaleY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldScaleY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the magnitide (always positive) of the world scale Y. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00128">128</a></p>
+
+</div>
+</div>
+<a id="ac8f234829fb48b94eb694537100b3570" name="ac8f234829fb48b94eb694537100b3570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f234829fb48b94eb694537100b3570">&#9670;&#160;</a></span>WorldX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The world X position. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00117">117</a></p>
+
+</div>
+</div>
+<a id="af22e54e68b742c6378c87fa2f5ad7d6c" name="af22e54e68b742c6378c87fa2f5ad7d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22e54e68b742c6378c87fa2f5ad7d6c">&#9670;&#160;</a></span>WorldY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.WorldY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The world Y position. If changed, <a class="el" href="#aa1ac7180d78c77b4ff5f0823bfc0b8ac" title="Computes the applied transform values from the world transform.">UpdateAppliedTransform()</a> should be called. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00119">119</a></p>
+
+</div>
+</div>
+<a id="a449250768b89e6b5cda2a158207b219e" name="a449250768b89e6b5cda2a158207b219e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449250768b89e6b5cda2a158207b219e">&#9670;&#160;</a></span>X</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.X</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local X translation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<a id="a4a7a8d0b99b6f3d2e042189bc1620b2a" name="a4a7a8d0b99b6f3d2e042189bc1620b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7a8d0b99b6f3d2e042189bc1620b2a">&#9670;&#160;</a></span>Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.Bone.Y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The local Y translation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_bone_8cs_source.html">Bone.cs</a> строка <a class="el" href="_bone_8cs_source.html#l00067">67</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/<a class="el" href="_bone_8cs_source.html">Bone.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_spine.html">Spine</a></li><li class="navelem"><a href="class_spine_1_1_bone.html">Bone</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

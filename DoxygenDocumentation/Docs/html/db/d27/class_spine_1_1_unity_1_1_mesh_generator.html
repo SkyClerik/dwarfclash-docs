@@ -1,0 +1,1057 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Spine.Unity.MeshGenerator</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('db/d27/class_spine_1_1_unity_1_1_mesh_generator.html','../../','d9/d16/class_spine_1_1_unity_1_1_mesh_generator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Spine.Unity.MeshGenerator</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Holds several methods to prepare and generate a UnityEngine mesh based on a skeleton. Contains buffers needed to perform the operation, and serializes settings for mesh generation.  
+ <a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:Settings" id="r_Settings"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d26/struct_spine_1_1_unity_1_1_mesh_generator_1_1_settings.html">Settings</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac6e4fe1527b79e1fddf7e0afefd79e33" id="r_ac6e4fe1527b79e1fddf7e0afefd79e33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6e4fe1527b79e1fddf7e0afefd79e33">SubmeshIndexCount</a> (int submeshIndex)</td></tr>
+<tr class="memitem:a2e1652f1dac9f494da4dfe73c91b564d" id="r_a2e1652f1dac9f494da4dfe73c91b564d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e1652f1dac9f494da4dfe73c91b564d">Begin</a> ()</td></tr>
+<tr class="memitem:aa952a9e80b0019d3bbeb457175e00e7a" id="r_aa952a9e80b0019d3bbeb457175e00e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa952a9e80b0019d3bbeb457175e00e7a">AddSubmesh</a> (<a class="el" href="../../d7/d8a/struct_spine_1_1_unity_1_1_submesh_instruction.html">SubmeshInstruction</a> instruction, bool updateTriangles=true)</td></tr>
+<tr class="memitem:afde88fe03d1b02324d25a61887315f1e" id="r_afde88fe03d1b02324d25a61887315f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde88fe03d1b02324d25a61887315f1e">BuildMesh</a> (<a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a> instruction, bool updateTriangles)</td></tr>
+<tr class="memitem:a627386e6a724f78211ef1ef258eeafcd" id="r_a627386e6a724f78211ef1ef258eeafcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a627386e6a724f78211ef1ef258eeafcd">BuildMeshWithArrays</a> (<a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a> instruction, bool updateTriangles)</td></tr>
+<tr class="memitem:a52baa653a39ac13f5b366c60d8edcb32" id="r_a52baa653a39ac13f5b366c60d8edcb32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52baa653a39ac13f5b366c60d8edcb32">ScaleVertexData</a> (float scale)</td></tr>
+<tr class="memitem:ac1e53ade3d1a600a0f724ada97234e16" id="r_ac1e53ade3d1a600a0f724ada97234e16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e53ade3d1a600a0f724ada97234e16">ScaleAndOffsetVertexData</a> (float scale, Vector2 offset2D)</td></tr>
+<tr class="memitem:a9532ce997a9e8b974ddb081919ac9631" id="r_a9532ce997a9e8b974ddb081919ac9631"><td class="memItemLeft" align="right" valign="top">Bounds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9532ce997a9e8b974ddb081919ac9631">GetMeshBounds</a> ()</td></tr>
+<tr class="memitem:afb4387f3a4fe800d64bba1e17bf1d9bd" id="r_afb4387f3a4fe800d64bba1e17bf1d9bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb4387f3a4fe800d64bba1e17bf1d9bd">FillVertexData</a> (Mesh mesh)</td></tr>
+<tr class="memitem:af42d751fee1dc4f18107753ff17e0dc9" id="r_af42d751fee1dc4f18107753ff17e0dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af42d751fee1dc4f18107753ff17e0dc9">FillLateVertexData</a> (Mesh mesh)</td></tr>
+<tr class="memitem:ac0c3f6846034a622aa0d7998d433fae6" id="r_ac0c3f6846034a622aa0d7998d433fae6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c3f6846034a622aa0d7998d433fae6">FillTriangles</a> (Mesh mesh)</td></tr>
+<tr class="memitem:a7eab2e56b3fd22c50bb71b3e2f07925c" id="r_a7eab2e56b3fd22c50bb71b3e2f07925c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eab2e56b3fd22c50bb71b3e2f07925c">EnsureVertexCapacity</a> (int minimumVertexCount, bool inlcudeTintBlack=false, bool includeTangents=false, bool includeNormals=false)</td></tr>
+<tr class="memitem:a0c95e18a942e46a54278472d8619e116" id="r_a0c95e18a942e46a54278472d8619e116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c95e18a942e46a54278472d8619e116">TrimExcess</a> ()</td></tr>
+<tr class="memdesc:a0c95e18a942e46a54278472d8619e116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims internal buffers to reduce the resulting mesh data stream size.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a581230789bb08b6f9100216257ed5c9a" id="r_a581230789bb08b6f9100216257ed5c9a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581230789bb08b6f9100216257ed5c9a">GenerateSingleSubmeshInstruction</a> (<a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a> instructionOutput, <a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> skeleton, Material material)</td></tr>
+<tr class="memdesc:a581230789bb08b6f9100216257ed5c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A specialized variant of GenerateSkeletonRendererInstruction. Generates renderer instructions using a single submesh, using only a single material and texture.  <br /></td></tr>
+<tr class="memitem:a9bf79946431b60945afe14e3b1338d5f" id="r_a9bf79946431b60945afe14e3b1338d5f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf79946431b60945afe14e3b1338d5f">RequiresMultipleSubmeshesByDrawOrder</a> (<a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> skeleton)</td></tr>
+<tr class="memitem:a997f5a2740aaacb784534e9be83327bb" id="r_a997f5a2740aaacb784534e9be83327bb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a997f5a2740aaacb784534e9be83327bb">GenerateSkeletonRendererInstruction</a> (<a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a> instructionOutput, <a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a> skeleton, Dictionary&lt; <a class="el" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>, Material &gt; customSlotMaterials, List&lt; <a class="el" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> &gt; separatorSlots, bool generateMeshOverride, bool immutableTriangles=false)</td></tr>
+<tr class="memitem:a6a986c9a1173d8c69a53bf466969a29a" id="r_a6a986c9a1173d8c69a53bf466969a29a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a986c9a1173d8c69a53bf466969a29a">TryReplaceMaterials</a> (ExposedList&lt; <a class="el" href="../../d7/d8a/struct_spine_1_1_unity_1_1_submesh_instruction.html">SubmeshInstruction</a> &gt; workingSubmeshInstructions, Dictionary&lt; Material, Material &gt; customMaterialOverride)</td></tr>
+<tr class="memitem:a5093b07a6aa730ec2cf2421d7ec17d8c" id="r_a5093b07a6aa730ec2cf2421d7ec17d8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5093b07a6aa730ec2cf2421d7ec17d8c">FillMeshLocal</a> (Mesh mesh, <a class="el" href="../../d0/d0c/class_spine_1_1_region_attachment.html">RegionAttachment</a> regionAttachment)</td></tr>
+<tr class="memdesc:a5093b07a6aa730ec2cf2421d7ec17d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills mesh vertex data to render a <a class="el" href="../../d0/d0c/class_spine_1_1_region_attachment.html" title="Attachment that displays a texture region.">RegionAttachment</a>.  <br /></td></tr>
+<tr class="memitem:ae3fa90c1bcbc326e3a9f008415f92586" id="r_ae3fa90c1bcbc326e3a9f008415f92586"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3fa90c1bcbc326e3a9f008415f92586">FillMeshLocal</a> (Mesh mesh, <a class="el" href="../../da/dd7/class_spine_1_1_mesh_attachment.html">MeshAttachment</a> meshAttachment, <a class="el" href="../../d0/d8a/class_spine_1_1_skeleton_data.html">SkeletonData</a> skeletonData)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad8011aaf0fa48403f8846e4eaa17b709" id="r_ad8011aaf0fa48403f8846e4eaa17b709"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d26/struct_spine_1_1_unity_1_1_mesh_generator_1_1_settings.html">Settings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8011aaf0fa48403f8846e4eaa17b709">settings</a> = Settings.Default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a81069561aef1674678f266b1f8511cc2" id="r_a81069561aef1674678f266b1f8511cc2"><td class="memItemLeft" align="right" valign="top">readonly ExposedList&lt; Vector3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81069561aef1674678f266b1f8511cc2">vertexBuffer</a> = new ExposedList&lt;Vector3&gt;(4)</td></tr>
+<tr class="memitem:a4d5415c1f1a79a8b5ff7dac9b08fe90d" id="r_a4d5415c1f1a79a8b5ff7dac9b08fe90d"><td class="memItemLeft" align="right" valign="top">readonly ExposedList&lt; Vector2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d5415c1f1a79a8b5ff7dac9b08fe90d">uvBuffer</a> = new ExposedList&lt;Vector2&gt;(4)</td></tr>
+<tr class="memitem:a8d41779968a5daa43b92966ea219a5af" id="r_a8d41779968a5daa43b92966ea219a5af"><td class="memItemLeft" align="right" valign="top">readonly ExposedList&lt; Color32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d41779968a5daa43b92966ea219a5af">colorBuffer</a> = new ExposedList&lt;Color32&gt;(4)</td></tr>
+<tr class="memitem:a6bb2ca9802f92994e3d544594a224683" id="r_a6bb2ca9802f92994e3d544594a224683"><td class="memItemLeft" align="right" valign="top">readonly ExposedList&lt; ExposedList&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb2ca9802f92994e3d544594a224683">submeshes</a> = new ExposedList&lt;ExposedList&lt;int&gt;&gt; { new ExposedList&lt;int&gt;(6) }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a9a849008b15e1283fafc573608e88312" id="r_a9a849008b15e1283fafc573608e88312"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a849008b15e1283fafc573608e88312">UV2</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9a849008b15e1283fafc573608e88312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vertex texture coordinates (UVs), second channel. To be used for UnityEngine.Mesh.uv2. Using this accessor automatically allocates and resizes the buffer accordingly.  <br /></td></tr>
+<tr class="memitem:ae4ebb3affd6c139023b7f4859d81c840" id="r_ae4ebb3affd6c139023b7f4859d81c840"><td class="memItemLeft" align="right" valign="top">Vector2[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4ebb3affd6c139023b7f4859d81c840">UV3</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae4ebb3affd6c139023b7f4859d81c840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vertex texture coordinates (UVs), third channel. To be used for UnityEngine.Mesh.uv3. Using this accessor automatically allocates and resizes the buffer accordingly.  <br /></td></tr>
+<tr class="memitem:a9008146a52315d745bbd29c9e3a419c0" id="r_a9008146a52315d745bbd29c9e3a419c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9008146a52315d745bbd29c9e3a419c0">VertexCount</a><code> [get]</code></td></tr>
+<tr class="memitem:ab039e5cd423122e5b8a474a75b516b73" id="r_ab039e5cd423122e5b8a474a75b516b73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d4c/struct_spine_1_1_unity_1_1_mesh_generator_buffers.html">MeshGeneratorBuffers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab039e5cd423122e5b8a474a75b516b73">Buffers</a><code> [get]</code></td></tr>
+<tr class="memdesc:ab039e5cd423122e5b8a474a75b516b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of mesh arrays whose values are modifiable by the user. Modify these values before they are passed to the UnityEngine mesh object in order to see the effect.  <br /></td></tr>
+<tr class="memitem:a4bcb1870986a773ee2eb6a5dbb4d1768" id="r_a4bcb1870986a773ee2eb6a5dbb4d1768"><td class="memItemLeft" align="right" valign="top">SkeletonClipping&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bcb1870986a773ee2eb6a5dbb4d1768">SkeletonClipping</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4bcb1870986a773ee2eb6a5dbb4d1768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d9/dee/class_spine_1_1_skeleton_clipping.html">SkeletonClipping</a> used by this mesh generator for use with e.g. <a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html#a7487f50de022043e17eab922b7d62de7" title="Returns the axis aligned bounding box (AABB) of the region and mesh attachments for the current pose.">Skeleton.GetBounds(out float, out float, out float, out float, ref float[], SkeletonClipping)</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Holds several methods to prepare and generate a UnityEngine mesh based on a skeleton. Contains buffers needed to perform the operation, and serializes settings for mesh generation. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00102">102</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a4f00a2ee3433eb885d93afc30476ee70" name="a4f00a2ee3433eb885d93afc30476ee70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f00a2ee3433eb885d93afc30476ee70">&#9670;&#160;</a></span>MeshGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.Unity.MeshGenerator.MeshGenerator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00189">189</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa952a9e80b0019d3bbeb457175e00e7a" name="aa952a9e80b0019d3bbeb457175e00e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa952a9e80b0019d3bbeb457175e00e7a">&#9670;&#160;</a></span>AddSubmesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.AddSubmesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d8a/struct_spine_1_1_unity_1_1_submesh_instruction.html">SubmeshInstruction</a></td>          <td class="paramname"><span class="paramname"><em>instruction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>updateTriangles</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00563">563</a></p>
+
+</div>
+</div>
+<a id="a2e1652f1dac9f494da4dfe73c91b564d" name="a2e1652f1dac9f494da4dfe73c91b564d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1652f1dac9f494da4dfe73c91b564d">&#9670;&#160;</a></span>Begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.Begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00544">544</a></p>
+
+</div>
+</div>
+<a id="afde88fe03d1b02324d25a61887315f1e" name="afde88fe03d1b02324d25a61887315f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde88fe03d1b02324d25a61887315f1e">&#9670;&#160;</a></span>BuildMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.BuildMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a></td>          <td class="paramname"><span class="paramname"><em>instruction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>updateTriangles</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00806">806</a></p>
+
+</div>
+</div>
+<a id="a627386e6a724f78211ef1ef258eeafcd" name="a627386e6a724f78211ef1ef258eeafcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627386e6a724f78211ef1ef258eeafcd">&#9670;&#160;</a></span>BuildMeshWithArrays()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.BuildMeshWithArrays </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a></td>          <td class="paramname"><span class="paramname"><em>instruction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>updateTriangles</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00813">813</a></p>
+
+</div>
+</div>
+<a id="a7eab2e56b3fd22c50bb71b3e2f07925c" name="a7eab2e56b3fd22c50bb71b3e2f07925c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eab2e56b3fd22c50bb71b3e2f07925c">&#9670;&#160;</a></span>EnsureVertexCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.EnsureVertexCapacity </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minimumVertexCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>inlcudeTintBlack</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeTangents</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeNormals</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01307">1307</a></p>
+
+</div>
+</div>
+<a id="af42d751fee1dc4f18107753ff17e0dc9" name="af42d751fee1dc4f18107753ff17e0dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42d751fee1dc4f18107753ff17e0dc9">&#9670;&#160;</a></span>FillLateVertexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.FillLateVertexData </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01274">1274</a></p>
+
+</div>
+</div>
+<a id="ae3fa90c1bcbc326e3a9f008415f92586" name="ae3fa90c1bcbc326e3a9f008415f92586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3fa90c1bcbc326e3a9f008415f92586">&#9670;&#160;</a></span>FillMeshLocal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.FillMeshLocal </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/dd7/class_spine_1_1_mesh_attachment.html">MeshAttachment</a></td>          <td class="paramname"><span class="paramname"><em>meshAttachment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8a/class_spine_1_1_skeleton_data.html">SkeletonData</a></td>          <td class="paramname"><span class="paramname"><em>skeletonData</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01489">1489</a></p>
+
+</div>
+</div>
+<a id="a5093b07a6aa730ec2cf2421d7ec17d8c" name="a5093b07a6aa730ec2cf2421d7ec17d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5093b07a6aa730ec2cf2421d7ec17d8c">&#9670;&#160;</a></span>FillMeshLocal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.FillMeshLocal </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d0c/class_spine_1_1_region_attachment.html">RegionAttachment</a></td>          <td class="paramname"><span class="paramname"><em>regionAttachment</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fills mesh vertex data to render a <a class="el" href="../../d0/d0c/class_spine_1_1_region_attachment.html" title="Attachment that displays a texture region.">RegionAttachment</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01449">1449</a></p>
+
+</div>
+</div>
+<a id="ac0c3f6846034a622aa0d7998d433fae6" name="ac0c3f6846034a622aa0d7998d433fae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c3f6846034a622aa0d7998d433fae6">&#9670;&#160;</a></span>FillTriangles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.FillTriangles </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01293">1293</a></p>
+
+</div>
+</div>
+<a id="afb4387f3a4fe800d64bba1e17bf1d9bd" name="afb4387f3a4fe800d64bba1e17bf1d9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb4387f3a4fe800d64bba1e17bf1d9bd">&#9670;&#160;</a></span>FillVertexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.FillVertexData </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01224">1224</a></p>
+
+</div>
+</div>
+<a id="a581230789bb08b6f9100216257ed5c9a" name="a581230789bb08b6f9100216257ed5c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581230789bb08b6f9100216257ed5c9a">&#9670;&#160;</a></span>GenerateSingleSubmeshInstruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.GenerateSingleSubmeshInstruction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a></td>          <td class="paramname"><span class="paramname"><em>instructionOutput</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a></td>          <td class="paramname"><span class="paramname"><em>skeleton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Material</td>          <td class="paramname"><span class="paramname"><em>material</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A specialized variant of GenerateSkeletonRendererInstruction. Generates renderer instructions using a single submesh, using only a single material and texture. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instructionOutput</td><td>The resulting instructions.</td></tr>
+    <tr><td class="paramname">skeleton</td><td>The skeleton to generate renderer instructions for.</td></tr>
+    <tr><td class="paramname">material</td><td>Material to be set at the renderer instruction. When null, the last attachment in the draw order list is assigned as the instruction's material.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00202">202</a></p>
+
+</div>
+</div>
+<a id="a997f5a2740aaacb784534e9be83327bb" name="a997f5a2740aaacb784534e9be83327bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997f5a2740aaacb784534e9be83327bb">&#9670;&#160;</a></span>GenerateSkeletonRendererInstruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.GenerateSkeletonRendererInstruction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d93/class_spine_1_1_unity_1_1_skeleton_renderer_instruction.html">SkeletonRendererInstruction</a></td>          <td class="paramname"><span class="paramname"><em>instructionOutput</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a></td>          <td class="paramname"><span class="paramname"><em>skeleton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Dictionary&lt; <a class="el" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a>, Material &gt;</td>          <td class="paramname"><span class="paramname"><em>customSlotMaterials</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="../../da/dd8/class_spine_1_1_slot.html">Slot</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>separatorSlots</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>generateMeshOverride</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>immutableTriangles</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00335">335</a></p>
+
+</div>
+</div>
+<a id="a9532ce997a9e8b974ddb081919ac9631" name="a9532ce997a9e8b974ddb081919ac9631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9532ce997a9e8b974ddb081919ac9631">&#9670;&#160;</a></span>GetMeshBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bounds Spine.Unity.MeshGenerator.GetMeshBounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01171">1171</a></p>
+
+</div>
+</div>
+<a id="a9bf79946431b60945afe14e3b1338d5f" name="a9bf79946431b60945afe14e3b1338d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf79946431b60945afe14e3b1338d5f">&#9670;&#160;</a></span>RequiresMultipleSubmeshesByDrawOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spine.Unity.MeshGenerator.RequiresMultipleSubmeshesByDrawOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html">Skeleton</a></td>          <td class="paramname"><span class="paramname"><em>skeleton</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00302">302</a></p>
+
+</div>
+</div>
+<a id="ac1e53ade3d1a600a0f724ada97234e16" name="ac1e53ade3d1a600a0f724ada97234e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e53ade3d1a600a0f724ada97234e16">&#9670;&#160;</a></span>ScaleAndOffsetVertexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.ScaleAndOffsetVertexData </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>offset2D</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01151">1151</a></p>
+
+</div>
+</div>
+<a id="a52baa653a39ac13f5b366c60d8edcb32" name="a52baa653a39ac13f5b366c60d8edcb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52baa653a39ac13f5b366c60d8edcb32">&#9670;&#160;</a></span>ScaleVertexData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.ScaleVertexData </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01134">1134</a></p>
+
+</div>
+</div>
+<a id="ac6e4fe1527b79e1fddf7e0afefd79e33" name="ac6e4fe1527b79e1fddf7e0afefd79e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e4fe1527b79e1fddf7e0afefd79e33">&#9670;&#160;</a></span>SubmeshIndexCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Spine.Unity.MeshGenerator.SubmeshIndexCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>submeshIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00169">169</a></p>
+
+</div>
+</div>
+<a id="a0c95e18a942e46a54278472d8619e116" name="a0c95e18a942e46a54278472d8619e116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c95e18a942e46a54278472d8619e116">&#9670;&#160;</a></span>TrimExcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.TrimExcess </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trims internal buffers to reduce the resulting mesh data stream size. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l01340">1340</a></p>
+
+</div>
+</div>
+<a id="a6a986c9a1173d8c69a53bf466969a29a" name="a6a986c9a1173d8c69a53bf466969a29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a986c9a1173d8c69a53bf466969a29a">&#9670;&#160;</a></span>TryReplaceMaterials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.Unity.MeshGenerator.TryReplaceMaterials </td>
+          <td>(</td>
+          <td class="paramtype">ExposedList&lt; <a class="el" href="../../d7/d8a/struct_spine_1_1_unity_1_1_submesh_instruction.html">SubmeshInstruction</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>workingSubmeshInstructions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Dictionary&lt; Material, Material &gt;</td>          <td class="paramname"><span class="paramname"><em>customMaterialOverride</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00527">527</a></p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a8d41779968a5daa43b92966ea219a5af" name="a8d41779968a5daa43b92966ea219a5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d41779968a5daa43b92966ea219a5af">&#9670;&#160;</a></span>colorBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ExposedList&lt;Color32&gt; Spine.Unity.MeshGenerator.colorBuffer = new ExposedList&lt;Color32&gt;(4)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a id="ad8011aaf0fa48403f8846e4eaa17b709" name="ad8011aaf0fa48403f8846e4eaa17b709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8011aaf0fa48403f8846e4eaa17b709">&#9670;&#160;</a></span>settings</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d26/struct_spine_1_1_unity_1_1_mesh_generator_1_1_settings.html">Settings</a> Spine.Unity.MeshGenerator.settings = Settings.Default</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00103">103</a></p>
+
+</div>
+</div>
+<a id="a6bb2ca9802f92994e3d544594a224683" name="a6bb2ca9802f92994e3d544594a224683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb2ca9802f92994e3d544594a224683">&#9670;&#160;</a></span>submeshes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ExposedList&lt;ExposedList&lt;int&gt; &gt; Spine.Unity.MeshGenerator.submeshes = new ExposedList&lt;ExposedList&lt;int&gt;&gt; { new ExposedList&lt;int&gt;(6) }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00142">142</a></p>
+
+</div>
+</div>
+<a id="a4d5415c1f1a79a8b5ff7dac9b08fe90d" name="a4d5415c1f1a79a8b5ff7dac9b08fe90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5415c1f1a79a8b5ff7dac9b08fe90d">&#9670;&#160;</a></span>uvBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ExposedList&lt;Vector2&gt; Spine.Unity.MeshGenerator.uvBuffer = new ExposedList&lt;Vector2&gt;(4)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00140">140</a></p>
+
+</div>
+</div>
+<a id="a81069561aef1674678f266b1f8511cc2" name="a81069561aef1674678f266b1f8511cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81069561aef1674678f266b1f8511cc2">&#9670;&#160;</a></span>vertexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ExposedList&lt;Vector3&gt; Spine.Unity.MeshGenerator.vertexBuffer = new ExposedList&lt;Vector3&gt;(4)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00139">139</a></p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Полный список свойств</h2>
+<a id="ab039e5cd423122e5b8a474a75b516b73" name="ab039e5cd423122e5b8a474a75b516b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab039e5cd423122e5b8a474a75b516b73">&#9670;&#160;</a></span>Buffers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d4c/struct_spine_1_1_unity_1_1_mesh_generator_buffers.html">MeshGeneratorBuffers</a> Spine.Unity.MeshGenerator.Buffers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A set of mesh arrays whose values are modifiable by the user. Modify these values before they are passed to the UnityEngine mesh object in order to see the effect. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00172">172</a></p>
+
+</div>
+</div>
+<a id="a4bcb1870986a773ee2eb6a5dbb4d1768" name="a4bcb1870986a773ee2eb6a5dbb4d1768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bcb1870986a773ee2eb6a5dbb4d1768">&#9670;&#160;</a></span>SkeletonClipping</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkeletonClipping Spine.Unity.MeshGenerator.SkeletonClipping</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="../../d9/dee/class_spine_1_1_skeleton_clipping.html">SkeletonClipping</a> used by this mesh generator for use with e.g. <a class="el" href="../../d9/dae/class_spine_1_1_skeleton.html#a7487f50de022043e17eab922b7d62de7" title="Returns the axis aligned bounding box (AABB) of the region and mesh attachments for the current pose.">Skeleton.GetBounds(out float, out float, out float, out float, ref float[], SkeletonClipping)</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00187">187</a></p>
+
+</div>
+</div>
+<a id="a9a849008b15e1283fafc573608e88312" name="a9a849008b15e1283fafc573608e88312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a849008b15e1283fafc573608e88312">&#9670;&#160;</a></span>UV2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Spine.Unity.MeshGenerator.UV2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional vertex texture coordinates (UVs), second channel. To be used for UnityEngine.Mesh.uv2. Using this accessor automatically allocates and resizes the buffer accordingly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00162">162</a></p>
+
+</div>
+</div>
+<a id="ae4ebb3affd6c139023b7f4859d81c840" name="ae4ebb3affd6c139023b7f4859d81c840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ebb3affd6c139023b7f4859d81c840">&#9670;&#160;</a></span>UV3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Spine.Unity.MeshGenerator.UV3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional vertex texture coordinates (UVs), third channel. To be used for UnityEngine.Mesh.uv3. Using this accessor automatically allocates and resizes the buffer accordingly. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00165">165</a></p>
+
+</div>
+</div>
+<a id="a9008146a52315d745bbd29c9e3a419c0" name="a9008146a52315d745bbd29c9e3a419c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9008146a52315d745bbd29c9e3a419c0">&#9670;&#160;</a></span>VertexCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Spine.Unity.MeshGenerator.VertexCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a> строка <a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html#l00168">168</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-unity/Mesh Generation/<a class="el" href="../../dc/d5f/_mesh_generator_8cs_source.html">MeshGenerator.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../de/de6/namespace_spine.html">Spine</a></li><li class="navelem"><a href="../../d4/d72/namespace_spine_1_1_unity.html">Unity</a></li><li class="navelem"><a href="../../db/d27/class_spine_1_1_unity_1_1_mesh_generator.html">MeshGenerator</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

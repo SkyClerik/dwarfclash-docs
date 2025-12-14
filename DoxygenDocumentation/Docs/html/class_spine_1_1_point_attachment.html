@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Spine.PointAttachment</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_spine_1_1_point_attachment.html','','class_spine_1_1_point_attachment-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Spine.PointAttachment</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>An attachment which is a single point and a rotation. This can be used to spawn projectiles, particles, etc. A bone can be used in similar ways, but a <a class="el" href="class_spine_1_1_point_attachment.html" title="An attachment which is a single point and a rotation. This can be used to spawn projectiles,...">PointAttachment</a> is slightly less expensive to compute and can be hidden, shown, and placed in a skin.  
+ <a href="#details">Подробнее...</a></p>
+
+<p>Базовые классы:<a class="el" href="class_spine_1_1_attachment.html">Spine.Attachment</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2ae2f0aa30bac4b25aa6a6adf190d77d" id="r_a2ae2f0aa30bac4b25aa6a6adf190d77d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae2f0aa30bac4b25aa6a6adf190d77d">PointAttachment</a> (string name)</td></tr>
+<tr class="memitem:af707129ef2f4326fa176b55c8944d2a4" id="r_af707129ef2f4326fa176b55c8944d2a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af707129ef2f4326fa176b55c8944d2a4">ComputeWorldPosition</a> (<a class="el" href="class_spine_1_1_bone.html">Bone</a> bone, out float ox, out float oy)</td></tr>
+<tr class="memitem:a62471f0abf986ae7b095152a17ae5f99" id="r_a62471f0abf986ae7b095152a17ae5f99"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62471f0abf986ae7b095152a17ae5f99">ComputeWorldRotation</a> (<a class="el" href="class_spine_1_1_bone.html">Bone</a> bone)</td></tr>
+<tr class="memitem:acb89a09250f32f0cc71816d0bbaf529a" id="r_acb89a09250f32f0cc71816d0bbaf529a"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_spine_1_1_attachment.html#a9314454a605d5b6a551dec03df1e7f65">Attachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb89a09250f32f0cc71816d0bbaf529a">Copy</a> ()</td></tr>
+<tr class="inherit_header pub_methods_class_spine_1_1_attachment"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_spine_1_1_attachment')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_spine_1_1_attachment.html">Spine.Attachment</a></td></tr>
+<tr class="memitem:ab3d15d41fbd2ee38f490735a16cc88a0 inherit pub_methods_class_spine_1_1_attachment" id="r_ab3d15d41fbd2ee38f490735a16cc88a0"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spine_1_1_attachment.html#ab3d15d41fbd2ee38f490735a16cc88a0">ToString</a> ()</td></tr>
+<tr class="memitem:a9e39d7f3885810a0f8f34285f53b2e2b inherit pub_methods_class_spine_1_1_attachment" id="r_a9e39d7f3885810a0f8f34285f53b2e2b"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_spine_1_1_attachment.html#a9314454a605d5b6a551dec03df1e7f65">Attachment</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Copy</b> ()</td></tr>
+<tr class="memdesc:a9e39d7f3885810a0f8f34285f53b2e2b inherit pub_methods_class_spine_1_1_attachment"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the attachment. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a88c88902b160dca006f6c4d747cdef6f" id="r_a88c88902b160dca006f6c4d747cdef6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c88902b160dca006f6c4d747cdef6f">PointAttachment</a> (PointAttachment other)</td></tr>
+<tr class="memdesc:a88c88902b160dca006f6c4d747cdef6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_spine_1_1_attachment"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_spine_1_1_attachment')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные члены унаследованные от <a class="el" href="class_spine_1_1_attachment.html">Spine.Attachment</a></td></tr>
+<tr class="memitem:afc368094ebe8f1ca00ba06bf6752b029 inherit pro_methods_class_spine_1_1_attachment" id="r_afc368094ebe8f1ca00ba06bf6752b029"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spine_1_1_attachment.html#afc368094ebe8f1ca00ba06bf6752b029">Attachment</a> (string name)</td></tr>
+<tr class="memitem:a9314454a605d5b6a551dec03df1e7f65 inherit pro_methods_class_spine_1_1_attachment" id="r_a9314454a605d5b6a551dec03df1e7f65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spine_1_1_attachment.html#a9314454a605d5b6a551dec03df1e7f65">Attachment</a> (Attachment other)</td></tr>
+<tr class="memdesc:a9314454a605d5b6a551dec03df1e7f65 inherit pro_methods_class_spine_1_1_attachment"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:ac4a6eefda3030b2294cfcf07443f417e" id="r_ac4a6eefda3030b2294cfcf07443f417e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4a6eefda3030b2294cfcf07443f417e">X</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a6f7987d16f3c50f8200fd27147b119aa" id="r_a6f7987d16f3c50f8200fd27147b119aa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f7987d16f3c50f8200fd27147b119aa">Y</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a9df3725722d6bb10f5efece7a2cfc935" id="r_a9df3725722d6bb10f5efece7a2cfc935"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df3725722d6bb10f5efece7a2cfc935">Rotation</a><code> [get, set]</code></td></tr>
+<tr class="inherit_header properties_class_spine_1_1_attachment"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_spine_1_1_attachment')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Свойства унаследованные от <a class="el" href="class_spine_1_1_attachment.html">Spine.Attachment</a></td></tr>
+<tr class="memitem:a63a616e3fcbfe9641abf8bd282e64ce8 inherit properties_class_spine_1_1_attachment" id="r_a63a616e3fcbfe9641abf8bd282e64ce8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spine_1_1_attachment.html#a63a616e3fcbfe9641abf8bd282e64ce8">Name</a><code> [get]</code></td></tr>
+<tr class="memdesc:a63a616e3fcbfe9641abf8bd282e64ce8 inherit properties_class_spine_1_1_attachment"><td class="mdescLeft">&#160;</td><td class="mdescRight">The attachment's name.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>An attachment which is a single point and a rotation. This can be used to spawn projectiles, particles, etc. A bone can be used in similar ways, but a <a class="el" href="class_spine_1_1_point_attachment.html" title="An attachment which is a single point and a rotation. This can be used to spawn projectiles,...">PointAttachment</a> is slightly less expensive to compute and can be hidden, shown, and placed in a skin. </p>
+<p>See <a href="http://esotericsoftware.com/spine-point-attachments">Point Attachments</a> in the <a class="el" href="namespace_spine.html">Spine</a> User Guide. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00040">40</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a2ae2f0aa30bac4b25aa6a6adf190d77d" name="a2ae2f0aa30bac4b25aa6a6adf190d77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae2f0aa30bac4b25aa6a6adf190d77d">&#9670;&#160;</a></span>PointAttachment() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.PointAttachment.PointAttachment </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<a id="a88c88902b160dca006f6c4d747cdef6f" name="a88c88902b160dca006f6c4d747cdef6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c88902b160dca006f6c4d747cdef6f">&#9670;&#160;</a></span>PointAttachment() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.PointAttachment.PointAttachment </td>
+          <td>(</td>
+          <td class="paramtype">PointAttachment</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00051">51</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="af707129ef2f4326fa176b55c8944d2a4" name="af707129ef2f4326fa176b55c8944d2a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af707129ef2f4326fa176b55c8944d2a4">&#9670;&#160;</a></span>ComputeWorldPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spine.PointAttachment.ComputeWorldPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_bone.html">Bone</a></td>          <td class="paramname"><span class="paramname"><em>bone</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>ox</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float</td>          <td class="paramname"><span class="paramname"><em>oy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a62471f0abf986ae7b095152a17ae5f99" name="a62471f0abf986ae7b095152a17ae5f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62471f0abf986ae7b095152a17ae5f99">&#9670;&#160;</a></span>ComputeWorldRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.PointAttachment.ComputeWorldRotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_bone.html">Bone</a></td>          <td class="paramname"><span class="paramname"><em>bone</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00062">62</a></p>
+
+</div>
+</div>
+<a id="acb89a09250f32f0cc71816d0bbaf529a" name="acb89a09250f32f0cc71816d0bbaf529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb89a09250f32f0cc71816d0bbaf529a">&#9670;&#160;</a></span>Copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="class_spine_1_1_attachment.html#a9314454a605d5b6a551dec03df1e7f65">Attachment</a> Spine.PointAttachment.Copy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00069">69</a></p>
+
+</div>
+</div>
+<a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Полный список свойств</h2>
+<a id="a9df3725722d6bb10f5efece7a2cfc935" name="a9df3725722d6bb10f5efece7a2cfc935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df3725722d6bb10f5efece7a2cfc935">&#9670;&#160;</a></span>Rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.PointAttachment.Rotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00044">44</a></p>
+
+</div>
+</div>
+<a id="ac4a6eefda3030b2294cfcf07443f417e" name="ac4a6eefda3030b2294cfcf07443f417e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a6eefda3030b2294cfcf07443f417e">&#9670;&#160;</a></span>X</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.PointAttachment.X</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00042">42</a></p>
+
+</div>
+</div>
+<a id="a6f7987d16f3c50f8200fd27147b119aa" name="a6f7987d16f3c50f8200fd27147b119aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7987d16f3c50f8200fd27147b119aa">&#9670;&#160;</a></span>Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Spine.PointAttachment.Y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a> строка <a class="el" href="_point_attachment_8cs_source.html#l00043">43</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/Attachments/<a class="el" href="_point_attachment_8cs_source.html">PointAttachment.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_spine.html">Spine</a></li><li class="navelem"><a href="class_spine_1_1_point_attachment.html">PointAttachment</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

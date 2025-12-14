@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Spine.AtlasAttachmentLoader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_spine_1_1_atlas_attachment_loader.html','','class_spine_1_1_atlas_attachment_loader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Spine.AtlasAttachmentLoader</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>An <a class="el" href="interface_spine_1_1_attachment_loader.html">AttachmentLoader</a> that configures attachments using texture regions from an <a class="el" href="class_spine_1_1_atlas.html">Atlas</a>. See <a href="http://esotericsoftware.com/spine-loading-skeleton-data#JSON-and-binary-data">Loading Skeleton Data</a> in the <a class="el" href="namespace_spine.html">Spine</a> Runtimes Guide.  
+ <a href="#details">Подробнее...</a></p>
+
+<p>Базовые классы:<a class="el" href="interface_spine_1_1_attachment_loader.html">Spine.AttachmentLoader</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3fd62c2c238a6a6bb6ec2f74fa65f109" id="r_a3fd62c2c238a6a6bb6ec2f74fa65f109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd62c2c238a6a6bb6ec2f74fa65f109">AtlasAttachmentLoader</a> (params <a class="el" href="class_spine_1_1_atlas.html">Atlas</a>[] atlasArray)</td></tr>
+<tr class="memitem:a1d607121acbcdd51de4e1a8474d063cc" id="r_a1d607121acbcdd51de4e1a8474d063cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_region_attachment.html">RegionAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d607121acbcdd51de4e1a8474d063cc">NewRegionAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name, string path, <a class="el" href="class_spine_1_1_sequence.html">Sequence</a> sequence)</td></tr>
+<tr class="memdesc:a1d607121acbcdd51de4e1a8474d063cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;return&gt;May be null to not load any attachment.&lt;/return&gt;  <br /></td></tr>
+<tr class="memitem:ade2b1e88b97b6bc073d0ae8ac90e22e0" id="r_ade2b1e88b97b6bc073d0ae8ac90e22e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_mesh_attachment.html">MeshAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade2b1e88b97b6bc073d0ae8ac90e22e0">NewMeshAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name, string path, <a class="el" href="class_spine_1_1_sequence.html">Sequence</a> sequence)</td></tr>
+<tr class="memdesc:ade2b1e88b97b6bc073d0ae8ac90e22e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;return&gt;May be null to not load any attachment.&lt;/return&gt;  <br /></td></tr>
+<tr class="memitem:af4e3beb65efaed84e684d78050afde70" id="r_af4e3beb65efaed84e684d78050afde70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_bounding_box_attachment.html">BoundingBoxAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e3beb65efaed84e684d78050afde70">NewBoundingBoxAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name)</td></tr>
+<tr class="memdesc:af4e3beb65efaed84e684d78050afde70"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;return&gt;May be null to not load any attachment.&lt;/return&gt;  <br /></td></tr>
+<tr class="memitem:aad18a939954b56f7d16d24f0ca46b103" id="r_aad18a939954b56f7d16d24f0ca46b103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_path_attachment.html">PathAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad18a939954b56f7d16d24f0ca46b103">NewPathAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name)</td></tr>
+<tr class="memdesc:aad18a939954b56f7d16d24f0ca46b103"><td class="mdescLeft">&#160;</td><td class="mdescRight"><dl class="section return"><dt>Возвращает</dt><dd>May be null to not load any attachment</dd></dl>
+ <br /></td></tr>
+<tr class="memitem:a671c5c29c8eff42a90506fc593011abc" id="r_a671c5c29c8eff42a90506fc593011abc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_point_attachment.html">PointAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a671c5c29c8eff42a90506fc593011abc">NewPointAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name)</td></tr>
+<tr class="memitem:a85d6fe3abaa381c7d977edd3e63552b8" id="r_a85d6fe3abaa381c7d977edd3e63552b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_clipping_attachment.html">ClippingAttachment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d6fe3abaa381c7d977edd3e63552b8">NewClippingAttachment</a> (<a class="el" href="class_spine_1_1_skin.html">Skin</a> skin, string name)</td></tr>
+<tr class="memitem:a9205ec9a85e865b634a1233ebb409faa" id="r_a9205ec9a85e865b634a1233ebb409faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spine_1_1_atlas_region.html">AtlasRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9205ec9a85e865b634a1233ebb409faa">FindRegion</a> (string name)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>An <a class="el" href="interface_spine_1_1_attachment_loader.html">AttachmentLoader</a> that configures attachments using texture regions from an <a class="el" href="class_spine_1_1_atlas.html">Atlas</a>. See <a href="http://esotericsoftware.com/spine-loading-skeleton-data#JSON-and-binary-data">Loading Skeleton Data</a> in the <a class="el" href="namespace_spine.html">Spine</a> Runtimes Guide. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00038">38</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a3fd62c2c238a6a6bb6ec2f74fa65f109" name="a3fd62c2c238a6a6bb6ec2f74fa65f109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd62c2c238a6a6bb6ec2f74fa65f109">&#9670;&#160;</a></span>AtlasAttachmentLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spine.AtlasAttachmentLoader.AtlasAttachmentLoader </td>
+          <td>(</td>
+          <td class="paramtype">params <a class="el" href="class_spine_1_1_atlas.html">Atlas</a>[]</td>          <td class="paramname"><span class="paramname"><em>atlasArray</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00041">41</a></p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a9205ec9a85e865b634a1233ebb409faa" name="a9205ec9a85e865b634a1233ebb409faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9205ec9a85e865b634a1233ebb409faa">&#9670;&#160;</a></span>FindRegion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_atlas_region.html">AtlasRegion</a> Spine.AtlasAttachmentLoader.FindRegion </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00097">97</a></p>
+
+</div>
+</div>
+<a id="af4e3beb65efaed84e684d78050afde70" name="af4e3beb65efaed84e684d78050afde70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e3beb65efaed84e684d78050afde70">&#9670;&#160;</a></span>NewBoundingBoxAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_bounding_box_attachment.html">BoundingBoxAttachment</a> Spine.AtlasAttachmentLoader.NewBoundingBoxAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt;return&gt;May be null to not load any attachment.&lt;/return&gt; </p>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html#a06b5733cb67b13536797601adc6db6b4">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00081">81</a></p>
+
+</div>
+</div>
+<a id="a85d6fe3abaa381c7d977edd3e63552b8" name="a85d6fe3abaa381c7d977edd3e63552b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d6fe3abaa381c7d977edd3e63552b8">&#9670;&#160;</a></span>NewClippingAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_clipping_attachment.html">ClippingAttachment</a> Spine.AtlasAttachmentLoader.NewClippingAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00093">93</a></p>
+
+</div>
+</div>
+<a id="ade2b1e88b97b6bc073d0ae8ac90e22e0" name="ade2b1e88b97b6bc073d0ae8ac90e22e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2b1e88b97b6bc073d0ae8ac90e22e0">&#9670;&#160;</a></span>NewMeshAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_mesh_attachment.html">MeshAttachment</a> Spine.AtlasAttachmentLoader.NewMeshAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_sequence.html">Sequence</a></td>          <td class="paramname"><span class="paramname"><em>sequence</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt;return&gt;May be null to not load any attachment.&lt;/return&gt; </p>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html#a644b65f1167edd252a0015ea693e56ef">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00068">68</a></p>
+
+</div>
+</div>
+<a id="aad18a939954b56f7d16d24f0ca46b103" name="aad18a939954b56f7d16d24f0ca46b103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad18a939954b56f7d16d24f0ca46b103">&#9670;&#160;</a></span>NewPathAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_path_attachment.html">PathAttachment</a> Spine.AtlasAttachmentLoader.NewPathAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><dl class="section return"><dt>Возвращает</dt><dd>May be null to not load any attachment</dd></dl>
+</p>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html#a6b5e631c0773ecedecc3121e84db109d">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00085">85</a></p>
+
+</div>
+</div>
+<a id="a671c5c29c8eff42a90506fc593011abc" name="a671c5c29c8eff42a90506fc593011abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671c5c29c8eff42a90506fc593011abc">&#9670;&#160;</a></span>NewPointAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_point_attachment.html">PointAttachment</a> Spine.AtlasAttachmentLoader.NewPointAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00089">89</a></p>
+
+</div>
+</div>
+<a id="a1d607121acbcdd51de4e1a8474d063cc" name="a1d607121acbcdd51de4e1a8474d063cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d607121acbcdd51de4e1a8474d063cc">&#9670;&#160;</a></span>NewRegionAttachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spine_1_1_region_attachment.html">RegionAttachment</a> Spine.AtlasAttachmentLoader.NewRegionAttachment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_skin.html">Skin</a></td>          <td class="paramname"><span class="paramname"><em>skin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_spine_1_1_sequence.html">Sequence</a></td>          <td class="paramname"><span class="paramname"><em>sequence</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt;return&gt;May be null to not load any attachment.&lt;/return&gt; </p>
+
+<p>Замещает <a class="el" href="interface_spine_1_1_attachment_loader.html#aff810197709d0f072332832888461057">Spine.AttachmentLoader</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a> строка <a class="el" href="_atlas_attachment_loader_8cs_source.html#l00055">55</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/Attachments/<a class="el" href="_atlas_attachment_loader_8cs_source.html">AtlasAttachmentLoader.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_spine.html">Spine</a></li><li class="navelem"><a href="class_spine_1_1_atlas_attachment_loader.html">AtlasAttachmentLoader</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

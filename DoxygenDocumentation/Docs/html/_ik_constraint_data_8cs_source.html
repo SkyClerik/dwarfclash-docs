@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-csharp/IkConstraintData.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ik_constraint_data_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IkConstraintData.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_spine.html">Spine</a> {</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html">   35</a></span>    <span class="keyword">public</span> <span class="keyword">class </span>IkConstraintData : ConstraintData {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">internal</span> ExposedList&lt;BoneData&gt; bones = <span class="keyword">new</span> ExposedList&lt;BoneData&gt;();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">internal</span> <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> target;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">internal</span> <span class="keywordtype">int</span> bendDirection;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">internal</span> <span class="keywordtype">bool</span> compress, stretch, uniform;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">internal</span> <span class="keywordtype">float</span> mix, softness;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">public</span> IkConstraintData (<span class="keywordtype">string</span> name) : base(name) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a0482d10438aafb8c636cb4fc58e42c39">   46</a></span>        <span class="keyword">public</span> ExposedList&lt;BoneData&gt; <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a0482d10438aafb8c636cb4fc58e42c39">Bones</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> bones; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a18da05e4ffd82a3b231f3b8fca46e8c7">   51</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a18da05e4ffd82a3b231f3b8fca46e8c7">Target</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> target; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">set</span> { target = value; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#af429d25c9a81a72e9d015b81018de49a">   61</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#af429d25c9a81a72e9d015b81018de49a">Mix</a> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> mix; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keyword">set</span> { mix = value; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a2689751f2f10ef5be11218838d71dd6c">   68</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a2689751f2f10ef5be11218838d71dd6c">Softness</a> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> softness; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keyword">set</span> { softness = value; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a4205e132826ab1e8e5e460d4d6558946">   74</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a4205e132826ab1e8e5e460d4d6558946">BendDirection</a> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> bendDirection; }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">set</span> { bendDirection = value; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a9d9a433e70374db249d1d694baae7329">   80</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a9d9a433e70374db249d1d694baae7329">Compress</a> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> compress; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keyword">set</span> { compress = value; }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a20ab1b0f71479d97568593d28335eaa2">   90</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a20ab1b0f71479d97568593d28335eaa2">Stretch</a> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> stretch; }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keyword">set</span> { stretch = value; }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="};">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_spine_1_1_ik_constraint_data.html#a687175b6573140d923fbb77e39bf3820">   98</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="class_spine_1_1_ik_constraint_data.html#a687175b6573140d923fbb77e39bf3820">Uniform</a> {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> uniform; }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keyword">set</span> { uniform = value; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html"><div class="ttname"><a href="class_spine_1_1_bone_data.html">Spine.BoneData</a></div><div class="ttdef"><b>Определения</b> <a href="_bone_data_8cs_source.html#l00033">BoneData.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a0482d10438aafb8c636cb4fc58e42c39"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a0482d10438aafb8c636cb4fc58e42c39">Spine.IkConstraintData.Bones</a></div><div class="ttdeci">ExposedList&lt; BoneData &gt; Bones</div><div class="ttdoc">The bones that are constrained by this IK Constraint.</div><div class="ttdef"><b>Определения</b> <a href="#l00046">IkConstraintData.cs:46</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a18da05e4ffd82a3b231f3b8fca46e8c7"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a18da05e4ffd82a3b231f3b8fca46e8c7">Spine.IkConstraintData.Target</a></div><div class="ttdeci">BoneData Target</div><div class="ttdoc">The bone that is the IK target.</div><div class="ttdef"><b>Определения</b> <a href="#l00051">IkConstraintData.cs:51</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a20ab1b0f71479d97568593d28335eaa2"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a20ab1b0f71479d97568593d28335eaa2">Spine.IkConstraintData.Stretch</a></div><div class="ttdeci">bool Stretch</div><div class="ttdoc">When true and the target is out of range, the parent bone is scaled to reach it.</div><div class="ttdef"><b>Определения</b> <a href="#l00090">IkConstraintData.cs:90</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a2689751f2f10ef5be11218838d71dd6c"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a2689751f2f10ef5be11218838d71dd6c">Spine.IkConstraintData.Softness</a></div><div class="ttdeci">float Softness</div><div class="ttdoc">For two bone IK, the target bone&#39;s distance from the maximum reach of the bones where rotation begins...</div><div class="ttdef"><b>Определения</b> <a href="#l00068">IkConstraintData.cs:68</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a4205e132826ab1e8e5e460d4d6558946"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a4205e132826ab1e8e5e460d4d6558946">Spine.IkConstraintData.BendDirection</a></div><div class="ttdeci">int BendDirection</div><div class="ttdoc">For two bone IK, controls the bend direction of the IK bones, either 1 or -1.</div><div class="ttdef"><b>Определения</b> <a href="#l00074">IkConstraintData.cs:74</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a687175b6573140d923fbb77e39bf3820"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a687175b6573140d923fbb77e39bf3820">Spine.IkConstraintData.Uniform</a></div><div class="ttdeci">bool Uniform</div><div class="ttdoc">When true and Compress or Stretch is used, the bone is scaled on both the X and Y axes.</div><div class="ttdef"><b>Определения</b> <a href="#l00098">IkConstraintData.cs:98</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_a9d9a433e70374db249d1d694baae7329"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#a9d9a433e70374db249d1d694baae7329">Spine.IkConstraintData.Compress</a></div><div class="ttdeci">bool Compress</div><div class="ttdoc">For one bone IK, when true and the target is too close, the bone is scaled to reach it.</div><div class="ttdef"><b>Определения</b> <a href="#l00080">IkConstraintData.cs:80</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_ik_constraint_data_html_af429d25c9a81a72e9d015b81018de49a"><div class="ttname"><a href="class_spine_1_1_ik_constraint_data.html#af429d25c9a81a72e9d015b81018de49a">Spine.IkConstraintData.Mix</a></div><div class="ttdeci">float Mix</div><div class="ttdoc">A percentage (0-1) that controls the mix between the constrained and unconstrained rotation.</div><div class="ttdef"><b>Определения</b> <a href="#l00061">IkConstraintData.cs:61</a></div></div>
+<div class="ttc" id="anamespace_spine_html"><div class="ttname"><a href="namespace_spine.html">Spine</a></div><div class="ttdef"><b>Определения</b> <a href="_animation_reference_asset_editor_8cs_source.html#l00035">AnimationReferenceAssetEditor.cs:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-csharp</b></li><li class="navelem"><b>IkConstraintData.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Класс Toolbox.LayerMaskExt</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('d4/dc3/class_toolbox_1_1_layer_mask_ext.html','../../','d4/de2/class_toolbox_1_1_layer_mask_ext-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Toolbox.LayerMaskExt</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a1e64ce9d70678f3e2ac581c8e7689e97" id="r_a1e64ce9d70678f3e2ac581c8e7689e97"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e64ce9d70678f3e2ac581c8e7689e97">Contain</a> (this LayerMask mask, int layer)</td></tr>
+<tr class="memdesc:a1e64ce9d70678f3e2ac581c8e7689e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, содержит ли LayerMask указанный слой.  <br /></td></tr>
+<tr class="memitem:a474804f6ffc003a2bf19f4a7eaffa95b" id="r_a474804f6ffc003a2bf19f4a7eaffa95b"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a474804f6ffc003a2bf19f4a7eaffa95b">Inverse</a> (this LayerMask original)</td></tr>
+<tr class="memdesc:a474804f6ffc003a2bf19f4a7eaffa95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инвертирует LayerMask, возвращая все слои, которые не были включены в исходную маску.  <br /></td></tr>
+<tr class="memitem:a4d09d1ed7741862d0653c762217032b4" id="r_a4d09d1ed7741862d0653c762217032b4"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d09d1ed7741862d0653c762217032b4">AddToMask</a> (this LayerMask original, params string[] layerNames)</td></tr>
+<tr class="memdesc:a4d09d1ed7741862d0653c762217032b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет один или несколько слоев по их именам к существующему LayerMask.  <br /></td></tr>
+<tr class="memitem:ab4cc94c131a8afb7305a606d3cb90f69" id="r_ab4cc94c131a8afb7305a606d3cb90f69"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4cc94c131a8afb7305a606d3cb90f69">RemoveFromMask</a> (this LayerMask original, params string[] layerNames)</td></tr>
+<tr class="memdesc:ab4cc94c131a8afb7305a606d3cb90f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет один или несколько слоев по их именам из существующего LayerMask.  <br /></td></tr>
+<tr class="memitem:a8693976cce81795d4e447d93fe54ef23" id="r_a8693976cce81795d4e447d93fe54ef23"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8693976cce81795d4e447d93fe54ef23">RemoveFromMask</a> (this LayerMask original, params int[] layers)</td></tr>
+<tr class="memdesc:a8693976cce81795d4e447d93fe54ef23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет один или несколько слоев по их номерам из существующего LayerMask.  <br /></td></tr>
+<tr class="memitem:a9b9a4107cb07538e73468decbecd14f8" id="r_a9b9a4107cb07538e73468decbecd14f8"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b9a4107cb07538e73468decbecd14f8">RemoveFromMask</a> (this LayerMask original, LayerMask layerMask)</td></tr>
+<tr class="memdesc:a9b9a4107cb07538e73468decbecd14f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет слои, содержащиеся в другом LayerMask, из исходной маски.  <br /></td></tr>
+<tr class="memitem:a0f9332999d54e88fb7ac6c7c8914f1e0" id="r_a0f9332999d54e88fb7ac6c7c8914f1e0"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f9332999d54e88fb7ac6c7c8914f1e0">MaskToNames</a> (this LayerMask original)</td></tr>
+<tr class="memdesc:a0f9332999d54e88fb7ac6c7c8914f1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует LayerMask в массив имен слоев, которые в него входят.  <br /></td></tr>
+<tr class="memitem:a716a101e084d7636667500fa51d51c6d" id="r_a716a101e084d7636667500fa51d51c6d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a716a101e084d7636667500fa51d51c6d">MaskToString</a> (this LayerMask original)</td></tr>
+<tr class="memdesc:a716a101e084d7636667500fa51d51c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует LayerMask в строку, содержащую имена слоев, разделенных запятыми.  <br /></td></tr>
+<tr class="memitem:a1598fc20611fd630959487b6a9c55f38" id="r_a1598fc20611fd630959487b6a9c55f38"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1598fc20611fd630959487b6a9c55f38">MaskToString</a> (this LayerMask original, string delimiter)</td></tr>
+<tr class="memdesc:a1598fc20611fd630959487b6a9c55f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует LayerMask в строку, содержащую имена слоев, разделенных указанным разделителем.  <br /></td></tr>
+<tr class="memitem:a0b4a090dd7dc6140bd7e150434fcd722" id="r_a0b4a090dd7dc6140bd7e150434fcd722"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b4a090dd7dc6140bd7e150434fcd722">BinaryFormat</a> (this LayerMask original)</td></tr>
+<tr class="memdesc:a0b4a090dd7dc6140bd7e150434fcd722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует LayerMask в строковое представление в двоичном формате.  <br /></td></tr>
+<tr class="memitem:a114b3acc1db3fec851b06d7de1439a9c" id="r_a114b3acc1db3fec851b06d7de1439a9c"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a114b3acc1db3fec851b06d7de1439a9c">Create</a> (params string[] layerNames)</td></tr>
+<tr class="memdesc:a114b3acc1db3fec851b06d7de1439a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает LayerMask из массива имен слоев.  <br /></td></tr>
+<tr class="memitem:ad95876ffacaa48baf219654a88980559" id="r_ad95876ffacaa48baf219654a88980559"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95876ffacaa48baf219654a88980559">Create</a> (params int[] layerNumbers)</td></tr>
+<tr class="memdesc:ad95876ffacaa48baf219654a88980559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает LayerMask из массива номеров слоев.  <br /></td></tr>
+<tr class="memitem:abd2bc4e28bd6a7becd83bed1362068d6" id="r_abd2bc4e28bd6a7becd83bed1362068d6"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2bc4e28bd6a7becd83bed1362068d6">NamesToMask</a> (params string[] layerNames)</td></tr>
+<tr class="memdesc:abd2bc4e28bd6a7becd83bed1362068d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует массив имен слоев в LayerMask.  <br /></td></tr>
+<tr class="memitem:a0e6e07fffd92d66e8910c87553a7c28d" id="r_a0e6e07fffd92d66e8910c87553a7c28d"><td class="memItemLeft" align="right" valign="top">static LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e6e07fffd92d66e8910c87553a7c28d">LayerNumbersToMask</a> (params int[] layerNumbers)</td></tr>
+<tr class="memdesc:a0e6e07fffd92d66e8910c87553a7c28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует массив номеров слоев в LayerMask.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00006">6</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a4d09d1ed7741862d0653c762217032b4" name="a4d09d1ed7741862d0653c762217032b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d09d1ed7741862d0653c762217032b4">&#9670;&#160;</a></span>AddToMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.AddToMask </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string[]</td>          <td class="paramname"><span class="paramname"><em>layerNames</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавляет один или несколько слоев по их именам к существующему LayerMask. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">layerNames</td><td>Массив имен слоев для добавления.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask с добавленными слоями.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="a0b4a090dd7dc6140bd7e150434fcd722" name="a0b4a090dd7dc6140bd7e150434fcd722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4a090dd7dc6140bd7e150434fcd722">&#9670;&#160;</a></span>BinaryFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Toolbox.LayerMaskExt.BinaryFormat </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертирует LayerMask в строковое представление в двоичном формате. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка, представляющая LayerMask в двоичном формате.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00126">126</a></p>
+
+</div>
+</div>
+<a id="a1e64ce9d70678f3e2ac581c8e7689e97" name="a1e64ce9d70678f3e2ac581c8e7689e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e64ce9d70678f3e2ac581c8e7689e97">&#9670;&#160;</a></span>Contain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Toolbox.LayerMaskExt.Contain </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>mask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, содержит ли LayerMask указанный слой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">layer</td><td>Номер слоя для проверки (0-31).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Возвращает <span class="tt">true</span>, если LayerMask содержит слой, иначе <span class="tt">false</span>.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="ad95876ffacaa48baf219654a88980559" name="ad95876ffacaa48baf219654a88980559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95876ffacaa48baf219654a88980559">&#9670;&#160;</a></span>Create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.Create </td>
+          <td>(</td>
+          <td class="paramtype">params int[]</td>          <td class="paramname"><span class="paramname"><em>layerNumbers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает LayerMask из массива номеров слоев. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerNumbers</td><td>Массив номеров слоев.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask, содержащий указанные слои.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00148">148</a></p>
+
+</div>
+</div>
+<a id="a114b3acc1db3fec851b06d7de1439a9c" name="a114b3acc1db3fec851b06d7de1439a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114b3acc1db3fec851b06d7de1439a9c">&#9670;&#160;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.Create </td>
+          <td>(</td>
+          <td class="paramtype">params string[]</td>          <td class="paramname"><span class="paramname"><em>layerNames</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает LayerMask из массива имен слоев. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerNames</td><td>Массив имен слоев.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask, содержащий указанные слои.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00138">138</a></p>
+
+</div>
+</div>
+<a id="a474804f6ffc003a2bf19f4a7eaffa95b" name="a474804f6ffc003a2bf19f4a7eaffa95b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474804f6ffc003a2bf19f4a7eaffa95b">&#9670;&#160;</a></span>Inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.Inverse </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инвертирует LayerMask, возвращая все слои, которые не были включены в исходную маску. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Инвертированный LayerMask.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="a0e6e07fffd92d66e8910c87553a7c28d" name="a0e6e07fffd92d66e8910c87553a7c28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6e07fffd92d66e8910c87553a7c28d">&#9670;&#160;</a></span>LayerNumbersToMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.LayerNumbersToMask </td>
+          <td>(</td>
+          <td class="paramtype">params int[]</td>          <td class="paramname"><span class="paramname"><em>layerNumbers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертирует массив номеров слоев в LayerMask. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerNumbers</td><td>Массив номеров слоев.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>LayerMask, соответствующий указанным номерам слоев.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00181">181</a></p>
+
+</div>
+</div>
+<a id="a0f9332999d54e88fb7ac6c7c8914f1e0" name="a0f9332999d54e88fb7ac6c7c8914f1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9332999d54e88fb7ac6c7c8914f1e0">&#9670;&#160;</a></span>MaskToNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string[] Toolbox.LayerMaskExt.MaskToNames </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразует LayerMask в массив имен слоев, которые в него входят. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Массив строковых имен слоев.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00080">80</a></p>
+
+</div>
+</div>
+<a id="a716a101e084d7636667500fa51d51c6d" name="a716a101e084d7636667500fa51d51c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716a101e084d7636667500fa51d51c6d">&#9670;&#160;</a></span>MaskToString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Toolbox.LayerMaskExt.MaskToString </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразует LayerMask в строку, содержащую имена слоев, разделенных запятыми. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с именами слоев, разделенными запятыми.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00104">104</a></p>
+
+</div>
+</div>
+<a id="a1598fc20611fd630959487b6a9c55f38" name="a1598fc20611fd630959487b6a9c55f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1598fc20611fd630959487b6a9c55f38">&#9670;&#160;</a></span>MaskToString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Toolbox.LayerMaskExt.MaskToString </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Преобразует LayerMask в строку, содержащую имена слоев, разделенных указанным разделителем. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">delimiter</td><td>Строка-разделитель для имен слоев.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с именами слоев, разделенными указанным разделителем.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00115">115</a></p>
+
+</div>
+</div>
+<a id="abd2bc4e28bd6a7becd83bed1362068d6" name="abd2bc4e28bd6a7becd83bed1362068d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd2bc4e28bd6a7becd83bed1362068d6">&#9670;&#160;</a></span>NamesToMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.NamesToMask </td>
+          <td>(</td>
+          <td class="paramtype">params string[]</td>          <td class="paramname"><span class="paramname"><em>layerNames</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертирует массив имен слоев в LayerMask. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerNames</td><td>Массив имен слоев.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>LayerMask, соответствующий указанным именам слоев.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00158">158</a></p>
+
+</div>
+</div>
+<a id="a9b9a4107cb07538e73468decbecd14f8" name="a9b9a4107cb07538e73468decbecd14f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9a4107cb07538e73468decbecd14f8">&#9670;&#160;</a></span>RemoveFromMask() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.RemoveFromMask </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayerMask</td>          <td class="paramname"><span class="paramname"><em>layerMask</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет слои, содержащиеся в другом LayerMask, из исходной маски. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">layerMask</td><td>LayerMask, слои которого нужно удалить из исходной маски.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask без слоев из <span class="tt">layerMask</span>.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00070">70</a></p>
+
+</div>
+</div>
+<a id="a8693976cce81795d4e447d93fe54ef23" name="a8693976cce81795d4e447d93fe54ef23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8693976cce81795d4e447d93fe54ef23">&#9670;&#160;</a></span>RemoveFromMask() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.RemoveFromMask </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params int[]</td>          <td class="paramname"><span class="paramname"><em>layers</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет один или несколько слоев по их номерам из существующего LayerMask. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">layers</td><td>Массив номеров слоев для удаления.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask без указанных слоев.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="ab4cc94c131a8afb7305a606d3cb90f69" name="ab4cc94c131a8afb7305a606d3cb90f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4cc94c131a8afb7305a606d3cb90f69">&#9670;&#160;</a></span>RemoveFromMask() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask Toolbox.LayerMaskExt.RemoveFromMask </td>
+          <td>(</td>
+          <td class="paramtype">this LayerMask</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string[]</td>          <td class="paramname"><span class="paramname"><em>layerNames</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет один или несколько слоев по их именам из существующего LayerMask. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Исходный LayerMask.</td></tr>
+    <tr><td class="paramname">layerNames</td><td>Массив имен слоев для удаления.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый LayerMask без указанных слоев.</dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a> строка <a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Dwarf-clash-game/Assets/Scripts/Extensions/<a class="el" href="../../d8/ddf/_layer_mask_ext_8cs_source.html">LayerMaskExt.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../df/d3f/namespace_toolbox.html">Toolbox</a></li><li class="navelem"><a href="../../d4/dc3/class_toolbox_1_1_layer_mask_ext.html">LayerMaskExt</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

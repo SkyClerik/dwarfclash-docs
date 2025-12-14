@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dwarf Clash Game: Исходный файл Dwarf-clash-game/Assets/Spine/Runtime/spine-unity/Utility/TimelineExtensions.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Dwarf Clash Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_timeline_extensions_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TimelineExtensions.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Spine Runtimes License Agreement</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Last updated April 5, 2025. Replaces all prior versions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2013-2025, Esoteric Software LLC</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Integration of the Spine Runtimes into software or otherwise creating</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * derivative works of the Spine Runtimes is permitted under the terms and</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * conditions of Section 2 of the Spine Editor License Agreement:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * http://esotericsoftware.com/spine-editor-license</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * Otherwise, it is permitted to integrate the Spine Runtimes into software</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * or otherwise create derivative works of the Spine Runtimes (collectively,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * &quot;Products&quot;), provided that each user of the Products must obtain their own</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * Spine Editor license and redistribution of the Products in any form must</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * include this license and copyright notice.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC &quot;AS IS&quot; AND ANY</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespace_spine_1_1_unity_1_1_animation_tools.html">   34</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_spine_1_1_unity_1_1_animation_tools.html">Spine.Unity.AnimationTools</a> {</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html">   35</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html">TimelineExtensions</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#abf24a8cc5ac0e9a5ca217ae84cd0f442">   41</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#abf24a8cc5ac0e9a5ca217ae84cd0f442">Evaluate</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_translate_timeline.html">TranslateTimeline</a> timeline, <span class="keywordtype">float</span> time, <a class="code hl_class" href="class_spine_1_1_skeleton_data.html">SkeletonData</a> skeletonData = <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span> (time &lt; timeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) <span class="keywordflow">return</span> Vector2.zero;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">float</span> x, y;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            timeline.GetCurveValue(out x, out y, time);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (skeletonData == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(x, y);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> boneData = skeletonData.Bones.Items[timeline.<a class="code hl_property" href="class_spine_1_1_translate_timeline.html#adff1668cd9c33cd4b6230ac88bda4d57">BoneIndex</a>];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(boneData.<a class="code hl_property" href="class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">X</a> + x, boneData.<a class="code hl_property" href="class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">Y</a> + y);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a6161dfe6e1bca257a5f64a304e468549">   59</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a6161dfe6e1bca257a5f64a304e468549">Evaluate</a> (<a class="code hl_class" href="class_spine_1_1_translate_x_timeline.html">TranslateXTimeline</a> xTimeline, <a class="code hl_class" href="class_spine_1_1_translate_y_timeline.html">TranslateYTimeline</a> yTimeline,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordtype">float</span> time, <a class="code hl_class" href="class_spine_1_1_skeleton_data.html">SkeletonData</a> skeletonData = <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">float</span> x = 0, y = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (xTimeline != <span class="keyword">null</span> &amp;&amp; time &gt; xTimeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) x = xTimeline.<a class="code hl_function" href="class_spine_1_1_curve_timeline1.html#a4c6265e50e7b3e9f359549ad55d94bf4">GetCurveValue</a>(time);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> (yTimeline != <span class="keyword">null</span> &amp;&amp; time &gt; yTimeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) y = yTimeline.<a class="code hl_function" href="class_spine_1_1_curve_timeline1.html#a4c6265e50e7b3e9f359549ad55d94bf4">GetCurveValue</a>(time);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span> (skeletonData == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(x, y);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a>[] bonesItems = skeletonData.Bones.Items;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> boneDataX = bonesItems[xTimeline.<a class="code hl_property" href="class_spine_1_1_translate_x_timeline.html#a542a8ccb6f12f8cb1b706f330b169f04">BoneIndex</a>];</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> boneDataY = bonesItems[yTimeline.<a class="code hl_property" href="class_spine_1_1_translate_y_timeline.html#abfad7bf21b228bdc687d0a8393eb5d29">BoneIndex</a>];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(boneDataX.<a class="code hl_property" href="class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">X</a> + x, boneDataY.<a class="code hl_property" href="class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">Y</a> + y);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a34ed29b214374e2269548b0fb1651aca">   80</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a34ed29b214374e2269548b0fb1651aca">Evaluate</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_rotate_timeline.html">RotateTimeline</a> timeline, <span class="keywordtype">float</span> time, <a class="code hl_class" href="class_spine_1_1_skeleton_data.html">SkeletonData</a> skeletonData = <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">if</span> (time &lt; timeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordtype">float</span> rotation = timeline.<a class="code hl_function" href="class_spine_1_1_curve_timeline1.html#a4c6265e50e7b3e9f359549ad55d94bf4">GetCurveValue</a>(time);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (skeletonData == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">return</span> rotation;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_class" href="class_spine_1_1_bone_data.html">BoneData</a> boneData = skeletonData.Bones.Items[timeline.<a class="code hl_property" href="class_spine_1_1_rotate_timeline.html#a142613b001e125f67deeff298e87d2fc">BoneIndex</a>];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">return</span> (boneData.<a class="code hl_property" href="class_spine_1_1_bone_data.html#afc399c01b18612e4741b645a328c4727">Rotation</a> + rotation);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a0e6c073f8bd74e21b9cba420be8f1c98">   94</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a0e6c073f8bd74e21b9cba420be8f1c98">EvaluateTranslateXYMix</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a> timeline, <span class="keywordtype">float</span> time) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">if</span> (time &lt; timeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) <span class="keywordflow">return</span> Vector2.zero;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordtype">float</span> rotate, mixX, mixY, scaleX, scaleY, shearY;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            timeline.GetCurveValue(out rotate, out mixX, out mixY, out scaleX, out scaleY, out shearY, time);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(mixX, mixY);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a58efbdb04b9e9f4b78de081595f0817a">  104</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a58efbdb04b9e9f4b78de081595f0817a">EvaluateRotateMix</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a> timeline, <span class="keywordtype">float</span> time) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (time &lt; timeline.<a class="code hl_property" href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Frames</a>[0]) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordtype">float</span> rotate, mixX, mixY, scaleX, scaleY, shearY;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            timeline.GetCurveValue(out rotate, out mixX, out mixY, out scaleX, out scaleY, out shearY, time);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> rotate;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ade27836fc723fc3e23ff9bf4778478b4">  116</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_spine_1_1_translate_timeline.html">TranslateTimeline</a> <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ade27836fc723fc3e23ff9bf4778478b4">FindTranslateTimelineForBone</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_animation.html">Animation</a> a, <span class="keywordtype">int</span> boneIndex) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_spine_1_1_timeline.html">Timeline</a> timeline <span class="keywordflow">in</span> a.Timelines) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">if</span> (timeline.GetType().IsSubclassOf(typeof(<a class="code hl_class" href="class_spine_1_1_translate_timeline.html">TranslateTimeline</a>)))</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <a class="code hl_class" href="class_spine_1_1_translate_timeline.html">TranslateTimeline</a> translateTimeline = timeline as <a class="code hl_class" href="class_spine_1_1_translate_timeline.html">TranslateTimeline</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">if</span> (translateTimeline != <span class="keyword">null</span> &amp;&amp; translateTimeline.<a class="code hl_property" href="class_spine_1_1_translate_timeline.html#adff1668cd9c33cd4b6230ac88bda4d57">BoneIndex</a> == boneIndex)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    <span class="keywordflow">return</span> translateTimeline;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a79a0a04d75b6eda922ac83a11ffc4e9e">  132</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> T <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a79a0a04d75b6eda922ac83a11ffc4e9e">FindTimelineForBone&lt;T&gt;</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_animation.html">Animation</a> a, <span class="keywordtype">int</span> boneIndex) where T : <span class="keyword">class</span>, <a class="code hl_interface" href="interface_spine_1_1_i_bone_timeline.html">IBoneTimeline</a> {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_spine_1_1_timeline.html">Timeline</a> timeline <span class="keywordflow">in</span> a.Timelines) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                T translateTimeline = timeline as T;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordflow">if</span> (translateTimeline != <span class="keyword">null</span> &amp;&amp; translateTimeline.BoneIndex == boneIndex)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    <span class="keywordflow">return</span> translateTimeline;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ac19536524370c3b592248f503ee7ab3c">  145</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a> <a class="code hl_function" href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ac19536524370c3b592248f503ee7ab3c">FindTransformConstraintTimeline</a> (<span class="keyword">this</span> <a class="code hl_class" href="class_spine_1_1_animation.html">Animation</a> a, <span class="keywordtype">int</span> transformConstraintIndex) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_spine_1_1_timeline.html">Timeline</a> timeline <span class="keywordflow">in</span> a.Timelines) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">if</span> (timeline.GetType().IsSubclassOf(typeof(<a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a>)))</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a> transformConstraintTimeline = timeline as <a class="code hl_class" href="class_spine_1_1_transform_constraint_timeline.html">TransformConstraintTimeline</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                <span class="keywordflow">if</span> (transformConstraintTimeline != <span class="keyword">null</span> &amp;&amp;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    transformConstraintTimeline.<a class="code hl_property" href="class_spine_1_1_transform_constraint_timeline.html#a0792ddce4470112e1b5c88353e800c22">TransformConstraintIndex</a> == transformConstraintIndex)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                    <span class="keywordflow">return</span> transformConstraintTimeline;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+</div>
+<div class="ttc" id="aclass_spine_1_1_animation_html"><div class="ttname"><a href="class_spine_1_1_animation.html">Spine.Animation</a></div><div class="ttdoc">Stores a list of timelines to animate a skeleton&#39;s pose over time.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00037">Animation.cs:37</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html"><div class="ttname"><a href="class_spine_1_1_bone_data.html">Spine.BoneData</a></div><div class="ttdef"><b>Определения</b> <a href="_bone_data_8cs_source.html#l00033">BoneData.cs:33</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a40568774979340d29d188f0fb7e6d039"><div class="ttname"><a href="class_spine_1_1_bone_data.html#a40568774979340d29d188f0fb7e6d039">Spine.BoneData.Y</a></div><div class="ttdeci">float Y</div><div class="ttdoc">Local Y translation.</div><div class="ttdef"><b>Определения</b> <a href="_bone_data_8cs_source.html#l00057">BoneData.cs:57</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_a904249dbb0be11f3e8b0156a7f504566"><div class="ttname"><a href="class_spine_1_1_bone_data.html#a904249dbb0be11f3e8b0156a7f504566">Spine.BoneData.X</a></div><div class="ttdeci">float X</div><div class="ttdoc">Local X translation.</div><div class="ttdef"><b>Определения</b> <a href="_bone_data_8cs_source.html#l00054">BoneData.cs:54</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_bone_data_html_afc399c01b18612e4741b645a328c4727"><div class="ttname"><a href="class_spine_1_1_bone_data.html#afc399c01b18612e4741b645a328c4727">Spine.BoneData.Rotation</a></div><div class="ttdeci">float Rotation</div><div class="ttdoc">Local rotation in degrees, counter clockwise.</div><div class="ttdef"><b>Определения</b> <a href="_bone_data_8cs_source.html#l00060">BoneData.cs:60</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_curve_timeline1_html_a4c6265e50e7b3e9f359549ad55d94bf4"><div class="ttname"><a href="class_spine_1_1_curve_timeline1.html#a4c6265e50e7b3e9f359549ad55d94bf4">Spine.CurveTimeline1.GetCurveValue</a></div><div class="ttdeci">float GetCurveValue(float time)</div><div class="ttdoc">Returns the interpolated value for the specified time.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00418">Animation.cs:418</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_rotate_timeline_html"><div class="ttname"><a href="class_spine_1_1_rotate_timeline.html">Spine.RotateTimeline</a></div><div class="ttdoc">Changes a bone&#39;s local Bone.Rotation.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00558">Animation.cs:558</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_rotate_timeline_html_a142613b001e125f67deeff298e87d2fc"><div class="ttname"><a href="class_spine_1_1_rotate_timeline.html#a142613b001e125f67deeff298e87d2fc">Spine.RotateTimeline.BoneIndex</a></div><div class="ttdeci">int BoneIndex</div><div class="ttdoc">The index of the bone in Skeleton.Bones that will be changed when this timeline is applied.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00566">Animation.cs:566</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_skeleton_data_html"><div class="ttname"><a href="class_spine_1_1_skeleton_data.html">Spine.SkeletonData</a></div><div class="ttdoc">Stores the setup pose and all of the stateless data for a skeleton.</div><div class="ttdef"><b>Определения</b> <a href="_skeleton_data_8cs_source.html#l00035">SkeletonData.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_timeline_html"><div class="ttname"><a href="class_spine_1_1_timeline.html">Spine.Timeline</a></div><div class="ttdoc">The base class for all timelines.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00192">Animation.cs:192</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_timeline_html_aecb5b6169fa02870035f5d3d788c5bfb"><div class="ttname"><a href="class_spine_1_1_timeline.html#aecb5b6169fa02870035f5d3d788c5bfb">Spine.Timeline.Frames</a></div><div class="ttdeci">float[] Frames</div><div class="ttdoc">The time in seconds and any other values for each frame.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00209">Animation.cs:209</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_transform_constraint_timeline_html"><div class="ttname"><a href="class_spine_1_1_transform_constraint_timeline.html">Spine.TransformConstraintTimeline</a></div><div class="ttdoc">Changes a transform constraint&#39;s mixes.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l02182">Animation.cs:2182</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_transform_constraint_timeline_html_a0792ddce4470112e1b5c88353e800c22"><div class="ttname"><a href="class_spine_1_1_transform_constraint_timeline.html#a0792ddce4470112e1b5c88353e800c22">Spine.TransformConstraintTimeline.TransformConstraintIndex</a></div><div class="ttdeci">int TransformConstraintIndex</div><div class="ttdoc">The index of the transform constraint in Skeleton.TransformConstraints that will be changed when this...</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l02201">Animation.cs:2201</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_timeline_html"><div class="ttname"><a href="class_spine_1_1_translate_timeline.html">Spine.TranslateTimeline</a></div><div class="ttdoc">Changes a bone&#39;s local &lt;see cref&quot;Bone.X&quot;/&gt; and &lt;see cref&quot;Bone.Y&quot;/&gt;.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00580">Animation.cs:580</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_timeline_html_adff1668cd9c33cd4b6230ac88bda4d57"><div class="ttname"><a href="class_spine_1_1_translate_timeline.html#adff1668cd9c33cd4b6230ac88bda4d57">Spine.TranslateTimeline.BoneIndex</a></div><div class="ttdeci">int BoneIndex</div><div class="ttdoc">The index of the bone in Skeleton.Bones that will be changed when this timeline is applied.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00590">Animation.cs:590</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_x_timeline_html"><div class="ttname"><a href="class_spine_1_1_translate_x_timeline.html">Spine.TranslateXTimeline</a></div><div class="ttdoc">Changes a bone&#39;s local &lt;see cref&quot;Bone.X&quot;/&gt;.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00660">Animation.cs:660</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_x_timeline_html_a542a8ccb6f12f8cb1b706f330b169f04"><div class="ttname"><a href="class_spine_1_1_translate_x_timeline.html#a542a8ccb6f12f8cb1b706f330b169f04">Spine.TranslateXTimeline.BoneIndex</a></div><div class="ttdeci">int BoneIndex</div><div class="ttdoc">The index of the bone in Skeleton.Bones that will be changed when this timeline is applied.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00668">Animation.cs:668</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_y_timeline_html"><div class="ttname"><a href="class_spine_1_1_translate_y_timeline.html">Spine.TranslateYTimeline</a></div><div class="ttdoc">Changes a bone&#39;s local &lt;see cref&quot;Bone.Y&quot;/&gt;.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00682">Animation.cs:682</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_translate_y_timeline_html_abfad7bf21b228bdc687d0a8393eb5d29"><div class="ttname"><a href="class_spine_1_1_translate_y_timeline.html#abfad7bf21b228bdc687d0a8393eb5d29">Spine.TranslateYTimeline.BoneIndex</a></div><div class="ttdeci">int BoneIndex</div><div class="ttdoc">The index of the bone in Skeleton.Bones that will be changed when this timeline is applied.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00690">Animation.cs:690</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html">Spine.Unity.AnimationTools.TimelineExtensions</a></div><div class="ttdef"><b>Определения</b> <a href="#l00035">TimelineExtensions.cs:35</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_a0e6c073f8bd74e21b9cba420be8f1c98"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a0e6c073f8bd74e21b9cba420be8f1c98">Spine.Unity.AnimationTools.TimelineExtensions.EvaluateTranslateXYMix</a></div><div class="ttdeci">static Vector2 EvaluateTranslateXYMix(this TransformConstraintTimeline timeline, float time)</div><div class="ttdoc">Evaluates the resulting X and Y translate mix values of a TransformConstraintTimeline at a given time...</div><div class="ttdef"><b>Определения</b> <a href="#l00094">TimelineExtensions.cs:94</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_a34ed29b214374e2269548b0fb1651aca"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a34ed29b214374e2269548b0fb1651aca">Spine.Unity.AnimationTools.TimelineExtensions.Evaluate</a></div><div class="ttdeci">static float Evaluate(this RotateTimeline timeline, float time, SkeletonData skeletonData=null)</div><div class="ttdoc">Evaluates the resulting value of a RotateTimeline at a given time. SkeletonData can be accessed from ...</div><div class="ttdef"><b>Определения</b> <a href="#l00080">TimelineExtensions.cs:80</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_a58efbdb04b9e9f4b78de081595f0817a"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a58efbdb04b9e9f4b78de081595f0817a">Spine.Unity.AnimationTools.TimelineExtensions.EvaluateRotateMix</a></div><div class="ttdeci">static float EvaluateRotateMix(this TransformConstraintTimeline timeline, float time)</div><div class="ttdoc">Evaluates the resulting rotate mix values of a TransformConstraintTimeline at a given time.</div><div class="ttdef"><b>Определения</b> <a href="#l00104">TimelineExtensions.cs:104</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_a6161dfe6e1bca257a5f64a304e468549"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a6161dfe6e1bca257a5f64a304e468549">Spine.Unity.AnimationTools.TimelineExtensions.Evaluate</a></div><div class="ttdeci">static Vector2 Evaluate(TranslateXTimeline xTimeline, TranslateYTimeline yTimeline, float time, SkeletonData skeletonData=null)</div><div class="ttdoc">Evaluates the resulting value of a pair of split translate timelines at a given time....</div><div class="ttdef"><b>Определения</b> <a href="#l00059">TimelineExtensions.cs:59</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_a79a0a04d75b6eda922ac83a11ffc4e9e"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#a79a0a04d75b6eda922ac83a11ffc4e9e">Spine.Unity.AnimationTools.TimelineExtensions.FindTimelineForBone&lt; T &gt;</a></div><div class="ttdeci">static T FindTimelineForBone&lt; T &gt;(this Animation a, int boneIndex)</div><div class="ttdoc">Gets the IBoneTimeline timeline of a given type for a given boneIndex. You can get the boneIndex usin...</div><div class="ttdef"><b>Определения</b> <a href="#l00132">TimelineExtensions.cs:132</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_abf24a8cc5ac0e9a5ca217ae84cd0f442"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#abf24a8cc5ac0e9a5ca217ae84cd0f442">Spine.Unity.AnimationTools.TimelineExtensions.Evaluate</a></div><div class="ttdeci">static Vector2 Evaluate(this TranslateTimeline timeline, float time, SkeletonData skeletonData=null)</div><div class="ttdoc">Evaluates the resulting value of a TranslateTimeline at a given time. SkeletonData can be accessed fr...</div><div class="ttdef"><b>Определения</b> <a href="#l00041">TimelineExtensions.cs:41</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_ac19536524370c3b592248f503ee7ab3c"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ac19536524370c3b592248f503ee7ab3c">Spine.Unity.AnimationTools.TimelineExtensions.FindTransformConstraintTimeline</a></div><div class="ttdeci">static TransformConstraintTimeline FindTransformConstraintTimeline(this Animation a, int transformConstraintIndex)</div><div class="ttdoc">Gets the transform constraint timeline for a given boneIndex. You can get the boneIndex using Skeleto...</div><div class="ttdef"><b>Определения</b> <a href="#l00145">TimelineExtensions.cs:145</a></div></div>
+<div class="ttc" id="aclass_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions_html_ade27836fc723fc3e23ff9bf4778478b4"><div class="ttname"><a href="class_spine_1_1_unity_1_1_animation_tools_1_1_timeline_extensions.html#ade27836fc723fc3e23ff9bf4778478b4">Spine.Unity.AnimationTools.TimelineExtensions.FindTranslateTimelineForBone</a></div><div class="ttdeci">static TranslateTimeline FindTranslateTimelineForBone(this Animation a, int boneIndex)</div><div class="ttdoc">Gets the translate timeline for a given boneIndex. You can get the boneIndex using SkeletonData....</div><div class="ttdef"><b>Определения</b> <a href="#l00116">TimelineExtensions.cs:116</a></div></div>
+<div class="ttc" id="ainterface_spine_1_1_i_bone_timeline_html"><div class="ttname"><a href="interface_spine_1_1_i_bone_timeline.html">Spine.IBoneTimeline</a></div><div class="ttdoc">An interface for timelines which change the property of a bone.</div><div class="ttdef"><b>Определения</b> <a href="_animation_8cs_source.html#l00273">Animation.cs:273</a></div></div>
+<div class="ttc" id="anamespace_spine_1_1_unity_1_1_animation_tools_html"><div class="ttname"><a href="namespace_spine_1_1_unity_1_1_animation_tools.html">Spine.Unity.AnimationTools</a></div><div class="ttdef"><b>Определения</b> <a href="#l00034">TimelineExtensions.cs:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Dwarf-clash-game</b></li><li class="navelem"><b>Assets</b></li><li class="navelem"><b>Spine</b></li><li class="navelem"><b>Runtime</b></li><li class="navelem"><b>spine-unity</b></li><li class="navelem"><b>Utility</b></li><li class="navelem"><b>TimelineExtensions.cs</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
