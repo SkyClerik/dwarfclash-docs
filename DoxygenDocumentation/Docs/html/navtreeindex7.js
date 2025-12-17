@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"d9/d8a/class_febucci_1_1_hierarchy_data_1_1_hierarchy_data_1_1_prefabs_data_1_1_prefab.html":[4,0,3,0,1,1,0],
+"d9/d8b/class_time_span_wrapper.html":[4,0,62],
 "d9/d8b/class_time_span_wrapper.html#a0c5203e06d580bca88f8118e36c592d0":[4,0,62,4],
 "d9/d8b/class_time_span_wrapper.html#a117a396998f379b785b6a4e6329719b4":[4,0,62,1],
 "d9/d8b/class_time_span_wrapper.html#a24211129c68f6d9b252375f5822f7fb2":[4,0,62,10],
@@ -16,12 +18,12 @@ var NAVTREEINDEX7 =
 "d9/d8b/class_time_span_wrapper.html#acdf9d83df3959c6b2126eaed0585671f":[4,0,62,7],
 "d9/d8b/class_time_span_wrapper.html#aeb52228be95aad15b3196bce648e4c4d":[4,0,62,5],
 "d9/d92/_transform_ext_8cs_source.html":[5,0,3,5,16],
-"d9/d92/class_global_background_sound.html":[4,0,34],
+"d9/d92/class_global_background_sound.html":[4,0,35],
 "d9/d96/_attachment_8cs_source.html":[5,0,4,1,0,0,1],
 "d9/d9a/class_f_m_o_d_unity_1_1_build_status_watcher.html":[3,0,5,23],
 "d9/d9a/class_f_m_o_d_unity_1_1_build_status_watcher.html":[4,0,5,23],
 "d9/da5/_hero_box_tree_asset_8cs_source.html":[5,0,6,2,4,0],
-"d9/dad/class_formation_controller.html":[4,0,31],
+"d9/dad/class_formation_controller.html":[4,0,32],
 "d9/dae/class_spine_1_1_skeleton.html":[3,0,10,84],
 "d9/dae/class_spine_1_1_skeleton.html":[4,0,10,84],
 "d9/dae/class_spine_1_1_skeleton.html#a0f883b19b2bc80d4d5db65fba9f1f99c":[3,0,10,84,29],
@@ -113,7 +115,7 @@ var NAVTREEINDEX7 =
 "d9/db6/struct_f_m_o_d_unity_1_1_automatable_slots.html":[3,0,5,8],
 "d9/db6/struct_f_m_o_d_unity_1_1_automatable_slots.html":[4,0,5,8],
 "d9/db7/_editor_bank_ref_8cs_source.html":[5,0,2,0,2,0,6],
-"d9/db9/class_spine_shader_with_outline_g_u_i.html":[4,0,57],
+"d9/db9/class_spine_shader_with_outline_g_u_i.html":[4,0,59],
 "d9/dbd/_platform_default_8cs_source.html":[5,0,2,0,2,16],
 "d9/dc1/struct_f_m_o_d_1_1_c_p_u___u_s_a_g_e.html":[3,0,4,10],
 "d9/dc1/struct_f_m_o_d_1_1_c_p_u___u_s_a_g_e.html":[4,0,4,10],
@@ -123,7 +125,7 @@ var NAVTREEINDEX7 =
 "d9/dcb/class_spine_1_1_unity_1_1_spine_attachment.html":[4,0,10,0,66],
 "d9/dcb/class_spine_1_1_unity_1_1_spine_attachment.html#a08f234fffdafe4437c0a3cb41c3b340a":[3,0,10,0,66,1],
 "d9/dcb/class_spine_1_1_unity_1_1_spine_attachment.html#a08f234fffdafe4437c0a3cb41c3b340a":[4,0,10,0,66,1],
-"d9/dcf/class_battle_pass_quest_tree_asset.html":[4,0,15],
+"d9/dcf/class_battle_pass_quest_tree_asset.html":[4,0,16],
 "d9/ddc/_param_ref_attribute_8cs_source.html":[5,0,2,0,2,14],
 "d9/de4/namespace_febucci_1_1_hierarchy_data_1_1_examples.html":[3,0,3,0,0],
 "d9/de5/_spine_attribute_drawers_8cs_source.html":[5,0,4,0,0,0,6],
@@ -169,7 +171,7 @@ var NAVTREEINDEX7 =
 "da/d32/_bank_refresher_8cs_source.html":[5,0,2,0,2,0,1],
 "da/d35/_ik_constraint_8cs_source.html":[5,0,4,1,0,12],
 "da/d35/_u_i_page_8cs_source.html":[5,0,6,0,0],
-"da/d36/struct_body_part_definition.html":[4,0,20],
+"da/d36/struct_body_part_definition.html":[4,0,21],
 "da/d37/class_febucci_1_1_hierarchy_data_1_1_examples_1_1_class_b.html":[3,0,3,0,0,3],
 "da/d37/class_febucci_1_1_hierarchy_data_1_1_examples_1_1_class_b.html":[4,0,3,0,0,3],
 "da/d3b/class_f_m_o_d_unity_1_1_event_manager_1_1_active_build_target_listener.html":[3,0,5,29,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "da/d60/class_spine_1_1_track_entry.html#aeaf284518a91e9d899ec1492623a1e77":[4,0,10,44,5],
 "da/d60/class_spine_1_1_track_entry.html#aee9b0e2833c675c897f6877119827525":[3,0,10,44,2],
 "da/d60/class_spine_1_1_track_entry.html#aee9b0e2833c675c897f6877119827525":[4,0,10,44,2],
-"da/d60/class_spine_1_1_track_entry.html#af11113456a43ac0ad170ad1937c7cd48":[3,0,10,44,18],
-"da/d60/class_spine_1_1_track_entry.html#af11113456a43ac0ad170ad1937c7cd48":[4,0,10,44,18],
-"da/d60/class_spine_1_1_track_entry.html#afa3afa0b84cd3b11b8d52200ead397d7":[3,0,10,44,1]
+"da/d60/class_spine_1_1_track_entry.html#af11113456a43ac0ad170ad1937c7cd48":[3,0,10,44,18]
 };

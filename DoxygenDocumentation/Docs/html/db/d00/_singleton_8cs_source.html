@@ -145,28 +145,32 @@ $(function(){initNavTree('db/d00/_singleton_8cs_source.html','../../',''); });
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                _instance = <span class="keyword">this</span> as T;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="comment">// И делаем себя &quot;бессмертным&quot;</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                DontDestroyOnLoad(gameObject);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_instance != <span class="keyword">this</span>)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="comment">// Если главный экземпляр уже существует, а мы - нет, то мы дубликат, и должны быть уничтожены.</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                Debug.Log($<span class="stringliteral">&quot;[Singleton] Instance of &#39;{typeof(T)}&#39; already exists. Destroying duplicate.&quot;</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                Destroy(gameObject);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (gameObject.transform.parent != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    Debug.LogError($<span class="stringliteral">&quot;{gameObject.name} не должен быть потомком объекта&quot;</span>, gameObject);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                DontDestroyOnLoad(gameObject);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_instance != <span class="keyword">this</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">// Если главный экземпляр уже существует, а мы - нет, то мы дубликат, и должны быть уничтожены.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                Debug.Log($<span class="stringliteral">&quot;[Singleton] Instance of &#39;{typeof(T)}&#39; already exists. Destroying duplicate.&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                Destroy(gameObject);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
-<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">   82</a></span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">OnApplicationQuit</a>()</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            _isQuitting = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">   86</a></span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">OnApplicationQuit</a>()</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            _isQuitting = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
 </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
 <div class="ttc" id="aclass_toolbox_1_1_singleton-1-g_html_a2b8876b27f139eb8212fbf428f456fe4"><div class="ttname"><a href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#a2b8876b27f139eb8212fbf428f456fe4">Toolbox.Singleton-1-g.Instance</a></div><div class="ttdeci">static T Instance</div><div class="ttdoc">Возвращает единственный потокобезопасный экземпляр &#39;Одиночки&#39;. Если экземпляр не существует,...</div><div class="ttdef"><b>Определения</b> <a href="#l00024">Singleton.cs:25</a></div></div>
-<div class="ttc" id="aclass_toolbox_1_1_singleton-1-g_html_ad322a91caf99f03330b48e7a745a188d"><div class="ttname"><a href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">Toolbox.Singleton-1-g.OnApplicationQuit</a></div><div class="ttdeci">virtual void OnApplicationQuit()</div><div class="ttdoc">При выходе из приложения устанавливает флаг, чтобы предотвратить создание &quot;призрачных&quot; объектов.</div><div class="ttdef"><b>Определения</b> <a href="#l00082">Singleton.cs:82</a></div></div>
+<div class="ttc" id="aclass_toolbox_1_1_singleton-1-g_html_ad322a91caf99f03330b48e7a745a188d"><div class="ttname"><a href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#ad322a91caf99f03330b48e7a745a188d">Toolbox.Singleton-1-g.OnApplicationQuit</a></div><div class="ttdeci">virtual void OnApplicationQuit()</div><div class="ttdoc">При выходе из приложения устанавливает флаг, чтобы предотвратить создание &quot;призрачных&quot; объектов.</div><div class="ttdef"><b>Определения</b> <a href="#l00086">Singleton.cs:86</a></div></div>
 <div class="ttc" id="aclass_toolbox_1_1_singleton-1-g_html_adc5daa4cd53fc09798ae0af0effbf81d"><div class="ttname"><a href="../../df/dba/class_toolbox_1_1_singleton-1-g.html#adc5daa4cd53fc09798ae0af0effbf81d">Toolbox.Singleton-1-g.Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdoc">Обрабатывает логику &#39;Одиночки&#39; при пробуждении объекта. Гарантирует, что существует только один экзем...</div><div class="ttdef"><b>Определения</b> <a href="#l00061">Singleton.cs:61</a></div></div>
 <div class="ttc" id="anamespace_toolbox_html"><div class="ttname"><a href="../../df/d3f/namespace_toolbox.html">Toolbox</a></div><div class="ttdef"><b>Определения</b> <a href="../../d8/d6e/_color_ext_8cs_source.html#l00003">ColorExt.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

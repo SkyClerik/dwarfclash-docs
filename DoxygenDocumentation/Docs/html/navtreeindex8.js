@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"da/d60/class_spine_1_1_track_entry.html#af11113456a43ac0ad170ad1937c7cd48":[4,0,10,44,18],
+"da/d60/class_spine_1_1_track_entry.html#afa3afa0b84cd3b11b8d52200ead397d7":[3,0,10,44,1],
 "da/d60/class_spine_1_1_track_entry.html#afa3afa0b84cd3b11b8d52200ead397d7":[4,0,10,44,1],
 "da/d60/class_spine_1_1_track_entry.html#afda9e78152aff443314acdbce1b8df43":[3,0,10,44,19],
 "da/d60/class_spine_1_1_track_entry.html#afda9e78152aff443314acdbce1b8df43":[4,0,10,44,19],
@@ -17,7 +19,7 @@ var NAVTREEINDEX8 =
 "da/d7c/class_spine_1_1_unity_1_1_skeleton_data_compatibility_1_1_version_info.html":[4,0,10,0,11,0],
 "da/d82/_blend_mode_8cs_source.html":[5,0,4,1,0,5],
 "da/d83/_constraint_data_8cs_source.html":[5,0,4,1,0,8],
-"da/d89/_hero_behaviour_8cs_source.html":[5,0,0,0,3],
+"da/d89/_hero_behaviour_8cs_source.html":[5,0,0,0,4],
 "da/d8e/struct_febucci_1_1_hierarchy_data_1_1_hierarchy_data_1_1_icons_data_1_1_hierarchy_element.html":[3,0,3,0,1,0,0],
 "da/d8e/struct_febucci_1_1_hierarchy_data_1_1_hierarchy_data_1_1_icons_data_1_1_hierarchy_element.html":[4,0,3,0,1,0,0],
 "da/d8f/_instancing_manager_8cs_source.html":[5,0,3,7,3],
@@ -31,7 +33,7 @@ var NAVTREEINDEX8 =
 "da/d98/interface_spine_1_1_i_updatable.html#a96146796a111eb677afe30ca6495a81e":[4,0,10,74,0],
 "da/d98/interface_spine_1_1_i_updatable.html#a98a24b18563168b4e5939af366cf5c24":[3,0,10,74,1],
 "da/d98/interface_spine_1_1_i_updatable.html#a98a24b18563168b4e5939af366cf5c24":[4,0,10,74,1],
-"da/d99/class_read_only_attribute.html":[4,0,52],
+"da/d99/class_read_only_attribute.html":[4,0,54],
 "da/da6/_wait_for_spine_animation_complete_8cs_source.html":[5,0,4,1,1,5,0,1],
 "da/daa/struct_f_m_o_d_1_1_d_s_p___p_a_r_a_m_e_t_e_r___a_t_t_e_n_u_a_t_i_o_n___r_a_n_g_e.html":[3,0,4,53],
 "da/daa/struct_f_m_o_d_1_1_d_s_p___p_a_r_a_m_e_t_e_r___a_t_t_e_n_u_a_t_i_o_n___r_a_n_g_e.html":[4,0,4,53],
@@ -120,6 +122,7 @@ var NAVTREEINDEX8 =
 "da/ddf/class_spine_1_1_unity_1_1_editor_1_1_asset_utility.html#a5b48592edf2a863fc1889c08345bbc1e":[3,0,10,0,0,36,1],
 "da/ddf/class_spine_1_1_unity_1_1_editor_1_1_asset_utility.html#a5b48592edf2a863fc1889c08345bbc1e":[4,0,10,0,0,36,1],
 "da/de0/_battlefield_manager_8cs_source.html":[5,0,0,0,0],
+"da/de3/_battlefield_spawner_8cs_source.html":[5,0,0,0,1],
 "da/de5/_on_demand_texture_loader_8cs_source.html":[5,0,4,1,1,0,4],
 "da/de6/_hero_page_8cs_source.html":[5,0,6,2,4,1],
 "da/de7/_skeleton_data_8cs_source.html":[5,0,4,1,0,25],
@@ -193,9 +196,10 @@ var NAVTREEINDEX8 =
 "db/d27/class_spine_1_1_unity_1_1_skeleton_root_motion_base.html#afc74579bf1beb4419b3475d917c4cec5":[4,0,10,0,25,2],
 "db/d2e/_bounding_box_follower_graphic_inspector_8cs_source.html":[5,0,4,0,0,0,1,2],
 "db/d33/_platform_mac_8cs_source.html":[5,0,2,0,1,4,0,0],
-"db/d33/_squad_8cs_source.html":[5,0,0,0,6],
+"db/d33/_squad_8cs_source.html":[5,0,0,0,7],
 "db/d38/_spine_atlas_asset_inspector_8cs_source.html":[5,0,4,0,0,0,0,2],
-"db/d39/class_crowd_sorting_manager.html":[4,0,26],
+"db/d39/class_crowd_sorting_manager.html":[4,0,27],
+"db/d3b/class_battlefield_spawner.html":[4,0,15],
 "db/d3f/struct_spine_1_1_bone_matrix.html":[3,0,10,99],
 "db/d3f/struct_spine_1_1_bone_matrix.html":[4,0,10,99],
 "db/d3f/struct_spine_1_1_bone_matrix.html#a50bcfa37635471fd4d7a948d605dd69f":[3,0,10,99,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "db/d5c/class_spine_1_1_transform_constraint.html#a8ea9f23c1cafb4aeee2842a176615375":[4,0,10,96,11],
 "db/d5c/class_spine_1_1_transform_constraint.html#a924ea1b33938d4e9bcc438d699b6c96a":[3,0,10,96,4],
 "db/d5c/class_spine_1_1_transform_constraint.html#a924ea1b33938d4e9bcc438d699b6c96a":[4,0,10,96,4],
-"db/d5c/class_spine_1_1_transform_constraint.html#aa71f426178cf3922c69da73754438d03":[3,0,10,96,2],
-"db/d5c/class_spine_1_1_transform_constraint.html#aa71f426178cf3922c69da73754438d03":[4,0,10,96,2],
-"db/d5c/class_spine_1_1_transform_constraint.html#ad6e171793f73e989dbaac352947693c7":[3,0,10,96,1],
-"db/d5c/class_spine_1_1_transform_constraint.html#ad6e171793f73e989dbaac352947693c7":[4,0,10,96,1],
-"db/d5c/class_spine_1_1_transform_constraint.html#ae0040d8bfcf8238a75c576546daa9c17":[3,0,10,96,3]
+"db/d5c/class_spine_1_1_transform_constraint.html#aa71f426178cf3922c69da73754438d03":[3,0,10,96,2]
 };

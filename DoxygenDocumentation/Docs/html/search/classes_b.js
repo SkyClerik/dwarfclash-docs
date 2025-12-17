@@ -16,6 +16,6 @@ var searchData=
   ['minionbehaviour_13',['MinionBehaviour',['../d7/dde/class_minion_behaviour.html',1,'']]],
   ['miniondefinition_14',['MinionDefinition',['../d0/d5b/class_data_1_1_minion_definition.html',1,'Data']]],
   ['miniondefinitioneditor_15',['MinionDefinitionEditor',['../d6/d2c/class_root_script_editor_1_1_minion_definition_editor.html',1,'RootScriptEditor']]],
-  ['minisquadcontainer_16',['MiniSquadContainer',['../df/d5c/class_mini_squad_container.html',1,'']]],
+  ['minionlevelscurvedefinition_16',['MinionLevelsCurveDefinition',['../df/d17/class_minion_levels_curve_definition.html',1,'']]],
   ['modalwindowpage_17',['ModalWindowPage',['../d0/de8/class_modal_window_page.html',1,'']]]
 ];
